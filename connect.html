@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect — FeelFamous Basecamp</title>
+<style>
+  @font-face { font-family: 'Crimson Pro'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300italic.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/CrimsonPro-600.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/SpaceMono-400.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/SpaceMono-700.ttf') format('truetype'); }
+  :root{--deep:#12100a;--ember:#d4891f;--gold:#f0b830;--cream:#f8f0de;--smoke:#b8a88a;--ash:#2a2218}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--deep);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.75;min-height:100vh;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 110%,rgba(201,126,26,.12) 0%,transparent 60%);pointer-events:none;z-index:0}
+  .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;position:relative;z-index:1}
+  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);text-decoration:none;margin-bottom:48px;transition:color .2s}
+  .back:hover{color:var(--ember)}
+  .section-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--ember);margin-bottom:16px}
+  h1{font-weight:300;font-size:clamp(2.2rem,5vw,3rem);line-height:1.2;margin-bottom:40px}
+  h1 em{font-style:italic;color:var(--gold)}
+  p{margin-bottom:24px}
+  strong{color:var(--gold);font-weight:600}
+  .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--ember),transparent);margin:40px 0}
+  .connect-grid{display:grid;grid-template-columns:1fr;gap:2px;margin:32px 0}
+  .connect-card{background:var(--ash);padding:24px 28px;display:flex;align-items:center;gap:20px;text-decoration:none;transition:background .2s;border-left:3px solid transparent}
+  .connect-card:hover{background:#16120a;border-left-color:var(--ember)}
+  .connect-icon{font-size:1.8rem;min-width:36px;text-align:center}
+  .connect-info{flex:1}
+  .connect-name{font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .connect-handle{font-size:.95rem;color:var(--cream)}
+  .connect-desc{font-size:.85rem;color:var(--smoke)}
+  .connect-arrow{color:var(--smoke);font-size:1.2rem;transition:all .2s}
+  .connect-card:hover .connect-arrow{color:var(--ember);transform:translateX(4px)}
+  .no-corporate{background:#0f0d08;border:1px solid var(--ash);padding:24px 28px;margin:40px 0;text-align:center}
+  .no-corporate p{font-family:'Space Mono',monospace;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);margin:0}
+  .no-corporate span{color:var(--ember)}
+  footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--ash);font-size:1rem;color:#b8a88a;font-style:italic}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back">← Basecamp</a>
+  <div class="section-label">Connect</div>
+  <h1>Decentralised<br><em>only.</em></h1>
+
+  <p>No Facebook. No Instagram. No Twitter/X. No TikTok. No YouTube.<br>
+  If it has shareholders demanding growth, it's not here.</p>
+  <p>Every link below is to a platform that is either open source, federated, encrypted, or all three. Your data is yours. Your identity is yours.</p>
+
+  <div class="divider"></div>
+
+  <div class="connect-grid">
+    <a href="https://bsky.app/profile/chrisdocstrange.bsky.social" class="connect-card">
+      <div class="connect-icon">🦋</div>
+      <div class="connect-info">
+        <div class="connect-name">Bluesky</div>
+        <div class="connect-handle">@chrisdocstrange.bsky.social</div>
+        <div class="connect-desc">AT Protocol · Portable identity · No algorithm</div>
+      </div>
+      <div class="connect-arrow">→</div>
+    </a>
+
+    <a href="https://mastodon.social/@chrisptee" class="connect-card">
+      <div class="connect-icon">🐘</div>
+      <div class="connect-info">
+        <div class="connect-name">Mastodon</div>
+        <div class="connect-handle">@chrisptee@mastodon.social</div>
+        <div class="connect-desc">Federated · Open source · Your instance, your rules</div>
+      </div>
+      <div class="connect-arrow">→</div>
+    </a>
+
+    <a href="https://upscrolled.com" class="connect-card">
+      <div class="connect-icon">⬆️</div>
+      <div class="connect-info">
+        <div class="connect-name">Upscrolled</div>
+        <div class="connect-handle">upscrolled.com</div>
+        <div class="connect-desc">Community feed · Real humans · No bots</div>
+      </div>
+      <div class="connect-arrow">→</div>
+    </a>
+
+    <a href="https://signal.me/#p/+447976884254" class="connect-card">
+      <div class="connect-icon">🔒</div>
+      <div class="connect-info">
+        <div class="connect-name">Signal</div>
+        <div class="connect-handle">+44 7976 884254</div>
+        <div class="connect-desc">End-to-end encrypted · No ads · No tracking · Preferred</div>
+      </div>
+      <div class="connect-arrow">→</div>
+    </a>
+
+    <a href="https://patreon.com/chrisptee" class="connect-card">
+      <div class="connect-icon">🔥</div>
+      <div class="connect-info">
+        <div class="connect-name">Patreon</div>
+        <div class="connect-handle">patreon.com/chrisptee</div>
+        <div class="connect-desc">The community hub · Villager / Elder / Founder tiers</div>
+      </div>
+      <div class="connect-arrow">→</div>
+    </a>
+
+    <a href="https://ko-fi.com/zoom" class="connect-card">
+      <div class="connect-icon">☕</div>
+      <div class="connect-info">
+        <div class="connect-name">Ko-Fi</div>
+        <div class="connect-handle">ko-fi.com/zoom</div>
+        <div class="connect-desc">Buy a coffee · Support the fire · Optional, never guilt-tripped</div>
+      </div>
+      <div class="connect-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="no-corporate">
+    <p>No <span>Facebook</span> · No <span>Instagram</span> · No <span>Twitter/X</span> · No <span>TikTok</span><br>
+    If it has shareholders demanding growth, it's not here.</p>
+  </div>
+
+  <footer>
+    All connections are to platforms that respect your privacy and your data.<br>
+    No referral fees. No tracking. Just doors.<br>
+    — Chris P Tee · feelfamous.com
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Escape Route — FeelFamous Basecamp</title>
+<style>
+  @font-face { font-family: 'Crimson Pro'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300italic.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/CrimsonPro-600.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/SpaceMono-400.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/SpaceMono-700.ttf') format('truetype'); }
+  :root{--deep:#12100a;--ember:#d4891f;--gold:#f0b830;--cream:#f8f0de;--smoke:#b8a88a;--ash:#2e2818;--red:#c04040}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--deep);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.75;min-height:100vh;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 50% 40% at 50% 110%,rgba(192,64,64,.08) 0%,transparent 60%);pointer-events:none;z-index:0}
+  .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;position:relative;z-index:1}
+  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);text-decoration:none;margin-bottom:48px;transition:color .2s}
+  .back:hover{color:var(--ember)}
+  .section-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+  h1{font-weight:300;font-size:clamp(2.2rem,5vw,3rem);line-height:1.2;margin-bottom:40px}
+  h1 em{font-style:italic;color:var(--gold)}
+  h2{font-weight:600;font-size:1.4rem;color:var(--gold);margin:48px 0 16px}
+  p{margin-bottom:24px}
+  strong{color:var(--gold);font-weight:600}
+  .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--red),transparent);margin:40px 0}
+  .lede{font-size:1.2rem;color:var(--cream);font-style:italic;border-left:3px solid var(--red);padding-left:24px;margin-bottom:40px}
+  .escape-card{background:var(--ash);border-left:3px solid var(--ember);padding:24px 28px;margin:16px 0}
+  .escape-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--ember);margin-bottom:12px}
+  .escape-text{font-size:1rem;color:var(--cream);margin-bottom:8px}
+  .escape-link{font-family:'Space Mono',monospace;font-size:.75rem;color:var(--gold)}
+  .pull-quote{background:#1a0a05;border-left:3px solid var(--red);padding:24px 28px;margin:40px 0;font-style:italic;font-size:1.15rem;color:var(--cream)}
+  .manifesto{background:#0f0d08;padding:32px;margin:40px 0;border:1px solid var(--ash)}
+  .manifesto p{font-style:italic;color:var(--smoke);font-size:1rem;margin-bottom:16px}
+  .manifesto p:last-child{margin:0;color:var(--cream)}
+  footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--ash);font-size:1rem;color:#b8a88a;font-style:italic}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back">← Basecamp</a>
+  <div class="section-label">⚠ The Escape Route</div>
+  <h1>You found<br><em>the door.</em></h1>
+
+  <p class="lede">This isn't a red pill. It's a door.<br>
+  You were already looking for it or you wouldn't be reading this.<br>
+  Nobody sent you here. Nobody knows you're here.<br>
+  This page doesn't phone home.</p>
+
+  <div class="divider"></div>
+
+  <p>If something brought you to this page — a feeling that the system you're in wasn't built for you, that you're working harder and harder to stay still, that your creativity is being harvested but your life isn't improving — you're probably right.</p>
+
+  <p>The good news: <strong>the tools to leave are free.</strong> Most of them have always been free. The barrier isn't money. It's knowing they exist and having someone say: <em>it's okay to use them.</em></p>
+
+  <p>It's okay to use them.</p>
+
+  <div class="divider"></div>
+
+  <h2>Reclaim your phone</h2>
+
+  <div class="escape-card">
+    <div class="escape-label">De-Google your Android</div>
+    <div class="escape-text">GrapheneOS turns a Pixel phone into a privacy-respecting device. No Google Play Services by default. Free. Open source. The gold standard.</div>
+    <div class="escape-link">grapheneos.org</div>
+  </div>
+
+  <div class="escape-card">
+    <div class="escape-label">Alternative app store</div>
+    <div class="escape-text">F-Droid is a free and open source Android app repository. No tracking. No ads. Apps that respect you.</div>
+    <div class="escape-link">f-droid.org</div>
+  </div>
+
+  <div class="escape-card">
+    <div class="escape-label">Privacy browser</div>
+    <div class="escape-text">Firefox with uBlock Origin blocks the surveillance layer. Brave is another strong option. Both free.</div>
+    <div class="escape-link">firefox.com · brave.com</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>Reclaim your identity online</h2>
+
+  <div class="escape-card">
+    <div class="escape-label">Portable social identity (Bluesky)</div>
+    <div class="escape-text">Your followers travel with you if you move servers. Your identity isn't owned by the platform. AT Protocol.</div>
+    <div class="escape-link">bsky.app</div>
+  </div>
+
+  <div class="escape-card">
+    <div class="escape-label">Federated social (Mastodon)</div>
+    <div class="escape-text">No algorithm. No ads. Thousands of servers, anyone can run one. Your account on one server connects to all others.</div>
+    <div class="escape-link">joinmastodon.org</div>
+  </div>
+
+  <div class="escape-card">
+    <div class="escape-label">Your own page (FeelFamous hamlet)</div>
+    <div class="escape-text">60 seconds to create. Free forever. Your own URL. No account needed. Just a name and a craft. A place to exist online that nobody can delete.</div>
+    <div class="escape-link">feelfamous.com</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>Reclaim your income</h2>
+
+  <div class="escape-card">
+    <div class="escape-label">Coffeeware model</div>
+    <div class="escape-text">Build something useful. Make the core features free forever. Let people donate if they want to. The service never degrades if they can't. This is a complete business model. It works.</div>
+  </div>
+
+  <div class="escape-card">
+    <div class="escape-label">Desire paths</div>
+    <div class="escape-text">Watch where people walk. Then pave it. The best products are discovered, not invented. Build what people are already trying to do badly.</div>
+  </div>
+
+  <div class="escape-card">
+    <div class="escape-label">The FeelFamous model</div>
+    <div class="escape-text">Free community village. Members get their own page. Donations optional. Revenue from trust, not extraction. Proven at scale in under two weeks, with no budget.</div>
+    <div class="escape-link">See feelfamous.html for the full story</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>Reclaim your movement</h2>
+
+  <div class="pull-quote">
+    1992. Hitchhiking. A man with a towel tied with string. Inside: a toothbrush and a credit card. I had a 65-litre rucksack.<br><br>
+    I spent 30 years becoming the towel guy.<br><br>
+    The freedom isn't in the toothbrush. It's in the decision that you don't need more than the toothbrush.
+  </div>
+
+  <p>Travel light. The things that weigh you down physically are usually metaphors for the things that weigh you down mentally. Start with one bag. Work backwards from there.</p>
+
+  <div class="divider"></div>
+
+  <h2>For when things are really hard</h2>
+
+  <div class="escape-card">
+    <div class="escape-label">If you're in crisis right now</div>
+    <div class="escape-text">Samaritans: 116 123 (UK, free, 24/7). They listen. No judgement. You don't have to be suicidal to call. You just have to need someone to hear you.</div>
+  </div>
+
+  <div class="escape-card">
+    <div class="escape-label">If you're neurodivergent and exhausted</div>
+    <div class="escape-text">The masking is real. The exhaustion is real. The late diagnosis is real. You're not broken. You were running the wrong operating system. The right one exists.</div>
+    <div class="escape-link">autism.org.uk · adhduk.co.uk</div>
+  </div>
+
+  <div class="manifesto">
+    <p>This page was built by someone who needed it and nobody gave it to him.</p>
+    <p>He built the infrastructure for magicians. Then realised it was the infrastructure he needed when he was sleeping rough. Same pattern. Different people. Same kindness.</p>
+    <p>If you're reading this and something resonated — the door is open. The fire is lit. The basecamp is warm. You don't need permission to come in.</p>
+    <p><strong>The Dude Abides. PLUR. Come as you are.</strong></p>
+  </div>
+
+  <footer>
+    This page doesn't track you. It doesn't know who you are.<br>
+    It just works. Take what you need. Leave the rest.<br>
+    — Chris P Tee · Bristol · feelfamous.com
+  </footer>
+</div>
+</body>
+</html>

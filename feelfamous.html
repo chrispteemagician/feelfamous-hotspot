@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FeelFamous &mdash; The Ecosystem</title>
+<style>
+  @font-face{font-family:'Crimson Pro';font-style:italic;font-weight:300;font-display:swap;src:url('fonts/CrimsonPro-300italic.ttf') format('truetype')}
+  @font-face{font-family:'Crimson Pro';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/CrimsonPro-300.ttf') format('truetype')}
+  @font-face{font-family:'Crimson Pro';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/CrimsonPro-600.ttf') format('truetype')}
+  @font-face{font-family:'Space Mono';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/SpaceMono-400.ttf') format('truetype')}
+  @font-face{font-family:'Space Mono';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/SpaceMono-700.ttf') format('truetype')}
+  :root{--deep:#12100a;--coal:#1a1710;--ember:#d4891f;--gold:#f0b830;--cream:#f8f0de;--smoke:#b8a88a;--ash:#2e2818}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--deep);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.75;min-height:100vh;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 110%,rgba(212,137,31,.12) 0%,transparent 60%);pointer-events:none;z-index:0}
+  .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;position:relative;z-index:1}
+  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);text-decoration:none;margin-bottom:48px;transition:color .2s}
+  .back:hover{color:var(--ember)}
+  .section-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--ember);margin-bottom:16px}
+  h1{font-weight:300;font-size:clamp(2.2rem,5vw,3rem);line-height:1.2;margin-bottom:40px}
+  h1 em{font-style:italic;color:var(--gold)}
+  h2{font-weight:600;font-size:1.4rem;color:var(--gold);margin:48px 0 16px}
+  p{margin-bottom:24px}
+  strong{color:var(--gold);font-weight:600}
+  .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--ember),transparent);margin:40px 0}
+  .village-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:32px 0}
+  .village{background:var(--ash);padding:16px 20px}
+  .village-name{font-family:'Space Mono',monospace;font-size:.75rem;color:var(--gold);letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+  .village-desc{font-size:.9rem;color:var(--smoke)}
+  .village-live{font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:1px;text-transform:uppercase;color:var(--ember);margin-top:4px}
+  .tier-card{background:var(--ash);border-left:3px solid var(--ember);padding:24px 28px;margin:16px 0}
+  .tier-name{font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--ember);margin-bottom:8px}
+  .tier-desc{font-size:1rem;color:var(--cream)}
+  .lede{font-size:1.2rem;color:var(--cream);font-style:italic;border-left:3px solid var(--ember);padding-left:24px;margin-bottom:40px}
+  .stat-row{display:flex;gap:16px;flex-wrap:wrap;margin:32px 0}
+  .stat{background:var(--ash);padding:20px 24px;flex:1;min-width:120px}
+  .stat-num{font-family:'Space Mono',monospace;font-size:1.8rem;color:var(--gold);display:block}
+  .stat-label{font-size:0.8rem;color:var(--smoke);font-family:'Space Mono',monospace;letter-spacing:1px;text-transform:uppercase}
+  .cta{display:inline-block;margin-top:32px;padding:16px 32px;background:var(--ember);color:var(--deep);font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .cta:hover{background:var(--gold)}
+  .tool-card{background:var(--ash);padding:20px 24px;margin:8px 0;border-left:3px solid transparent}
+  .tool-card:hover{border-left-color:var(--ember)}
+  .tool-name{font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .tool-desc{font-size:0.95rem;color:var(--cream)}
+  footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--ash);font-size:1rem;color:var(--smoke);font-style:italic}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back">&larr; Basecamp</a>
+  <div class="section-label">The Ecosystem</div>
+  <h1>A village,<br><em>not a platform.</em></h1>
+
+  <p class="lede">Platforms have shareholders. Villages have neighbours.<br>
+  FeelFamous is a network of free community spaces built on kindness, not extraction.</p>
+
+  <div class="stat-row">
+    <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Villages live</span></div>
+    <div class="stat"><span class="stat-num">0</span><span class="stat-label">Ads. Ever.</span></div>
+    <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Core features always</span></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>What is FeelFamous?</h2>
+  <p>FeelFamous is a network of community villages &mdash; each one built around a niche, powered by AI, hosted for free, and owned by nobody. No algorithm. No ads. No data harvesting.</p>
+  <p>Each village has an <strong>AI expert character</strong> who speaks the community&rsquo;s language, a directory of members with their own pages, and one rule: <em>core features free forever.</em></p>
+  <p>The model is <strong>Coffeeware</strong> &mdash; free to use, buy the builder a coffee if you want to, never required. The service never degrades if you can&rsquo;t pay.</p>
+
+  <div class="divider"></div>
+
+  <h2>The Villages</h2>
+  <p>Each village uses the same proven pattern &mdash; like Worzel Gummidge, same body, different expert head for different communities.</p>
+
+  <div class="village-grid">
+    <div class="village">
+      <div class="village-name">Magic-Oid</div>
+      <div class="village-desc">Trick ID for magicians &amp; collectors</div>
+      <div class="village-live">&#9679; Live</div>
+    </div>
+    <div class="village">
+      <div class="village-name">Cannabin-Oid</div>
+      <div class="village-desc">Cannabis knowledge &amp; harm reduction</div>
+      <div class="village-live">&#9679; Live</div>
+    </div>
+    <div class="village">
+      <div class="village-name">Radi-Oid</div>
+      <div class="village-desc">CB &amp; ham radio community</div>
+      <div class="village-live">&#9679; Live</div>
+    </div>
+    <div class="village">
+      <div class="village-name">Sail-Oid</div>
+      <div class="village-desc">Marine gear &amp; sailing</div>
+      <div class="village-live">&#9679; Live</div>
+    </div>
+    <div class="village">
+      <div class="village-name">Motor-Oid</div>
+      <div class="village-desc">Car mechanics &amp; garage community</div>
+      <div class="village-live">&#9679; Live</div>
+    </div>
+    <div class="village">
+      <div class="village-name">Designer-Oid</div>
+      <div class="village-desc">Fashion &amp; market traders</div>
+      <div class="village-live">&#9679; Live</div>
+    </div>
+    <div class="village">
+      <div class="village-name">Stamp-Oid</div>
+      <div class="village-desc">Philatelists &amp; stamp collectors</div>
+      <div class="village-live">&#9679; Live</div>
+    </div>
+    <div class="village">
+      <div class="village-name">Miniature-Oid</div>
+      <div class="village-desc">Wargaming &amp; miniature painters</div>
+      <div class="village-live">&#9679; Live</div>
+    </div>
+    <div class="village">
+      <div class="village-name">Guit-Oid</div>
+      <div class="village-desc">Vintage guitar authentication</div>
+      <div class="village-live">Coming soon</div>
+    </div>
+    <div class="village">
+      <div class="village-name">Vinyl-Oid</div>
+      <div class="village-desc">Record pressing identification</div>
+      <div class="village-live">Coming soon</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>The Tools</h2>
+  <p>Built alongside the villages &mdash; free tools for real life, no account needed.</p>
+
+  <div class="tool-card">
+    <div class="tool-name">SpicyLister</div>
+    <div class="tool-desc">AI-powered eBay listing tool for car boot sellers. Free. Takes seconds.</div>
+  </div>
+  <div class="tool-card">
+    <div class="tool-name">Travel-Oid</div>
+    <div class="tool-desc">AI travel companion. Builds your pack list, documents your trip, keeps you company on the road.</div>
+  </div>
+  <div class="tool-card">
+    <div class="tool-name">Kid Finder / Meeting Point Generator</div>
+    <div class="tool-desc">Generate a what3words QR for any meeting point. Show it. Scan it. Find each other.</div>
+  </div>
+  <div class="tool-card">
+    <div class="tool-name">GlowGadgets</div>
+    <div class="tool-desc">The Bristol rave archive. 400+ photos from 1999&ndash;2003. The scene, preserved.</div>
+  </div>
+  <div class="tool-card">
+    <div class="tool-name">QR Generator (offline)</div>
+    <div class="tool-desc">On this hotspot right now. Generate and save QR codes for anything. No internet needed.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>Your Hamlet</h2>
+  <p>Every person in the ecosystem gets a <strong>hamlet</strong> &mdash; their own page with their own URL. Not a profile in someone&rsquo;s database. A real page. Permanent until you say otherwise.</p>
+  <p>60 seconds to create. No account. No password. Just a name, a craft, a location. A place to be found.</p>
+  <p><em>I exist. I do this thing. Here&rsquo;s how to find me. No permission needed.</em></p>
+
+  <div class="divider"></div>
+
+  <h2>Join the Community</h2>
+
+  <div class="tier-card">
+    <div class="tier-name">Villager</div>
+    <div class="tier-desc">Core access. You&rsquo;re in the village. Community, kudos, updates.</div>
+  </div>
+  <div class="tier-card">
+    <div class="tier-name">Elder</div>
+    <div class="tier-desc">Extended access. Pro features. Part of the decisions.</div>
+  </div>
+  <div class="tier-card">
+    <div class="tier-name">Founder</div>
+    <div class="tier-desc">Your own hamlet. Built with you. Custom. Personal. Permanent.</div>
+  </div>
+
+  <a href="https://patreon.com/chrisptee" class="cta">Join at patreon.com/chrisptee &rarr;</a>
+
+  <footer>
+    All villages: Google Gemini AI &middot; Netlify hosting &middot; Supabase data<br>
+    &ldquo;A platform has shareholders. A village has neighbours.&rdquo;<br><br>
+    feelfamous.co.uk &middot; Built by Chris P Tee, Bristol
+  </footer>
+</div>
+</body>
+</html>

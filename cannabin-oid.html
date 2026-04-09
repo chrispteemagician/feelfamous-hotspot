@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cannabin-Oid — FeelFamous Basecamp</title>
+<style>
+  @font-face { font-family: 'Crimson Pro'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300italic.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/CrimsonPro-600.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/SpaceMono-400.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/SpaceMono-700.ttf') format('truetype'); }
+  :root{--deep:#12100a;--ember:#d4891f;--gold:#f0b830;--green:#4a7c52;--cream:#f8f0de;--smoke:#b8a88a;--ash:#2a2218}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--deep);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.75;min-height:100vh;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 30% 110%,rgba(74,124,82,.1) 0%,transparent 60%),radial-gradient(ellipse 40% 30% at 70% 110%,rgba(201,126,26,.08) 0%,transparent 50%);pointer-events:none;z-index:0}
+  .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;position:relative;z-index:1}
+  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);text-decoration:none;margin-bottom:48px;transition:color .2s}
+  .back:hover{color:var(--ember)}
+  .section-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:#4a9c54;margin-bottom:16px}
+  h1{font-weight:300;font-size:clamp(2.2rem,5vw,3rem);line-height:1.2;margin-bottom:40px}
+  h1 em{font-style:italic;color:#6ab870}
+  h2{font-weight:600;font-size:1.4rem;color:#6ab870;margin:48px 0 16px}
+  p{margin-bottom:24px}
+  strong{color:var(--gold);font-weight:600}
+  .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,#4a9c54,transparent);margin:40px 0}
+  .lede{font-size:1.2rem;color:var(--cream);font-style:italic;border-left:3px solid #4a9c54;padding-left:24px;margin-bottom:40px}
+  .fact-card{background:var(--ash);border-left:3px solid #4a9c54;padding:20px 24px;margin:16px 0}
+  .fact-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:#6ab870;margin-bottom:8px}
+  .fact-text{font-size:1rem;color:var(--cream)}
+  .warning{background:#1a0f08;border:1px solid var(--ember);padding:20px 24px;margin:32px 0;font-size:.95rem}
+  .warning-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--ember);margin-bottom:8px}
+  .cta{display:inline-block;margin-top:16px;padding:16px 32px;background:#2a5c2e;color:var(--cream);font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s;border:1px solid #4a9c54}
+  .cta:hover{background:#3a7c40}
+  footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--ash);font-size:1rem;color:#b8a88a;font-style:italic}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back">← Basecamp</a>
+  <div class="section-label">🌿 Cannabin-Oid</div>
+  <h1>Knowledge is<br><em>harm reduction.</em></h1>
+
+  <p class="lede">Built for people who use cannabis and want to understand it better — medically, legally, and personally. No judgement. No agenda. Just honest information.</p>
+
+  <div class="divider"></div>
+
+  <h2>What is Cannabin-Oid?</h2>
+  <p>Cannabin-Oid is a free AI-powered information platform for cannabis users, patients, and curious people. It helps you identify strains, understand terpene profiles, navigate medical prescription pathways, and connect with a harm-reduction community.</p>
+  <p>It's part of the <strong>FeelFamous ecosystem</strong> — built by a cannabis patient, for cannabis patients, on free tools, with no data harvesting.</p>
+  <p>If you're being treated for a condition and cannabis might help — or is helping — Cannabin-Oid can help you understand your options and find a route to legal prescription in the UK.</p>
+
+  <div class="divider"></div>
+
+  <h2>If you're at Spannabis</h2>
+  <p>Welcome to Bilbao. Welcome to the future of cannabis in Europe. This is the first Spannabis at the Bilbao Exhibition Centre — a historic moment.</p>
+  <p>The Basque Country has the most stable Cannabis Social Club (CSC) environment in Spain right now. While Barcelona has been shutting clubs, the Basque Country has been building community.</p>
+
+  <div class="fact-card">
+    <div class="fact-label">CSC Culture Here</div>
+    <div class="fact-text">Cannabis Social Clubs are private associations — not shops, not coffee shops. You need an existing member to sponsor you, valid ID, and a 24–48 hour wait. Annual membership is typically €15–50. Cash only. Consume on premises only.</div>
+  </div>
+
+  <div class="fact-card">
+    <div class="fact-label">Public Consumption</div>
+    <div class="fact-text">Public consumption can result in fines of €300–600. Keep it in the club. Be discreet. Respect the community that keeps these spaces legal.</div>
+  </div>
+
+  <div class="warning">
+    <div class="warning-label">⚠️ Know Before You Go</div>
+    Cannabis laws vary significantly by country and region. This information is for harm reduction purposes only. Always research the specific laws where you are. If you're travelling internationally, know your country's import/export laws — they are serious.
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>UK Medical Cannabis</h2>
+  <p>Since Royal Decree 903/2025, Spain has legalised medical cannabis through hospital dispensing. The UK has had medical cannabis available on prescription since 2018 — but access has been slow and expensive through private clinics.</p>
+  <p>If you're self-medicating and want to go legal, Cannabin-Oid can help you understand the pathway, the clinics, and what to expect.</p>
+
+  <a href="https://cannabin-oid.co.uk" class="cta">Visit cannabin-oid.co.uk →</a>
+
+  <footer>
+    Cannabin-Oid is for information and community only. Not medical advice.<br>
+    Always consult a qualified healthcare professional for medical decisions.<br>
+    "Knowledge is harm reduction."
+  </footer>
+</div>
+</body>
+</html>

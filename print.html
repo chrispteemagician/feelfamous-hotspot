@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connect to FeelFamous</title>
+<style>
+  @media screen {
+    body { background: #12100a; color: #f8f0de; font-family: Georgia, serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    .card { max-width: 480px; padding: 48px 40px; border: 2px solid #d4891f; }
+  }
+  @media print {
+    body { margin: 0; font-family: Georgia, serif; }
+    .card { border: 3px solid #000; padding: 32px; max-width: 400px; margin: 40px auto; }
+    .no-print { display: none; }
+  }
+  h1 { font-size: 1.8rem; font-weight: normal; margin: 0 0 8px; color: #f0b830; }
+  h1 span { display: block; font-size: 1rem; font-style: italic; color: #b8a88a; margin-top: 4px; }
+  .divider { border: none; border-top: 1px solid #d4891f; margin: 24px 0; }
+  .step { display: flex; gap: 16px; margin: 16px 0; align-items: flex-start; }
+  .num { font-family: monospace; font-size: 1.4rem; color: #d4891f; min-width: 28px; }
+  .text { font-size: 1.1rem; line-height: 1.5; }
+  .wifi { font-family: monospace; font-size: 1.5rem; letter-spacing: 3px; color: #f0b830; display: block; margin: 20px 0 4px; }
+  .url { font-family: monospace; font-size: 1.3rem; color: #f0b830; display: block; margin: 8px 0; }
+  .note { font-size: 0.9rem; font-style: italic; color: #b8a88a; margin-top: 24px; }
+  .print-btn { margin-top: 32px; padding: 12px 28px; background: #d4891f; color: #12100a; border: none; font-size: 1rem; cursor: pointer; font-family: monospace; letter-spacing: 1px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>FeelFamous Basecamp
+    <span>World domination through kindness.</span>
+  </h1>
+  <hr class="divider">
+  <div class="step">
+    <div class="num">1</div>
+    <div class="text">Connect to this WiFi network:<br>
+      <span class="wifi">FeelFamous</span>
+      No password needed.
+    </div>
+  </div>
+  <div class="step">
+    <div class="num">2</div>
+    <div class="text">Open your browser and go to:<br>
+      <span class="url">10.10.10.254/basecamp</span>
+    </div>
+  </div>
+  <div class="step">
+    <div class="num">3</div>
+    <div class="text">Bookmark it. Share it. Take it with you.<br>
+      Everything works without the internet.
+    </div>
+  </div>
+  <p class="note">If the address above doesn't work, go to 10.10.10.254 and tap the basecamp folder in the file manager.</p>
+  <button class="print-btn no-print" onclick="window.print()">Print this card</button>
+</div>
+</body>
+</html>
