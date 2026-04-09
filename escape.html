@@ -51,6 +51,8 @@
   <div class="lang-switcher">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('es')">ES</button>
+    <button class="lang-btn" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" onclick="setLang('de')">DE</button>
     <button class="lang-btn" onclick="setLang('eu')">EU</button>
   </div>
 
@@ -278,6 +280,98 @@ var t = {
     footer: "Esta página no te rastrea. No sabe quién eres.<br>Simplemente funciona. Coge lo que necesites. Deja el resto.<br>— Chris P Tee · Bristol · feelfamous.co.uk"
   },
 
+  fr: {
+    back: '← Camp de Base',
+    section_label: '⚠ La Voie de Sortie',
+    h1: 'Tu as trouvé<br><em>la porte.</em>',
+    lede: "Ce n'est pas une pilule rouge. C'est une porte.<br>Tu la cherchais déjà, sinon tu ne lirais pas ceci.<br>Personne ne t'a envoyé ici. Personne ne sait que tu es là.<br>Cette page ne te surveille pas.",
+    p1: "Si quelque chose t'a amené à cette page — le sentiment que le système dans lequel tu vis n'a pas été fait pour toi, que tu travailles de plus en plus dur pour rester sur place, que ta créativité est exploitée mais que ta vie ne s'améliore pas — tu as probablement raison.",
+    p2: "La bonne nouvelle : <strong>les outils pour partir sont gratuits.</strong> La plupart l'ont toujours été. La barrière n'est pas l'argent. C'est de savoir qu'ils existent et que quelqu'un te dise : <em>c'est ok de les utiliser.</em>",
+    p2_strong: 'les outils pour partir sont gratuits.',
+    p3: "C'est ok de les utiliser.",
+    h2_phone: 'Reprends ton téléphone',
+    phone_1_label: 'Dégooglise ton Android',
+    phone_1_text: 'GrapheneOS transforme un Pixel en appareil respectueux de la vie privée. Sans Google Play Services. Gratuit. Open source. La référence.',
+    phone_2_label: 'Boutique d\'apps alternative',
+    phone_2_text: 'F-Droid est un dépôt d\'apps Android libre et gratuit. Sans traçage. Sans publicités. Des apps qui te respectent.',
+    phone_3_label: 'Navigateur privé',
+    phone_3_text: 'Firefox avec uBlock Origin bloque la couche de surveillance. Brave est une autre bonne option. Les deux gratuits.',
+    h2_identity: 'Reprends ton identité en ligne',
+    id_1_label: 'Identité sociale portable (Bluesky)',
+    id_1_text: 'Tes abonnés voyagent avec toi si tu changes de serveur. Ton identité n\'appartient pas à la plateforme. Protocole AT.',
+    id_2_label: 'Réseau fédéré (Mastodon)',
+    id_2_text: 'Pas d\'algorithme. Pas de pub. Des milliers de serveurs, n\'importe qui peut en avoir un. Ton compte sur un serveur se connecte à tous les autres.',
+    id_3_label: 'Ta propre page (hamlet FeelFamous)',
+    id_3_text: '60 secondes pour créer. Gratuit pour toujours. Ta propre URL. Sans compte. Juste un nom et un métier. Un endroit en ligne que personne ne peut supprimer.',
+    h2_income: 'Reprends tes revenus',
+    income_1_label: 'Le modèle Coffeeware',
+    income_1_text: 'Construis quelque chose d\'utile. Les fonctions de base gratuites pour toujours. Les gens donnent s\'ils veulent. Le service ne se dégrade pas s\'ils ne peuvent pas. C\'est un modèle économique complet. Ça marche.',
+    income_2_label: 'Chemins de désir',
+    income_2_text: 'Observe où les gens marchent. Puis asfhalte là. Les meilleurs produits se découvrent, ils ne s\'inventent pas. Construis ce que les gens essaient déjà de faire mal.',
+    income_3_label: 'Le modèle FeelFamous',
+    income_3_text: 'Communauté gratuite. Les membres ont leur propre page. Dons optionnels. Revenus basés sur la confiance, pas l\'extraction. Prouvé à l\'échelle en moins de deux semaines, sans budget.',
+    income_3_link: 'Voir feelfamous.html pour toute l\'histoire',
+    h2_movement: 'Reprends ta liberté de mouvement',
+    pull_quote: "1992. En autostop. Un homme avec une serviette attachée avec une ficelle. Dedans : une brosse à dents et une carte de crédit. Moi, j'avais un sac de 65 litres.<br><br>J'ai passé 30 ans à devenir l'homme à la serviette.<br><br>La liberté n'est pas dans la brosse à dents. Elle est dans la décision que tu n'as pas besoin de plus qu'une brosse à dents.",
+    movement_p: 'Voyage léger. Les choses qui te pèsent physiquement sont souvent des métaphores de ce qui te pèse mentalement. Commence avec un sac. Remonte à partir de là.',
+    h2_crisis: 'Pour quand les choses deviennent vraiment difficiles',
+    crisis_1_label: 'Si tu es en crise maintenant',
+    crisis_1_text: "<strong>UK:</strong> Samaritans 116 123 (gratuit, 24/7)<br><strong>France:</strong> Numéro National de Prévention du Suicide 3114 (gratuit, 24/7)<br><strong>España:</strong> Teléfono de la Esperanza 717 003 717<br><br>Ils écoutent. Sans jugement. Tu n'as pas besoin d'être en danger pour appeler. Tu as juste besoin que quelqu'un t'entende.",
+    crisis_2_label: 'Si tu es neurodivergent et épuisé',
+    crisis_2_text: "Le masking est réel. L'épuisement est réel. Le diagnostic tardif est réel. Tu n'es pas cassé. Tu utilisais le mauvais système d'exploitation. Le bon existe.",
+    manifesto_1: 'Cette page a été construite par quelqu\'un qui en avait besoin et personne ne la lui a donnée.',
+    manifesto_2: 'Il a construit l\'infrastructure pour les magiciens. Puis a réalisé que c\'était l\'infrastructure dont il avait besoin quand il dormait dans la rue. Le même schéma. Des gens différents. La même bonté.',
+    manifesto_3: 'Si tu lis ceci et que quelque chose a résonné — la porte est ouverte. Le feu est allumé. Le camp de base est chaud. Tu n\'as pas besoin de permission pour entrer.',
+    manifesto_cta: 'Viens comme tu es.',
+    footer: "Cette page ne te traque pas. Elle ne sait pas qui tu es.<br>Elle fonctionne, c'est tout. Prends ce dont tu as besoin. Laisse le reste.<br>— Chris P Tee · Bristol · feelfamous.co.uk"
+  },
+
+  de: {
+    back: '← Basislager',
+    section_label: '⚠ Der Ausweg',
+    h1: 'Du hast<br><em>die Tür gefunden.</em>',
+    lede: "Das ist keine rote Pille. Es ist eine Tür.<br>Du hast sie schon gesucht, sonst würdest du das hier nicht lesen.<br>Niemand hat dich hierher geschickt. Niemand weiß, dass du hier bist.<br>Diese Seite verfolgt dich nicht.",
+    p1: "Wenn dich etwas auf diese Seite geführt hat — das Gefühl, dass das System, in dem du lebst, nicht für dich gemacht wurde, dass du immer harder arbeitest, aber auf der Stelle trittst, dass deine Kreativität ausgebeutet wird, aber dein Leben sich nicht verbessert — dann liegst du wahrscheinlich richtig.",
+    p2: "Die gute Nachricht: <strong>die Werkzeuge zum Gehen sind kostenlos.</strong> Die meisten waren es immer. Die Hürde ist nicht das Geld. Es ist zu wissen, dass sie existieren und jemanden zu haben, der sagt: <em>Es ist okay, sie zu benutzen.</em>",
+    p2_strong: 'die Werkzeuge zum Gehen sind kostenlos.',
+    p3: "Es ist okay, sie zu benutzen.",
+    h2_phone: 'Hol dir dein Telefon zurück',
+    phone_1_label: 'Entgoogle dein Android',
+    phone_1_text: 'GrapheneOS verwandelt ein Pixel-Telefon in ein datenschutzfreundliches Gerät. Ohne Google Play Services. Kostenlos. Open Source. Der Goldstandard.',
+    phone_2_label: 'Alternativer App-Store',
+    phone_2_text: 'F-Droid ist ein freies Open-Source-Android-App-Repository. Kein Tracking. Keine Werbung. Apps, die dich respektieren.',
+    phone_3_label: 'Datenschutz-Browser',
+    phone_3_text: 'Firefox mit uBlock Origin blockiert die Überwachungsschicht. Brave ist eine weitere starke Option. Beide kostenlos.',
+    h2_identity: 'Hol dir deine Online-Identität zurück',
+    id_1_label: 'Portable soziale Identität (Bluesky)',
+    id_1_text: 'Deine Follower reisen mit dir, wenn du den Server wechselst. Deine Identität gehört nicht der Plattform. AT-Protokoll.',
+    id_2_label: 'Föderiertes Netzwerk (Mastodon)',
+    id_2_text: 'Kein Algorithmus. Keine Werbung. Tausende von Servern, jeder kann einen betreiben. Dein Konto auf einem Server verbindet sich mit allen anderen.',
+    id_3_label: 'Deine eigene Seite (FeelFamous Hamlet)',
+    id_3_text: '60 Sekunden zum Erstellen. Kostenlos für immer. Deine eigene URL. Kein Konto nötig. Nur ein Name und ein Handwerk. Ein Ort im Internet, den niemand löschen kann.',
+    h2_income: 'Hol dir dein Einkommen zurück',
+    income_1_label: 'Das Coffeeware-Modell',
+    income_1_text: 'Baue etwas Nützliches. Kernfunktionen kostenlos für immer. Lass Leute spenden, wenn sie wollen. Der Service verschlechtert sich nicht, wenn sie es nicht können. Das ist ein vollständiges Geschäftsmodell. Es funktioniert.',
+    income_2_label: 'Trampelpfade',
+    income_2_text: 'Beobachte, wo die Leute laufen. Dann pflastere es. Die besten Produkte werden entdeckt, nicht erfunden. Baue, was die Leute bereits schlecht zu tun versuchen.',
+    income_3_label: 'Das FeelFamous-Modell',
+    income_3_text: 'Kostenlose Gemeinschaft. Mitglieder haben ihre eigene Seite. Spenden optional. Einnahmen durch Vertrauen, nicht durch Ausbeutung. In weniger als zwei Wochen ohne Budget bewiesen.',
+    income_3_link: 'Siehe feelfamous.html für die ganze Geschichte',
+    h2_movement: 'Hol dir deine Bewegungsfreiheit zurück',
+    pull_quote: "1992. Per Anhalter. Ein Mann mit einem Handtuch, das mit einer Schnur gebunden war. Darin: eine Zahnbürste und eine Kreditkarte. Ich hatte einen 65-Liter-Rucksack.<br><br>Ich habe 30 Jahre damit verbracht, der Handtuch-Mann zu werden.<br><br>Die Freiheit steckt nicht in der Zahnbürste. Sie steckt in der Entscheidung, dass du nicht mehr als eine Zahnbürste brauchst.",
+    movement_p: 'Reise leicht. Die Dinge, die dich physisch belasten, sind meistens Metaphern für die Dinge, die dich mental belasten. Fang mit einer Tasche an. Arbeite dich von dort zurück.',
+    h2_crisis: 'Für wenn es wirklich schwer wird',
+    crisis_1_label: 'Wenn du gerade in einer Krise bist',
+    crisis_1_text: "<strong>UK:</strong> Samaritans 116 123 (kostenlos, 24/7)<br><strong>Deutschland:</strong> Telefonseelsorge 0800 111 0 111 (kostenlos, 24/7)<br><strong>España:</strong> Teléfono de la Esperanza 717 003 717<br><br>Sie hören zu. Ohne Urteil. Du musst nicht suizidgefährdet sein, um anzurufen. Du brauchst nur jemanden, der zuhört.",
+    crisis_2_label: 'Wenn du neurodivergent und erschöpft bist',
+    crisis_2_text: "Das Masking ist real. Die Erschöpfung ist real. Die späte Diagnose ist real. Du bist nicht kaputt. Du hast das falsche Betriebssystem ausgeführt. Das richtige existiert.",
+    manifesto_1: 'Diese Seite wurde von jemandem gebaut, der sie brauchte und dem sie niemand gegeben hat.',
+    manifesto_2: 'Er baute die Infrastruktur für Zauberkünstler. Dann erkannte er, dass es die Infrastruktur war, die er brauchte, als er auf der Straße schlief. Dasselbe Muster. Andere Menschen. Dieselbe Freundlichkeit.',
+    manifesto_3: 'Wenn du das liest und etwas hat resoniert — die Tür ist offen. Das Feuer brennt. Das Basislager ist warm. Du brauchst keine Erlaubnis hereinzukommen.',
+    manifesto_cta: 'Komm wie du bist.',
+    footer: "Diese Seite verfolgt dich nicht. Sie weiß nicht, wer du bist.<br>Sie funktioniert einfach. Nimm, was du brauchst. Lass den Rest.<br>— Chris P Tee · Bristol · feelfamous.co.uk"
+  },
+
   eu: {
     back: '← Kanpalekua',
     section_label: '⚠ Ihes Bidea',
@@ -336,7 +430,8 @@ function setLang(l) {
   document.querySelectorAll('.lang-btn').forEach(function(btn) {
     btn.classList.toggle('active', btn.textContent === l.toUpperCase());
   });
-  document.documentElement.lang = l === 'eu' ? 'eu' : l === 'es' ? 'es' : 'en';
+  var langMap = {en:'en',es:'es',fr:'fr',de:'de',eu:'eu'};
+  document.documentElement.lang = langMap[l] || 'en';
 }
 </script>
 </body>
