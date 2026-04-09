@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -32,6 +32,11 @@
     font-family:'Space Mono',monospace;font-size:0.65rem;
     letter-spacing:3px;color:var(--smoke);text-transform:uppercase;
   }
+
+  .lang-switcher{display:flex;gap:6px;justify-content:center;padding:16px 0 0}
+  .lang-btn{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border:1px solid var(--ash);background:none;color:var(--smoke);cursor:pointer;transition:all .2s}
+  .lang-btn.active{border-color:var(--ember);color:var(--ember)}
+  .lang-btn:hover{border-color:var(--smoke);color:var(--cream)}
 
   .flame-mark{
     text-align:center;padding:48px 0 24px;
@@ -88,87 +93,210 @@
 <div class="container">
 
   <div class="version-bar">Basecamp v2 &middot; Spannabis Edition &middot; April 2026</div>
+
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('es')">ES</button>
+    <button class="lang-btn" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" onclick="setLang('de')">DE</button>
+    <button class="lang-btn" onclick="setLang('eu')">EU</button>
+  </div>
+
   <div class="flame-mark">FeelFamous Basecamp</div>
 
-  <h1>You found<br><em>the fire.</em></h1>
-  <p class="tagline">World domination through kindness. One ember at a time.</p>
+  <h1 data-i18n="h1">You found<br><em>the fire.</em></h1>
+  <p class="tagline" data-i18n="tagline">World domination through kindness. One ember at a time.</p>
 
   <div class="divider"></div>
 
-  <p class="lede">
-    You&rsquo;re connected to a <strong>wandering hotspot</strong> carried by a human.
-    No algorithm fed you this. No ad paid for your attention.
-    Someone wanted you to find it.
-  </p>
-  <p class="lede">
-    This is <strong>FeelFamous Basecamp</strong> &mdash; a pocket ecosystem built on kindness,
-    run on free tools, owned by nobody, open to everyone.
-    PLUR. The Dude Abides.
-  </p>
+  <p class="lede" data-i18n="lede1">You&rsquo;re connected to a <strong>wandering hotspot</strong> carried by a human. No algorithm fed you this. No ad paid for your attention. Someone wanted you to find it.</p>
+  <p class="lede" data-i18n="lede2">This is <strong>FeelFamous Basecamp</strong> &mdash; a pocket ecosystem built on kindness, run on free tools, owned by nobody, open to everyone. PLUR. The Dude Abides.</p>
 
   <div class="update-box">
-    <h2>This file is alive</h2>
-    <p>Everything on this hotspot is <strong>yours to keep</strong>. Copy it. Share it. Carry it.
-    The person who gave you this connection is carrying a library &mdash; tools, knowledge, community &mdash; all offline, all free.</p>
-    <p>When you meet someone else carrying this, check the version at the top of this page.
-    <strong>Newer version wins.</strong> Ask them to share the updated files.
-    That&rsquo;s how the fire spreads. Peer to peer. No servers. No middlemen.</p>
-    <p>Version stamp: <strong>v2 &middot; April 2026</strong>. If theirs is newer, grab it.</p>
+    <h2 data-i18n="box_title">This file is alive</h2>
+    <p data-i18n="box_p1">Everything on this hotspot is <strong>yours to keep</strong>. Copy it. Share it. Carry it. The person who gave you this connection is carrying a library &mdash; tools, knowledge, community &mdash; all offline, all free.</p>
+    <p data-i18n="box_p2">When you meet someone else carrying this, check the version at the top of this page. <strong>Newer version wins.</strong> Ask them to share the updated files. That&rsquo;s how the fire spreads. Peer to peer. No servers. No middlemen.</p>
+    <p data-i18n="box_p3">Version stamp: <strong>v2 &middot; April 2026</strong>. If theirs is newer, grab it.</p>
   </div>
 
   <div class="divider"></div>
 
   <nav class="nav-grid">
     <a href="who.html" class="nav-card">
-      <div class="nav-card-title">The Story</div>
-      <div class="nav-card-desc">Who built this fire and why</div>
+      <div class="nav-card-title" data-i18n="nav_who_title">The Story</div>
+      <div class="nav-card-desc" data-i18n="nav_who_desc">Who built this fire and why</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="feelfamous.html" class="nav-card">
       <div class="nav-card-title">FeelFamous</div>
-      <div class="nav-card-desc">The ecosystem. 10 free community villages. The plan.</div>
+      <div class="nav-card-desc" data-i18n="nav_ff_desc">The ecosystem. 10 free community villages. The plan.</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="cannabin-oid.html" class="nav-card">
       <div class="nav-card-title">Cannabin-Oid</div>
-      <div class="nav-card-desc">Cannabis knowledge. Harm reduction. Community.</div>
+      <div class="nav-card-desc" data-i18n="nav_cb_desc">Cannabis knowledge. Harm reduction. Community.</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="partners.html" class="nav-card">
-      <div class="nav-card-title">Spannabis Partners</div>
-      <div class="nav-card-desc">The people worth knowing. Tap for their page + meeting QR.</div>
-      <span class="nav-card-new">New</span>
+      <div class="nav-card-title" data-i18n="nav_partners_title">Spannabis Partners</div>
+      <div class="nav-card-desc" data-i18n="nav_partners_desc">The people worth knowing. Tap for their page + meeting QR.</div>
+      <span class="nav-card-new" data-i18n="nav_new">New</span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="spore.html" class="nav-card">
-      <div class="nav-card-title">Become a Spore 🍄</div>
-      <div class="nav-card-desc">Clone this. Carry it. Spread the mycelium.</div>
+      <div class="nav-card-title" data-i18n="nav_spore_title">Become a Spore 🍄</div>
+      <div class="nav-card-desc" data-i18n="nav_spore_desc">Clone this. Carry it. Spread the mycelium.</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="escape.html" class="nav-card">
-      <div class="nav-card-title">The Escape Route</div>
-      <div class="nav-card-desc">For when you&rsquo;re ready to leave the system.</div>
+      <div class="nav-card-title" data-i18n="nav_escape_title">The Escape Route</div>
+      <div class="nav-card-desc" data-i18n="nav_escape_desc">For when you&rsquo;re ready to leave the system.</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="connect.html" class="nav-card">
-      <div class="nav-card-title">Connect</div>
-      <div class="nav-card-desc">Decentralised only. No surveillance platforms.</div>
+      <div class="nav-card-title" data-i18n="nav_connect_title">Connect</div>
+      <div class="nav-card-desc" data-i18n="nav_connect_desc">Decentralised only. No surveillance platforms.</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="qr.html" class="nav-card">
-      <div class="nav-card-title">🔲 Make a QR Code</div>
-      <div class="nav-card-desc">Generate and save QR codes for anything. Fully offline.</div>
+      <div class="nav-card-title" data-i18n="nav_qr_title">🔲 Make a QR Code</div>
+      <div class="nav-card-desc" data-i18n="nav_qr_desc">Generate and save QR codes for anything. Fully offline.</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
   </nav>
 
   <footer>
-    <p>This page works without the internet. Everything here is yours to keep.</p>
-    <p>Copy it. Share it. Update it when you find a newer version.</p>
-    <div class="wifi-badge">📶 Connected to FeelFamous</div>
+    <p data-i18n="footer_p1">This page works without the internet. Everything here is yours to keep.</p>
+    <p data-i18n="footer_p2">Copy it. Share it. Update it when you find a newer version.</p>
+    <div class="wifi-badge">📶 <span data-i18n="wifi_label">Connected to FeelFamous</span></div>
     <div class="version-footer">v2 &middot; April 2026 &middot; feelfamous.co.uk</div>
   </footer>
 
 </div>
+<script>
+var t = {
+  en: {
+    h1: 'You found<br><em>the fire.</em>',
+    tagline: 'World domination through kindness. One ember at a time.',
+    lede1: 'You\u2019re connected to a <strong>wandering hotspot</strong> carried by a human. No algorithm fed you this. No ad paid for your attention. Someone wanted you to find it.',
+    lede2: 'This is <strong>FeelFamous Basecamp</strong> \u2014 a pocket ecosystem built on kindness, run on free tools, owned by nobody, open to everyone. PLUR. The Dude Abides.',
+    box_title: 'This file is alive',
+    box_p1: 'Everything on this hotspot is <strong>yours to keep</strong>. Copy it. Share it. Carry it. The person who gave you this connection is carrying a library \u2014 tools, knowledge, community \u2014 all offline, all free.',
+    box_p2: 'When you meet someone else carrying this, check the version at the top of this page. <strong>Newer version wins.</strong> Ask them to share the updated files. That\u2019s how the fire spreads. Peer to peer. No servers. No middlemen.',
+    box_p3: 'Version stamp: <strong>v2 \u00b7 April 2026</strong>. If theirs is newer, grab it.',
+    nav_who_title: 'The Story', nav_who_desc: 'Who built this fire and why',
+    nav_ff_desc: 'The ecosystem. 10 free community villages. The plan.',
+    nav_cb_desc: 'Cannabis knowledge. Harm reduction. Community.',
+    nav_partners_title: 'Spannabis Partners', nav_partners_desc: 'The people worth knowing. Tap for their page + meeting QR.',
+    nav_new: 'New',
+    nav_spore_title: 'Become a Spore 🍄', nav_spore_desc: 'Clone this. Carry it. Spread the mycelium.',
+    nav_escape_title: 'The Escape Route', nav_escape_desc: 'For when you\u2019re ready to leave the system.',
+    nav_connect_title: 'Connect', nav_connect_desc: 'Decentralised only. No surveillance platforms.',
+    nav_qr_title: '🔲 Make a QR Code', nav_qr_desc: 'Generate and save QR codes for anything. Fully offline.',
+    footer_p1: 'This page works without the internet. Everything here is yours to keep.',
+    footer_p2: 'Copy it. Share it. Update it when you find a newer version.',
+    wifi_label: 'Connected to FeelFamous'
+  },
+  es: {
+    h1: 'Encontraste<br><em>el fuego.</em>',
+    tagline: 'Dominación mundial a través de la bondad. Una brasa a la vez.',
+    lede1: 'Estás conectado a un <strong>hotspot errante</strong> que lleva un ser humano. Ningún algoritmo te trajo aquí. Ningún anuncio compró tu atención. Alguien quería que lo encontraras.',
+    lede2: 'Este es <strong>FeelFamous Basecamp</strong> \u2014 un ecosistema de bolsillo construido sobre la bondad, funcionando con herramientas gratuitas, sin dueño, abierto a todos. PLUR. El Dude Abides.',
+    box_title: 'Este archivo está vivo',
+    box_p1: 'Todo en este hotspot es <strong>tuyo para quedártelo</strong>. Cópialo. Compártelo. Llévalo. La persona que te dio esta conexión lleva una biblioteca \u2014 herramientas, conocimiento, comunidad \u2014 todo sin internet, todo gratis.',
+    box_p2: 'Cuando encuentres a otra persona que lleve esto, comprueba la versión en la parte superior de esta página. <strong>La versión más nueva gana.</strong> Pídeles que compartan los archivos actualizados. Así se extiende el fuego. De persona a persona. Sin servidores. Sin intermediarios.',
+    box_p3: 'Versión: <strong>v2 \u00b7 Abril 2026</strong>. Si la suya es más nueva, cógela.',
+    nav_who_title: 'La Historia', nav_who_desc: 'Quién encendió este fuego y por qué',
+    nav_ff_desc: 'El ecosistema. 10 comunidades gratuitas. El plan.',
+    nav_cb_desc: 'Conocimiento cannábico. Reducción de daños. Comunidad.',
+    nav_partners_title: 'Partners Spannabis', nav_partners_desc: 'La gente que vale la pena conocer. Toca para su página + QR de encuentro.',
+    nav_new: 'Nuevo',
+    nav_spore_title: 'Conviértete en Espora 🍄', nav_spore_desc: 'Clónalo. Llévalo. Extiende el micelio.',
+    nav_escape_title: 'La Ruta de Escape', nav_escape_desc: 'Para cuando estés listo para dejar el sistema.',
+    nav_connect_title: 'Conectar', nav_connect_desc: 'Solo descentralizado. Sin plataformas de vigilancia.',
+    nav_qr_title: '🔲 Crear un Código QR', nav_qr_desc: 'Genera y guarda códigos QR para cualquier cosa. Sin internet.',
+    footer_p1: 'Esta página funciona sin internet. Todo aquí es tuyo.',
+    footer_p2: 'Cópialo. Compártelo. Actualízalo cuando encuentres una versión más nueva.',
+    wifi_label: 'Conectado a FeelFamous'
+  },
+  fr: {
+    h1: 'Tu as trouvé<br><em>le feu.</em>',
+    tagline: 'Domination mondiale par la gentillesse. Une braise à la fois.',
+    lede1: 'Tu es connecté à un <strong>hotspot nomade</strong> porté par un humain. Aucun algorithme ne t\u2019a amené ici. Aucune pub n\u2019a payé pour ton attention. Quelqu\u2019un voulait que tu le trouves.',
+    lede2: 'Voici <strong>FeelFamous Basecamp</strong> \u2014 un écosystème de poche construit sur la gentillesse, fonctionnant avec des outils gratuits, sans propriétaire, ouvert à tous. PLUR. The Dude Abides.',
+    box_title: 'Ce fichier est vivant',
+    box_p1: 'Tout sur ce hotspot est <strong>à toi pour le garder</strong>. Copie-le. Partage-le. Porte-le. La personne qui t\u2019a donné cette connexion porte une bibliothèque \u2014 outils, savoirs, communauté \u2014 tout hors ligne, tout gratuit.',
+    box_p2: 'Quand tu rencontres quelqu\u2019un d\u2019autre qui porte ça, vérifie la version en haut de cette page. <strong>La version la plus récente l\u2019emporte.</strong> Demande-leur de partager les fichiers mis à jour. C\u2019est comme ça que le feu se propage. De pair à pair. Pas de serveurs. Pas d\u2019intermédiaires.',
+    box_p3: 'Timbre de version : <strong>v2 \u00b7 Avril 2026</strong>. Si la leur est plus récente, prends-la.',
+    nav_who_title: 'L\u2019Histoire', nav_who_desc: 'Qui a allumé ce feu et pourquoi',
+    nav_ff_desc: 'L\u2019écosystème. 10 villages communautaires gratuits. Le plan.',
+    nav_cb_desc: 'Connaissances cannabis. Réduction des risques. Communauté.',
+    nav_partners_title: 'Partenaires Spannabis', nav_partners_desc: 'Les gens qui valent le coup. Tapez pour leur page + QR de rendez-vous.',
+    nav_new: 'Nouveau',
+    nav_spore_title: 'Deviens une Spore 🍄', nav_spore_desc: 'Clone-le. Porte-le. Répands le mycélium.',
+    nav_escape_title: 'La Voie de Sortie', nav_escape_desc: 'Pour quand tu es prêt à quitter le système.',
+    nav_connect_title: 'Connecter', nav_connect_desc: 'Décentralisé uniquement. Pas de plateformes de surveillance.',
+    nav_qr_title: '🔲 Créer un QR Code', nav_qr_desc: 'Génère et sauvegarde des QR codes pour tout. Hors ligne.',
+    footer_p1: 'Cette page fonctionne sans internet. Tout ici est à toi.',
+    footer_p2: 'Copie-le. Partage-le. Mets-le à jour quand tu trouves une version plus récente.',
+    wifi_label: 'Connecté à FeelFamous'
+  },
+  de: {
+    h1: 'Du hast<br><em>das Feuer gefunden.</em>',
+    tagline: 'Weltherrschaft durch Freundlichkeit. Eine Glut nach der anderen.',
+    lede1: 'Du bist mit einem <strong>wandernden Hotspot</strong> verbunden, der von einem Menschen getragen wird. Kein Algorithmus hat dir das gebracht. Keine Werbung hat deine Aufmerksamkeit bezahlt. Jemand wollte, dass du es findest.',
+    lede2: 'Das ist <strong>FeelFamous Basecamp</strong> \u2014 ein Taschenkosystem, aufgebaut auf Freundlichkeit, betrieben mit kostenlosen Tools, niemandem gehörend, offen für alle. PLUR. The Dude Abides.',
+    box_title: 'Diese Datei lebt',
+    box_p1: 'Alles auf diesem Hotspot gehört <strong>dir zum Behalten</strong>. Kopiere es. Teile es. Trage es. Die Person, die dir diese Verbindung gegeben hat, trägt eine Bibliothek \u2014 Werkzeuge, Wissen, Gemeinschaft \u2014 alles offline, alles kostenlos.',
+    box_p2: 'Wenn du jemand anderen triffst, der das trägt, überprüfe die Version oben auf dieser Seite. <strong>Die neuere Version gewinnt.</strong> Bitte sie, die aktualisierten Dateien zu teilen. So verbreitet sich das Feuer. Von Mensch zu Mensch. Keine Server. Keine Mittelsleute.',
+    box_p3: 'Versionsstempel: <strong>v2 \u00b7 April 2026</strong>. Wenn ihre neuer ist, nimm sie.',
+    nav_who_title: 'Die Geschichte', nav_who_desc: 'Wer dieses Feuer entfacht hat und warum',
+    nav_ff_desc: 'Das Ökosystem. 10 kostenlose Gemeinschaftsdörfer. Der Plan.',
+    nav_cb_desc: 'Cannabis-Wissen. Schadensminimierung. Gemeinschaft.',
+    nav_partners_title: 'Spannabis Partner', nav_partners_desc: 'Die Leute, die es wert sind zu kennen. Tippe für ihre Seite + Treff-QR.',
+    nav_new: 'Neu',
+    nav_spore_title: 'Werde eine Spore 🍄', nav_spore_desc: 'Klon es. Trage es. Verbreite das Myzel.',
+    nav_escape_title: 'Der Ausweg', nav_escape_desc: 'Für wenn du bereit bist, das System zu verlassen.',
+    nav_connect_title: 'Verbinden', nav_connect_desc: 'Nur dezentral. Keine Überwachungsplattformen.',
+    nav_qr_title: '🔲 QR-Code erstellen', nav_qr_desc: 'Erstelle und speichere QR-Codes für alles. Vollständig offline.',
+    footer_p1: 'Diese Seite funktioniert ohne Internet. Alles hier gehört dir.',
+    footer_p2: 'Kopiere es. Teile es. Aktualisiere es, wenn du eine neuere Version findest.',
+    wifi_label: 'Verbunden mit FeelFamous'
+  },
+  eu: {
+    h1: 'Sua<br><em>aurkitu duzu.</em>',
+    tagline: 'Munduko nagusitasuna adeitasunaren bidez. Txinpart bat aldi berean.',
+    lede1: 'Gizaki batek eramaten duen <strong>hotspot ibiltari</strong> batekin konektatuta zaude. Ezein algoritmok ez zaitu hona ekarri. Ezein iragarkirik ez du zure arreta ordaindu. Norbaitek nahi zuen aurkitzea.',
+    lede2: 'Hau da <strong>FeelFamous Basecamp</strong> \u2014 adeitasunaren gainean eraikitako poltsikoko ekosistema bat, doako tresnez funtzionatzen duena, inorena ez dena, guztientzat irekia. PLUR. The Dude Abides.',
+    box_title: 'Fitxategi hau bizirik dago',
+    box_p1: 'Hotspot honetan dagoen guztia <strong>zure gordetzeko da</strong>. Kopiatu. Partekatu. Eraman. Konexio hau eman dizun pertsonak liburutegi bat darama \u2014 tresnak, ezagutzak, komunitatea \u2014 dena lineaz kanpo, dena doan.',
+    box_p2: 'Hau daraman beste norbait topatzen duzunean, egiaztatu orri honen goiko bertsioa. <strong>Bertsio berriena irabazten du.</strong> Eskatu eguneratutako fitxategiak parteka ditzaten. Horrela hedatzen da sua. Pertsona batetik bestera. Zerbitzaririk gabe. Bitartekorik gabe.',
+    box_p3: 'Bertsio zigilua: <strong>v2 \u00b7 2026ko apirila</strong>. Eurena berriagoa bada, hartu.',
+    nav_who_title: 'Historia', nav_who_desc: 'Nork piztu zuen su hau eta zergatik',
+    nav_ff_desc: 'Ekosistema. 10 komunitate herri doako. Plana.',
+    nav_cb_desc: 'Cannabis ezagutzak. Kalte murrizketa. Komunitatea.',
+    nav_partners_title: 'Spannabis Bazkideak', nav_partners_desc: 'Ezagutzea merezi duten pertsonak. Sakatu haien orria + bilera QR.',
+    nav_new: 'Berria',
+    nav_spore_title: 'Bihurtu Espora 🍄', nav_spore_desc: 'Klonatu. Eraman. Zabaldu mizelioaren sarea.',
+    nav_escape_title: 'Ihes Bidea', nav_escape_desc: 'Sistema uzteko prest zaudenean.',
+    nav_connect_title: 'Konektatu', nav_connect_desc: 'Deszentralizatua soilik. Zaintza plataformarik gabe.',
+    nav_qr_title: '🔲 QR Kode bat sortu', nav_qr_desc: 'Sortu eta gorde QR kodeak edozertarako. Lineaz kanpo.',
+    footer_p1: 'Orri hau internetik gabe funtzionatzen du. Hemen dagoen guztia zurea da.',
+    footer_p2: 'Kopiatu. Partekatu. Eguneratu bertsio berriagoa aurkitzen duzunean.',
+    wifi_label: 'FeelFamous-era konektatuta'
+  }
+};
+
+function setLang(l) {
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (t[l] && t[l][key]) el.innerHTML = t[l][key];
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.textContent === l.toUpperCase());
+  });
+  document.documentElement.lang = l;
+}
+</script>
 </body>
 </html>
