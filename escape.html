@@ -15,8 +15,15 @@
   body{background:var(--deep);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.75;min-height:100vh;overflow-x:hidden}
   body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 50% 40% at 50% 110%,rgba(192,64,64,.08) 0%,transparent 60%);pointer-events:none;z-index:0}
   .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;position:relative;z-index:1}
-  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);text-decoration:none;margin-bottom:48px;transition:color .2s}
+  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);text-decoration:none;margin-bottom:24px;transition:color .2s}
   .back:hover{color:var(--ember)}
+
+  /* Language switcher */
+  .lang-switcher{display:flex;gap:8px;margin-bottom:40px}
+  .lang-btn{font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border:1px solid var(--ash);background:none;color:var(--smoke);cursor:pointer;transition:all .2s}
+  .lang-btn.active{border-color:var(--ember);color:var(--ember)}
+  .lang-btn:hover{border-color:var(--smoke);color:var(--cream)}
+
   .section-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--red);margin-bottom:16px}
   h1{font-weight:300;font-size:clamp(2.2rem,5vw,3rem);line-height:1.2;margin-bottom:40px}
   h1 em{font-style:italic;color:var(--gold)}
@@ -38,126 +45,298 @@
 </head>
 <body>
 <div class="container">
-  <a href="index.html" class="back">← Basecamp</a>
-  <div class="section-label">⚠ The Escape Route</div>
-  <h1>You found<br><em>the door.</em></h1>
 
-  <p class="lede">This isn't a red pill. It's a door.<br>
+  <a href="index.html" class="back" data-i18n="back">← Basecamp</a>
+
+  <div class="lang-switcher">
+    <button class="lang-btn active" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('es')">ES</button>
+    <button class="lang-btn" onclick="setLang('eu')">EU</button>
+  </div>
+
+  <div class="section-label" data-i18n="section_label">⚠ The Escape Route</div>
+  <h1 data-i18n="h1">You found<br><em>the door.</em></h1>
+
+  <p class="lede" data-i18n="lede">This isn't a red pill. It's a door.<br>
   You were already looking for it or you wouldn't be reading this.<br>
   Nobody sent you here. Nobody knows you're here.<br>
   This page doesn't phone home.</p>
 
   <div class="divider"></div>
 
-  <p>If something brought you to this page — a feeling that the system you're in wasn't built for you, that you're working harder and harder to stay still, that your creativity is being harvested but your life isn't improving — you're probably right.</p>
+  <p data-i18n="p1">If something brought you to this page — a feeling that the system you're in wasn't built for you, that you're working harder and harder to stay still, that your creativity is being harvested but your life isn't improving — you're probably right.</p>
 
-  <p>The good news: <strong>the tools to leave are free.</strong> Most of them have always been free. The barrier isn't money. It's knowing they exist and having someone say: <em>it's okay to use them.</em></p>
+  <p data-i18n="p2">The good news: <strong data-i18n="p2_strong">the tools to leave are free.</strong> Most of them have always been free. The barrier isn't money. It's knowing they exist and having someone say: <em>it's okay to use them.</em></p>
 
-  <p>It's okay to use them.</p>
+  <p data-i18n="p3">It's okay to use them.</p>
 
   <div class="divider"></div>
 
-  <h2>Reclaim your phone</h2>
+  <h2 data-i18n="h2_phone">Reclaim your phone</h2>
 
   <div class="escape-card">
-    <div class="escape-label">De-Google your Android</div>
-    <div class="escape-text">GrapheneOS turns a Pixel phone into a privacy-respecting device. No Google Play Services by default. Free. Open source. The gold standard.</div>
+    <div class="escape-label" data-i18n="phone_1_label">De-Google your Android</div>
+    <div class="escape-text" data-i18n="phone_1_text">GrapheneOS turns a Pixel phone into a privacy-respecting device. No Google Play Services by default. Free. Open source. The gold standard.</div>
     <div class="escape-link">grapheneos.org</div>
   </div>
 
   <div class="escape-card">
-    <div class="escape-label">Alternative app store</div>
-    <div class="escape-text">F-Droid is a free and open source Android app repository. No tracking. No ads. Apps that respect you.</div>
+    <div class="escape-label" data-i18n="phone_2_label">Alternative app store</div>
+    <div class="escape-text" data-i18n="phone_2_text">F-Droid is a free and open source Android app repository. No tracking. No ads. Apps that respect you.</div>
     <div class="escape-link">f-droid.org</div>
   </div>
 
   <div class="escape-card">
-    <div class="escape-label">Privacy browser</div>
-    <div class="escape-text">Firefox with uBlock Origin blocks the surveillance layer. Brave is another strong option. Both free.</div>
+    <div class="escape-label" data-i18n="phone_3_label">Privacy browser</div>
+    <div class="escape-text" data-i18n="phone_3_text">Firefox with uBlock Origin blocks the surveillance layer. Brave is another strong option. Both free.</div>
     <div class="escape-link">firefox.com · brave.com</div>
   </div>
 
   <div class="divider"></div>
 
-  <h2>Reclaim your identity online</h2>
+  <h2 data-i18n="h2_identity">Reclaim your identity online</h2>
 
   <div class="escape-card">
-    <div class="escape-label">Portable social identity (Bluesky)</div>
-    <div class="escape-text">Your followers travel with you if you move servers. Your identity isn't owned by the platform. AT Protocol.</div>
+    <div class="escape-label" data-i18n="id_1_label">Portable social identity (Bluesky)</div>
+    <div class="escape-text" data-i18n="id_1_text">Your followers travel with you if you move servers. Your identity isn't owned by the platform. AT Protocol.</div>
     <div class="escape-link">bsky.app</div>
   </div>
 
   <div class="escape-card">
-    <div class="escape-label">Federated social (Mastodon)</div>
-    <div class="escape-text">No algorithm. No ads. Thousands of servers, anyone can run one. Your account on one server connects to all others.</div>
+    <div class="escape-label" data-i18n="id_2_label">Federated social (Mastodon)</div>
+    <div class="escape-text" data-i18n="id_2_text">No algorithm. No ads. Thousands of servers, anyone can run one. Your account on one server connects to all others.</div>
     <div class="escape-link">joinmastodon.org</div>
   </div>
 
   <div class="escape-card">
-    <div class="escape-label">Your own page (FeelFamous hamlet)</div>
-    <div class="escape-text">60 seconds to create. Free forever. Your own URL. No account needed. Just a name and a craft. A place to exist online that nobody can delete.</div>
-    <div class="escape-link">feelfamous.com</div>
+    <div class="escape-label" data-i18n="id_3_label">Your own page (FeelFamous hamlet)</div>
+    <div class="escape-text" data-i18n="id_3_text">60 seconds to create. Free forever. Your own URL. No account needed. Just a name and a craft. A place to exist online that nobody can delete.</div>
+    <div class="escape-link">feelfamous.co.uk</div>
   </div>
 
   <div class="divider"></div>
 
-  <h2>Reclaim your income</h2>
+  <h2 data-i18n="h2_income">Reclaim your income</h2>
 
   <div class="escape-card">
-    <div class="escape-label">Coffeeware model</div>
-    <div class="escape-text">Build something useful. Make the core features free forever. Let people donate if they want to. The service never degrades if they can't. This is a complete business model. It works.</div>
+    <div class="escape-label" data-i18n="income_1_label">Coffeeware model</div>
+    <div class="escape-text" data-i18n="income_1_text">Build something useful. Make the core features free forever. Let people donate if they want to. The service never degrades if they can't. This is a complete business model. It works.</div>
   </div>
 
   <div class="escape-card">
-    <div class="escape-label">Desire paths</div>
-    <div class="escape-text">Watch where people walk. Then pave it. The best products are discovered, not invented. Build what people are already trying to do badly.</div>
+    <div class="escape-label" data-i18n="income_2_label">Desire paths</div>
+    <div class="escape-text" data-i18n="income_2_text">Watch where people walk. Then pave it. The best products are discovered, not invented. Build what people are already trying to do badly.</div>
   </div>
 
   <div class="escape-card">
-    <div class="escape-label">The FeelFamous model</div>
-    <div class="escape-text">Free community village. Members get their own page. Donations optional. Revenue from trust, not extraction. Proven at scale in under two weeks, with no budget.</div>
-    <div class="escape-link">See feelfamous.html for the full story</div>
+    <div class="escape-label" data-i18n="income_3_label">The FeelFamous model</div>
+    <div class="escape-text" data-i18n="income_3_text">Free community village. Members get their own page. Donations optional. Revenue from trust, not extraction. Proven at scale in under two weeks, with no budget.</div>
+    <div class="escape-link" data-i18n="income_3_link">See feelfamous.html for the full story</div>
   </div>
 
   <div class="divider"></div>
 
-  <h2>Reclaim your movement</h2>
+  <h2 data-i18n="h2_movement">Reclaim your movement</h2>
 
-  <div class="pull-quote">
+  <div class="pull-quote" data-i18n="pull_quote">
     1992. Hitchhiking. A man with a towel tied with string. Inside: a toothbrush and a credit card. I had a 65-litre rucksack.<br><br>
     I spent 30 years becoming the towel guy.<br><br>
     The freedom isn't in the toothbrush. It's in the decision that you don't need more than the toothbrush.
   </div>
 
-  <p>Travel light. The things that weigh you down physically are usually metaphors for the things that weigh you down mentally. Start with one bag. Work backwards from there.</p>
+  <p data-i18n="movement_p">Travel light. The things that weigh you down physically are usually metaphors for the things that weigh you down mentally. Start with one bag. Work backwards from there.</p>
 
   <div class="divider"></div>
 
-  <h2>For when things are really hard</h2>
+  <h2 data-i18n="h2_crisis">For when things are really hard</h2>
 
   <div class="escape-card">
-    <div class="escape-label">If you're in crisis right now</div>
-    <div class="escape-text">Samaritans: 116 123 (UK, free, 24/7). They listen. No judgement. You don't have to be suicidal to call. You just have to need someone to hear you.</div>
+    <div class="escape-label" data-i18n="crisis_1_label">If you're in crisis right now</div>
+    <div class="escape-text" data-i18n="crisis_1_text">
+      <strong>UK:</strong> Samaritans 116 123 (free, 24/7)<br>
+      <strong>España:</strong> Teléfono de la Esperanza 717 003 717 (gratuito, 24/7)<br>
+      <strong>Euskadi:</strong> Teléfono de la Esperanza 717 003 717 · SOS Deiak 112<br><br>
+      They listen. No judgement. You don't have to be suicidal to call. You just have to need someone to hear you.
+    </div>
   </div>
 
   <div class="escape-card">
-    <div class="escape-label">If you're neurodivergent and exhausted</div>
-    <div class="escape-text">The masking is real. The exhaustion is real. The late diagnosis is real. You're not broken. You were running the wrong operating system. The right one exists.</div>
+    <div class="escape-label" data-i18n="crisis_2_label">If you're neurodivergent and exhausted</div>
+    <div class="escape-text" data-i18n="crisis_2_text">The masking is real. The exhaustion is real. The late diagnosis is real. You're not broken. You were running the wrong operating system. The right one exists.</div>
     <div class="escape-link">autism.org.uk · adhduk.co.uk</div>
   </div>
 
   <div class="manifesto">
-    <p>This page was built by someone who needed it and nobody gave it to him.</p>
-    <p>He built the infrastructure for magicians. Then realised it was the infrastructure he needed when he was sleeping rough. Same pattern. Different people. Same kindness.</p>
-    <p>If you're reading this and something resonated — the door is open. The fire is lit. The basecamp is warm. You don't need permission to come in.</p>
-    <p><strong>The Dude Abides. PLUR. Come as you are.</strong></p>
+    <p data-i18n="manifesto_1">This page was built by someone who needed it and nobody gave it to him.</p>
+    <p data-i18n="manifesto_2">He built the infrastructure for magicians. Then realised it was the infrastructure he needed when he was sleeping rough. Same pattern. Different people. Same kindness.</p>
+    <p data-i18n="manifesto_3">If you're reading this and something resonated — the door is open. The fire is lit. The basecamp is warm. You don't need permission to come in.</p>
+    <p><strong>The Dude Abides. PLUR. <span data-i18n="manifesto_cta">Come as you are.</span></strong></p>
   </div>
 
-  <footer>
+  <footer data-i18n="footer">
     This page doesn't track you. It doesn't know who you are.<br>
     It just works. Take what you need. Leave the rest.<br>
-    — Chris P Tee · Bristol · feelfamous.com
+    — Chris P Tee · Bristol · feelfamous.co.uk
   </footer>
+
 </div>
+
+<script>
+var lang = 'en';
+
+var t = {
+  en: {
+    back: '← Basecamp',
+    section_label: '⚠ The Escape Route',
+    h1: 'You found<br><em>the door.</em>',
+    lede: "This isn't a red pill. It's a door.<br>You were already looking for it or you wouldn't be reading this.<br>Nobody sent you here. Nobody knows you're here.<br>This page doesn't phone home.",
+    p1: "If something brought you to this page — a feeling that the system you're in wasn't built for you, that you're working harder and harder to stay still, that your creativity is being harvested but your life isn't improving — you're probably right.",
+    p2: "The good news: <strong>the tools to leave are free.</strong> Most of them have always been free. The barrier isn't money. It's knowing they exist and having someone say: <em>it's okay to use them.</em>",
+    p2_strong: 'the tools to leave are free.',
+    p3: "It's okay to use them.",
+    h2_phone: 'Reclaim your phone',
+    phone_1_label: 'De-Google your Android',
+    phone_1_text: 'GrapheneOS turns a Pixel phone into a privacy-respecting device. No Google Play Services by default. Free. Open source. The gold standard.',
+    phone_2_label: 'Alternative app store',
+    phone_2_text: 'F-Droid is a free and open source Android app repository. No tracking. No ads. Apps that respect you.',
+    phone_3_label: 'Privacy browser',
+    phone_3_text: 'Firefox with uBlock Origin blocks the surveillance layer. Brave is another strong option. Both free.',
+    h2_identity: 'Reclaim your identity online',
+    id_1_label: 'Portable social identity (Bluesky)',
+    id_1_text: "Your followers travel with you if you move servers. Your identity isn't owned by the platform. AT Protocol.",
+    id_2_label: 'Federated social (Mastodon)',
+    id_2_text: 'No algorithm. No ads. Thousands of servers, anyone can run one. Your account on one server connects to all others.',
+    id_3_label: 'Your own page (FeelFamous hamlet)',
+    id_3_text: '60 seconds to create. Free forever. Your own URL. No account needed. Just a name and a craft. A place to exist online that nobody can delete.',
+    h2_income: 'Reclaim your income',
+    income_1_label: 'Coffeeware model',
+    income_1_text: "Build something useful. Make the core features free forever. Let people donate if they want to. The service never degrades if they can't. This is a complete business model. It works.",
+    income_2_label: 'Desire paths',
+    income_2_text: 'Watch where people walk. Then pave it. The best products are discovered, not invented. Build what people are already trying to do badly.',
+    income_3_label: 'The FeelFamous model',
+    income_3_text: 'Free community village. Members get their own page. Donations optional. Revenue from trust, not extraction. Proven at scale in under two weeks, with no budget.',
+    income_3_link: 'See feelfamous.html for the full story',
+    h2_movement: 'Reclaim your movement',
+    pull_quote: "1992. Hitchhiking. A man with a towel tied with string. Inside: a toothbrush and a credit card. I had a 65-litre rucksack.<br><br>I spent 30 years becoming the towel guy.<br><br>The freedom isn't in the toothbrush. It's in the decision that you don't need more than the toothbrush.",
+    movement_p: 'Travel light. The things that weigh you down physically are usually metaphors for the things that weigh you down mentally. Start with one bag. Work backwards from there.',
+    h2_crisis: 'For when things are really hard',
+    crisis_1_label: "If you're in crisis right now",
+    crisis_1_text: "<strong>UK:</strong> Samaritans 116 123 (free, 24/7)<br><strong>España:</strong> Teléfono de la Esperanza 717 003 717 (gratuito, 24/7)<br><strong>Euskadi:</strong> Teléfono de la Esperanza 717 003 717 · SOS Deiak 112<br><br>They listen. No judgement. You don't have to be suicidal to call. You just have to need someone to hear you.",
+    crisis_2_label: "If you're neurodivergent and exhausted",
+    crisis_2_text: "The masking is real. The exhaustion is real. The late diagnosis is real. You're not broken. You were running the wrong operating system. The right one exists.",
+    manifesto_1: 'This page was built by someone who needed it and nobody gave it to him.',
+    manifesto_2: 'He built the infrastructure for magicians. Then realised it was the infrastructure he needed when he was sleeping rough. Same pattern. Different people. Same kindness.',
+    manifesto_3: "If you're reading this and something resonated — the door is open. The fire is lit. The basecamp is warm. You don't need permission to come in.",
+    manifesto_cta: 'Come as you are.',
+    footer: "This page doesn't track you. It doesn't know who you are.<br>It just works. Take what you need. Leave the rest.<br>— Chris P Tee · Bristol · feelfamous.co.uk"
+  },
+
+  es: {
+    back: '← Campamento Base',
+    section_label: '⚠ La Ruta de Escape',
+    h1: 'Encontraste<br><em>la puerta.</em>',
+    lede: "Esto no es una pastilla roja. Es una puerta.<br>Ya la estabas buscando o no estarías leyendo esto.<br>Nadie te mandó aquí. Nadie sabe que estás aquí.<br>Esta página no rastrea nada.",
+    p1: "Si algo te trajo a esta página — una sensación de que el sistema en el que estás no fue hecho para ti, que trabajas cada vez más para quedarte quieto, que tu creatividad es aprovechada pero tu vida no mejora — probablemente tengas razón.",
+    p2: "La buena noticia: <strong>las herramientas para salir son gratuitas.</strong> La mayoría siempre lo han sido. La barrera no es el dinero. Es saber que existen y que alguien te diga: <em>está bien usarlas.</em>",
+    p2_strong: 'las herramientas para salir son gratuitas.',
+    p3: "Está bien usarlas.",
+    h2_phone: 'Recupera tu teléfono',
+    phone_1_label: 'Desvincula tu Android de Google',
+    phone_1_text: 'GrapheneOS convierte un Pixel en un dispositivo que respeta tu privacidad. Sin Google Play Services. Gratis. Código abierto. El estándar de oro.',
+    phone_2_label: 'Tienda de apps alternativa',
+    phone_2_text: 'F-Droid es un repositorio de apps Android de código abierto. Sin rastreo. Sin anuncios. Apps que te respetan.',
+    phone_3_label: 'Navegador privado',
+    phone_3_text: 'Firefox con uBlock Origin bloquea la capa de vigilancia. Brave es otra opción sólida. Ambos gratuitos.',
+    h2_identity: 'Recupera tu identidad online',
+    id_1_label: 'Identidad social portátil (Bluesky)',
+    id_1_text: 'Tus seguidores viajan contigo si cambias de servidor. Tu identidad no la posee la plataforma. Protocolo AT.',
+    id_2_label: 'Red federada (Mastodon)',
+    id_2_text: 'Sin algoritmo. Sin anuncios. Miles de servidores, cualquiera puede tener uno. Tu cuenta en un servidor conecta con todos los demás.',
+    id_3_label: 'Tu propia página (FeelFamous hamlet)',
+    id_3_text: '60 segundos para crearla. Gratis para siempre. Tu propia URL. Sin cuenta. Solo un nombre y un oficio. Un lugar en internet que nadie puede borrar.',
+    h2_income: 'Recupera tus ingresos',
+    income_1_label: 'El modelo Coffeeware',
+    income_1_text: 'Construye algo útil. Las funciones principales gratuitas para siempre. Que la gente done si quiere. El servicio no empeora si no pueden. Esto es un modelo de negocio completo. Funciona.',
+    income_2_label: 'Caminos de deseo',
+    income_2_text: 'Observa por dónde camina la gente. Luego asfalta ahí. Los mejores productos se descubren, no se inventan. Construye lo que la gente ya intenta hacer mal.',
+    income_3_label: 'El modelo FeelFamous',
+    income_3_text: 'Comunidad gratuita. Los miembros tienen su propia página. Donaciones opcionales. Ingresos basados en la confianza, no en la extracción. Probado a escala en menos de dos semanas, sin presupuesto.',
+    income_3_link: 'Ver feelfamous.html para la historia completa',
+    h2_movement: 'Recupera tu libertad de movimiento',
+    pull_quote: "1992. Haciendo autostop. Un hombre con una toalla atada con cuerda. Dentro: un cepillo de dientes y una tarjeta de crédito. Yo llevaba una mochila de 65 litros.<br><br>Pasé 30 años convirtiéndome en el del cepillo.<br><br>La libertad no está en el cepillo. Está en la decisión de que no necesitas más que el cepillo.",
+    movement_p: 'Viaja ligero. Las cosas que te pesan físicamente suelen ser metáforas de las que te pesan mentalmente. Empieza con una bolsa. Ve hacia atrás desde ahí.',
+    h2_crisis: 'Para cuando las cosas se ponen muy difíciles',
+    crisis_1_label: 'Si estás en crisis ahora mismo',
+    crisis_1_text: "<strong>UK:</strong> Samaritans 116 123 (gratis, 24/7)<br><strong>España:</strong> Teléfono de la Esperanza 717 003 717 (gratuito, 24/7)<br><strong>Euskadi:</strong> Teléfono de la Esperanza 717 003 717 · SOS Deiak 112<br><br>Escuchan. Sin juicios. No tienes que estar en peligro para llamar. Solo necesitas que alguien te escuche.",
+    crisis_2_label: 'Si eres neurodivergente y estás agotado',
+    crisis_2_text: "El enmascaramiento es real. El agotamiento es real. El diagnóstico tardío es real. No estás roto. Estabas ejecutando el sistema operativo equivocado. El correcto existe.",
+    manifesto_1: 'Esta página fue construida por alguien que la necesitaba y nadie se la dio.',
+    manifesto_2: 'Construyó la infraestructura para magos. Luego se dio cuenta de que era la infraestructura que él necesitaba cuando dormía en la calle. El mismo patrón. Personas diferentes. La misma bondad.',
+    manifesto_3: 'Si estás leyendo esto y algo resonó — la puerta está abierta. El fuego está encendido. El campamento está caliente. No necesitas permiso para entrar.',
+    manifesto_cta: 'Ven como eres.',
+    footer: "Esta página no te rastrea. No sabe quién eres.<br>Simplemente funciona. Coge lo que necesites. Deja el resto.<br>— Chris P Tee · Bristol · feelfamous.co.uk"
+  },
+
+  eu: {
+    back: '← Kanpalekua',
+    section_label: '⚠ Ihes Bidea',
+    h1: 'Atea<br><em>aurkitu duzu.</em>',
+    lede: "Ez da pilula gorri bat. Ate bat da.<br>Jada bilatzen ari zinen edo ez zinateke hau irakurtzen.<br>Inork ez zaitu hona bidali. Inork ez daki hemen zaudela.<br>Orri honek ez du ezer jarraitzen.",
+    p1: "Zerbaitek orri honetara eraman bazaitu — zu egon zaren sistemak zuretzat egin ez zuela sentituz, are gehiago lan egiten duzula baina lekuan gelditzen zarela sentituz — ziurrenik arrazoia duzu.",
+    p2: "Albiste ona: <strong>ateratzeko tresnak doakoak dira.</strong> Gehienak beti doakoak izan dira. Oztopoa ez da dirua. Existitzen direla jakitea eta norbaitek esatea da: <em>ondo dago erabiltzea.</em>",
+    p2_strong: 'ateratzeko tresnak doakoak dira.',
+    p3: "Ondo dago erabiltzea.",
+    h2_phone: 'Berreskuratu zure telefonoa',
+    phone_1_label: 'Kendu Google zure Androidetik',
+    phone_1_text: 'GrapheneOS Pixel telefono bat pribatutasuna errespetatzen duen gailu bihurtzen du. Google Play Services-ik gabe. Doakoa. Kode irekia.',
+    phone_2_label: 'App denda alternatiboa',
+    phone_2_text: 'F-Droid Android app iturri ireki eta doakoa da. Jarraipenik gabe. Iragarkirik gabe. Zure alde lan egiten duten aplikazioak.',
+    phone_3_label: 'Pribatutasun nabigatzailea',
+    phone_3_text: 'Firefox uBlock Origin-ekin zaintza geruza blokeatzen du. Brave beste aukera on bat da. Biak doakoak.',
+    h2_identity: 'Berreskuratu zure identitate digitala',
+    id_1_label: 'Nortasun sozial eramangarria (Bluesky)',
+    id_1_text: 'Zure jarraitzaileak zurekin bidaiatzen dute zerbitzaria aldatzen baduzu. Zure identitatea ez da plataformaren jabetza.',
+    id_2_label: 'Sare federatua (Mastodon)',
+    id_2_text: 'Algoritmorik gabe. Iragarkirik gabe. Milaka zerbitzari, edonork erabili dezake. Zure kontua beste guztiekin konektatuta dago.',
+    id_3_label: 'Zure orria (FeelFamous hamlet)',
+    id_3_text: '60 segundotan sortu. Betirako doakoa. Zure URL propioa. Konturik gabe. Izen bat eta ofizio bat. Inork ezabatu ezin duen tokia interneten.',
+    h2_income: 'Berreskuratu zure diru-sarrerak',
+    income_1_label: 'Coffeeware eredua',
+    income_1_text: 'Zerbait erabilgarria eraiki. Oinarrizko ezaugarriak betirako doakoak. Jendeak nahi badu dohaintza egin dezake. Ezin badu, zerbitzua ez da aldatzen. Negozio eredu osoa da. Funtzionatzen du.',
+    income_2_label: 'Nahi-bideak',
+    income_2_text: 'Begiratu nondik ibiltzen den jendea. Gero asfaltatu hortik. Produktu onenak aurkitzen dira, ez asmatzen. Jendeak gaizki egiten ari den hori eraiki.',
+    income_3_label: 'FeelFamous eredua',
+    income_3_text: 'Komunitate doakoa. Kideek beren orria dute. Dohaintzak hautazkoak. Konfiantzan oinarritutako sarrerak, ez erauzketakoak. Bi astetik beherako epeetan frogatuta, aurrekonturik gabe.',
+    income_3_link: 'Ikusi feelfamous.html historia osorako',
+    h2_movement: 'Berreskuratu zure mugitzeko askatasuna',
+    pull_quote: "1992. Autostopa. Eskuko toaila batekin gizon bat. Barruan: hortz eskuila bat eta txartel bat. Nik 65 litroko motxila nuen.<br><br>30 urte eman nituen toaila-gizon bihurtzen.<br><br>Askatasuna ez dago hortz eskuilan. Gehiago ez duzula behar erabakitzean dago.",
+    movement_p: 'Bidaia arin. Fisikoki astuntzen zaituztenak normalean mentalki astuntzen zaituztenak diren metaforak dira. Poltsa batekin hasi. Handik atzeraka.',
+    h2_crisis: 'Gauzak oso zailak direnean',
+    crisis_1_label: 'Orain krisian bazaude',
+    crisis_1_text: "<strong>UK:</strong> Samaritans 116 123 (doakoa, 24/7)<br><strong>España:</strong> Teléfono de la Esperanza 717 003 717 (doakoa, 24/7)<br><strong>Euskadi:</strong> Teléfono de la Esperanza 717 003 717 · SOS Deiak 112<br><br>Entzuten dute. Epaitu gabe. Ez duzu arriskuan egon behar deitzeko. Norbaitek entzutea behar izatea nahikoa da.",
+    crisis_2_label: 'Neurodibertsitatekoa bazara eta nekatuta bazaude',
+    crisis_2_text: "Maskara erreala da. Nekea erreala da. Diagnostiko berantiarra erreala da. Ez zaude hautsita. Sistema operatibo okerra erabiltzen ari zinen. Zuzena existitzen da.",
+    manifesto_1: 'Orri hau behar zuen norbaitek eraiki zuen eta inork ez zion eman.',
+    manifesto_2: 'Magialarien azpiegiturak eraiki zituen. Gero konturatu zen hori bera behar zuela kalean lo egiten zuenean. Eredu bera. Pertsona desberdinak. Ontasun bera.',
+    manifesto_3: 'Hau irakurtzen ari bazara eta zerbaitek hunkitu bazaitu — atea irekita dago. Sua pizturik dago. Kanpalekua bero dago. Ez duzu baimenik behar sartzeko.',
+    manifesto_cta: 'Zatoz zaren bezala.',
+    footer: "Orri honek ez zaitu jarraitzen. Ez daki nor zaren.<br>Funtzionatzen du. Hartu behar duzuna. Utzi gainerakoa.<br>— Chris P Tee · Bristol · feelfamous.co.uk"
+  }
+};
+
+function setLang(l) {
+  lang = l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (t[l] && t[l][key]) {
+      el.innerHTML = t[l][key];
+    }
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.textContent === l.toUpperCase());
+  });
+  document.documentElement.lang = l === 'eu' ? 'eu' : l === 'es' ? 'es' : 'en';
+}
+</script>
 </body>
 </html>
