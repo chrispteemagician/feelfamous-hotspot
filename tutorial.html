@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Become a Node — FeelFamous Basecamp</title>
+<style>
+  @font-face { font-family: 'Crimson Pro'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300italic.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/CrimsonPro-600.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/SpaceMono-400.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/SpaceMono-700.ttf') format('truetype'); }
+  :root { --deep:#12100a; --ember:#d4891f; --gold:#f0b830; --cream:#f8f0de; --smoke:#b8a88a; --ash:#2e2818; --green:#4a7c59; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--deep); color:var(--cream); font-family:'Crimson Pro',Georgia,serif; font-size:20px; line-height:1.75; min-height:100vh; overflow-x:hidden; }
+  body::before { content:''; position:fixed; inset:0; background:radial-gradient(ellipse 60% 40% at 50% 110%,rgba(212,137,31,0.15) 0%,transparent 60%); pointer-events:none; z-index:0; }
+  .container { max-width:680px; margin:0 auto; padding:48px 24px 80px; position:relative; z-index:1; }
+  .back { display:inline-block; font-family:'Space Mono',monospace; font-size:.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--smoke); text-decoration:none; margin-bottom:48px; transition:color .2s; }
+  .back:hover { color:var(--ember); }
+  .section-label { font-family:'Space Mono',monospace; font-size:.7rem; letter-spacing:4px; text-transform:uppercase; color:var(--ember); margin-bottom:16px; }
+  h1 { font-weight:300; font-size:clamp(2.2rem,5vw,3rem); line-height:1.2; margin-bottom:40px; }
+  h1 em { font-style:italic; color:var(--gold); }
+  h2 { font-weight:600; font-size:1.3rem; color:var(--gold); margin:48px 0 12px; }
+  p { margin-bottom:20px; }
+  strong { color:var(--gold); font-weight:600; }
+  .lede { font-size:1.2rem; font-style:italic; border-left:3px solid var(--ember); padding-left:24px; margin-bottom:40px; color:var(--cream); }
+  .divider { width:60px; height:1px; background:linear-gradient(90deg,transparent,var(--ember),transparent); margin:40px 0; }
+  .kit-box { background:var(--ash); padding:28px 32px; margin:32px 0; border-left:3px solid var(--ember); }
+  .kit-item { display:flex; gap:16px; align-items:flex-start; margin-bottom:16px; font-size:1rem; }
+  .kit-item:last-child { margin-bottom:0; }
+  .kit-icon { font-size:1.4rem; min-width:32px; }
+  .kit-text strong { display:block; color:var(--gold); font-size:1rem; margin-bottom:2px; }
+  .kit-text span { color:var(--smoke); font-size:.9rem; }
+  .step-block { margin:32px 0; padding:28px 32px; background:rgba(46,40,24,0.6); border:1px solid var(--ash); position:relative; }
+  .step-number { font-family:'Space Mono',monospace; font-size:3rem; color:var(--ember); opacity:.3; position:absolute; top:16px; right:24px; line-height:1; }
+  .step-block h3 { font-size:1.2rem; font-weight:600; color:var(--cream); margin-bottom:12px; }
+  .step-block p { font-size:1rem; color:var(--cream); margin-bottom:12px; }
+  .step-block p:last-child { margin-bottom:0; }
+  .step-block .note { font-size:.9rem; color:var(--smoke); font-style:italic; }
+  .code { font-family:'Space Mono',monospace; font-size:.85rem; background:var(--ash); color:var(--gold); padding:4px 10px; border-radius:4px; display:inline-block; }
+  .download-btn { display:block; width:100%; padding:20px 28px; background:var(--gold); color:#12100a; font-family:'Space Mono',monospace; font-size:.85rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; text-decoration:none; text-align:center; margin:16px 0 8px; transition:background .2s; }
+  .download-btn:hover { background:#f0b830; }
+  .pull-quote { background:var(--ash); border-left:3px solid var(--ember); padding:24px 28px; margin:40px 0; font-style:italic; font-size:1.15rem; color:var(--cream); }
+  .success-box { background:rgba(74,124,89,0.15); border:1px solid var(--green); padding:24px 28px; margin:32px 0; }
+  .success-box h3 { color:var(--green); font-size:1.1rem; font-weight:600; margin-bottom:8px; }
+  footer { margin-top:64px; padding-top:32px; border-top:1px solid var(--ash); font-size:1rem; color:var(--smoke); font-style:italic; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="index.html" class="back">← Basecamp</a>
+  <div class="section-label">📱 Node Setup Tutorial</div>
+
+  <h1>That old phone<br><em>is a revolution.</em></h1>
+
+  <p class="lede">Doc Strange here. I've been a travelling shaman for 30 years. I carry almost nothing. And I've just figured out how to carry a library — a whole community — in a pocket. Let me show you.</p>
+
+  <div class="divider"></div>
+
+  <p>Somewhere in your house there's a phone doing nothing. In a drawer. On a shelf. Waiting to become something. You're about to turn it into a FeelFamous node — a walking WiFi library that broadcasts to everyone within range.</p>
+
+  <p>No technical knowledge needed. No monthly fees. No platform owns it. Just a phone, a powerbank, and five minutes.</p>
+
+  <div class="pull-quote">
+    "The internet was supposed to be decentralised. We let it get centralised.<br>
+    We can route around that — one phone at a time."
+  </div>
+
+  <h2>What you need</h2>
+
+  <div class="kit-box">
+    <div class="kit-item">
+      <div class="kit-icon">📱</div>
+      <div class="kit-text"><strong>An old Android phone</strong><span>Any Android will do. Doesn't need a SIM. Doesn't need to be fast. Just needs to turn on.</span></div>
+    </div>
+    <div class="kit-item">
+      <div class="kit-icon">🔋</div>
+      <div class="kit-text"><strong>A powerbank</strong><span>Any size. Even a small one will run a node for hours.</span></div>
+    </div>
+    <div class="kit-item">
+      <div class="kit-icon">📶</div>
+      <div class="kit-text"><strong>A WiFi connection (just for setup)</strong><span>Just to download the app and the files. After that — no internet needed. Ever.</span></div>
+    </div>
+    <div class="kit-item">
+      <div class="kit-icon">⏱️</div>
+      <div class="kit-text"><strong>Five minutes</strong><span>That's genuinely all it takes.</span></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>The setup — step by step</h2>
+
+  <div class="step-block">
+    <div class="step-number">01</div>
+    <h3>Download the files</h3>
+    <p>On the old phone, connect to WiFi and download the basecamp zip.</p>
+    <a class="download-btn" href="https://feelfamous-basecamp.netlify.app/feelfamous-basecamp.zip" download>⬇ Download feelfamous-basecamp.zip</a>
+    <p class="note">When it downloads, your phone will offer to unzip it. Do that. It'll create a folder called <span class="code">feelfamous-basecamp</span>.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">02</div>
+    <h3>Move the files</h3>
+    <p>Open your file manager. Find the <span class="code">feelfamous-basecamp</span> folder (usually in Downloads). Move it to <strong>Internal Storage</strong> and rename it <span class="code">basecamp</span>.</p>
+    <p class="note">It needs to be at the root of Internal Storage — not buried inside another folder. Internal Storage → basecamp → index.html. That's the structure.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">03</div>
+    <h3>Install the server app</h3>
+    <p>Go to Play Store. Search for <strong>HTTP File Server</strong>. Install the one by <strong>Slowscript</strong>. It's free.</p>
+    <p>Open the app. Tap the folder icon. Navigate to <strong>Internal Storage → basecamp</strong>. Select it. Hit <strong>Start</strong>.</p>
+    <p class="note">The app will show you an IP address — something like <span class="code">192.168.x.x:8080</span>. Write it down or screenshot it. You'll need it in a moment.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">04</div>
+    <h3>Name your hotspot FeelFamous</h3>
+    <p>Go to Settings → Network → Mobile Hotspot. Turn it on. Tap the name and change it to <strong>FeelFamous</strong>. No password — leave it open. This is intentional. You want people to connect.</p>
+    <p class="note">Keep the HTTP File Server running in the background while the hotspot is on.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">05</div>
+    <h3>Make the QR code</h3>
+    <p>On another device connected to your FeelFamous hotspot, open a browser and go to:</p>
+    <p><span class="code">http://[your IP]:8080/files/qr.html</span></p>
+    <p>Paste in the full URL: <span class="code">http://[your IP]:8080/files/index.html</span></p>
+    <p>Generate the QR. Save it. That's what people scan to go straight to the basecamp.</p>
+    <p class="note">The IP can change when you restart. Check the app each time and regenerate the QR if it's different.</p>
+  </div>
+
+  <div class="step-block">
+    <div class="step-number">06</div>
+    <h3>Plug in the powerbank. Walk into a crowd.</h3>
+    <p>Phone in your bag. Powerbank plugged in. Hotspot on. HTTP File Server running. That's it.</p>
+    <p>People nearby see <strong>FeelFamous</strong> WiFi. They connect. They scan the QR. They arrive here. They become nodes. The fire spreads.</p>
+    <p class="note">You don't have to do anything. You just have to show up.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="success-box">
+    <h3>✓ You're a node now.</h3>
+    <p style="color:var(--cream);margin:0;">Every person who connects can become a node too. Show them this tutorial. Give them the zip. The mycelium spreads. Peer to peer. No servers. No middlemen. No extraction.</p>
+  </div>
+
+  <div class="pull-quote">
+    "I spent 30 years appearing to fail. What I was actually doing was training.<br>
+    Learning every trap. Building scar tissue.<br>
+    This is what it was all for."
+    <br><br>— Doc Strange, April 2026
+  </div>
+
+  <h2>Troubleshooting</h2>
+
+  <p><strong>App can't see my files</strong> — check Internal Storage permissions. Go to Settings → Apps → HTTP File Server → Permissions → Allow management of all files.</p>
+
+  <p><strong>Browser shows a / with no content</strong> — go to the full URL: <span class="code">http://[IP]:8080/files/index.html</span></p>
+
+  <p><strong>IP has changed since last time</strong> — check the HTTP File Server app for the current IP. Regenerate the QR.</p>
+
+  <p><strong>People can't connect</strong> — make sure the hotspot is named FeelFamous and has no password.</p>
+
+  <footer>
+    Doc Strange · Bristol, UK · Magic Circle · The FeelFamous Ecosystem<br>
+    "World domination through kindness. One ember at a time."
+  </footer>
+
+</div>
+</body>
+</html>
