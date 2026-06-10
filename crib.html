@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Doc's Berlin Crib Sheet</title>
+<style>
+  :root{--bg:#0d0d10;--panel:#16161c;--border:#2a2a38;--green:#34d399;--amber:#f59e0b;--red:#f87171;--text:#f0f0f5;--muted:#9ca3af}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;font-size:17px;line-height:1.6;padding:16px;max-width:480px;margin:0 auto}
+  h1{font-size:1.4rem;font-weight:900;color:var(--green);margin:0 0 4px}
+  .sub{font-size:0.8rem;color:var(--muted);margin-bottom:20px;letter-spacing:0.05em;text-transform:uppercase}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+  .card-title{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .big{font-size:1.3rem;font-weight:800;color:var(--green);margin-bottom:4px}
+  .item{display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border)}
+  .item:last-child{border-bottom:none}
+  .label{color:var(--muted);font-size:0.9rem}
+  .val{font-weight:700;text-align:right;max-width:60%}
+  .green{color:var(--green)}
+  .amber{color:var(--amber)}
+  .red{color:var(--red)}
+  .pill{display:inline-block;padding:3px 10px;border-radius:20px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em}
+  .pill-green{background:rgba(52,211,153,0.15);color:var(--green);border:1px solid rgba(52,211,153,0.3)}
+  .pill-amber{background:rgba(245,158,11,0.15);color:var(--amber);border:1px solid rgba(245,158,11,0.3)}
+  .pill-red{background:rgba(248,113,113,0.15);color:var(--red);border:1px solid rgba(248,113,113,0.3)}
+  .step{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--border)}
+  .step:last-child{border-bottom:none}
+  .step-num{min-width:26px;height:26px;border-radius:50%;background:rgba(52,211,153,0.2);color:var(--green);font-weight:900;font-size:0.85rem;display:flex;align-items:center;justify-content:center}
+  .step-text{font-size:0.95rem}
+  .mono{font-family:monospace;background:rgba(255,255,255,0.06);padding:2px 8px;border-radius:4px;font-size:0.9rem}
+  a{color:var(--green);text-decoration:none}
+</style>
+</head><body>
+
+<h1>🌿 Doc's Berlin Crib</h1>
+<div class="sub">Mary Jane Berlin · June 11–14 2026</div>
+
+<div class="card">
+  <div class="card-title">🔥 Hotspot Setup</div>
+  <div class="step"><div class="step-num">1</div><div class="step-text">Old Android phone → open <strong>Slowscript</strong> app</div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-text">Start HTTP server on port <strong>8080</strong>, root = Internal Storage/basecamp/</div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-text">Connect their phone to <strong>FeelFamous</strong> WiFi</div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-text">Send them to: <span class="mono">192.168.50.95:8080/files/index.html</span></div></div>
+  <div class="step"><div class="step-num">5</div><div class="step-text">Or show them the QR on the lockscreen</div></div>
+</div>
+
+<div class="card">
+  <div class="card-title">📍 Partner Stands</div>
+  <div class="item"><span class="label">Dutch Passion</span><span class="val green">Hall 20 · Stand B27</span></div>
+  <div class="item"><span class="label">Tessa (DP)</span><span class="val amber">Not attending — colleagues briefed</span></div>
+  <div class="item"><span class="label">James Harrison (PAX)</span><span class="val amber">No reply since Jun 4 — try in person</span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">🌐 URLs to Demo</div>
+  <div class="item"><span class="label">Symbiosis Engine</span><span class="val"><a href="https://symbiosis-engine.netlify.app">symbiosis-engine.netlify.app</a></span></div>
+  <div class="item"><span class="label">cannabin-oid</span><span class="val"><a href="https://cannabin-oid.co.uk">cannabin-oid.co.uk</a></span></div>
+  <div class="item"><span class="label">FeelFamous</span><span class="val"><a href="https://feelfamous.co.uk">feelfamous.co.uk</a></span></div>
+  <div class="item"><span class="label">Motor-Oid</span><span class="val"><a href="https://motor-oid.co.uk">motor-oid.co.uk</a></span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">💬 The Pitch (Symbiosis Engine)</div>
+  <div style="font-size:0.95rem;color:var(--text);line-height:1.7">
+    "AI inbox automation. Your staff get their time back. <strong>14-day deployment</strong>. Free proof of concept — I show you it working on your actual emails before you pay a penny."<br><br>
+    Contact: <a href="mailto:doc@docstrange.co.uk">doc@docstrange.co.uk</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">🌿 Vaping in Berlin</div>
+  <div class="item"><span class="label">Outdoors (general)</span><span class="val"><span class="pill pill-green">LEGAL</span></span></div>
+  <div class="item"><span class="label">Mary Jane venue</span><span class="val"><span class="pill pill-green">LEGAL (designated areas)</span></span></div>
+  <div class="item"><span class="label">Near schools / kids</span><span class="val"><span class="pill pill-red">AVOID — 100m rule</span></span></div>
+  <div class="item"><span class="label">Pedestrian zones 7am–8pm</span><span class="val"><span class="pill pill-amber">RESTRICTED</span></span></div>
+  <div class="item"><span class="label">Hotels</span><span class="val"><span class="pill pill-amber">ASK FIRST</span></span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">💊 Your Medication</div>
+  <div class="item"><span class="label">Carry</span><span class="val green">Original packaging + prescription</span></div>
+  <div class="item"><span class="label">Alternaleaf letter</span><span class="val amber">Check Gmail — add phone → send</span></div>
+  <div class="item"><span class="label">Germany domestic limit</span><span class="val green">25g — you're well within</span></div>
+  <div class="item"><span class="label">If stopped at border</span><span class="val">Show prescription. Stay calm. You're a patient.</span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">📞 Key Contacts</div>
+  <div class="item"><span class="label">Doc's email</span><span class="val"><a href="mailto:doc@docstrange.co.uk">doc@docstrange.co.uk</a></span></div>
+  <div class="item"><span class="label">Alternaleaf</span><span class="val"><a href="mailto:info@alternaleaf.co.uk">info@alternaleaf.co.uk</a></span></div>
+</div>
+
+<div style="text-align:center;padding:24px 0 8px;color:var(--muted);font-size:0.8rem">
+  🌿 World domination through kindness. One ember at a time.<br>
+  <a href="index.html" style="color:var(--muted)">← Basecamp</a>
+</div>
+
+</body></html>

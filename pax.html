@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Alternaleaf UK - FeelFamous Basecamp Berlin</title>
+<title>PAX - FeelFamous Basecamp Berlin</title>
 <style>
   @font-face{font-family:'Crimson Pro';font-style:italic;font-weight:300;src:url('fonts/CrimsonPro-300italic.ttf') format('truetype')}
   @font-face{font-family:'Crimson Pro';font-style:normal;font-weight:300;src:url('fonts/CrimsonPro-300.ttf') format('truetype')}
@@ -23,6 +23,9 @@
   strong{color:var(--gold);font-weight:600}
   .lede{font-size:1.2rem;color:var(--cream);font-style:italic;border-left:3px solid var(--ember);padding-left:24px;margin-bottom:32px}
   .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--ember),transparent);margin:36px 0}
+  .temp-row{background:var(--ash);padding:18px 24px;margin:6px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .temp-label{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+  .temp-desc{color:var(--smoke);font-size:0.9rem}
   .contact-block{background:var(--ash);padding:20px 24px;margin:8px 0}
   .contact-label{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);margin-bottom:6px}
   .contact-val{color:var(--cream);font-size:1rem}
@@ -46,31 +49,37 @@
 <div class="container">
   <a href="partners.html" class="back">&larr; All Partners</a>
   <div class="section-label">Mary Jane Berlin &middot; June 2026</div>
-  <h1><em>Alternaleaf UK</em></h1>
-  <p class="lede">Doc's own clinic. Forty-two years of self-medicating. One video call. A prescription arrived in the post. That's the story behind everything you're looking at.</p>
+  <h1><em>PAX</em></h1>
+  <p class="lede">Precision dry herb vaporizers. Medical-grade temperature control. The science that now lives inside Ask Terp — every patient consultation, every strain recommendation.</p>
 
-  <p>Alternaleaf are a UK medical cannabis clinic — online consultations, fast access, proper clinical process. Doc got prescribed through them after 42 years of self-medicating without ever knowing he could go legal.</p>
-  <p>That experience is why Cannabin-Oid exists. Every patient who walks through Ask Terp and asks about getting prescribed gets pointed toward the exact pathway Doc took — Alternaleaf first, because it's the one he knows works. <strong>This isn't an ad. It's the origin story.</strong></p>
-  <p>The prescription changed everything. The clinic made it possible. If you've been self-medicating for years and nobody's ever suggested you could get it legally — this is the page worth sharing.</p>
+  <p>PAX make some of the most precise vaporizers available to medical cannabis patients. Temperature control matters: different terpenes and cannabinoids activate at different points, and the difference between 175°C and 210°C is the difference between a clear head and a sofa.</p>
+  <p>James Harrison (EU Sales Manager) and Doc have been talking. PAX's temperature science is now embedded directly into <strong>Ask Terp on Cannabin-Oid</strong> — so every patient who asks about vaporization gets pointed to PAX's data, PAX's science, and PAX's devices. Not as an ad. As the correct answer.</p>
 
   <div class="divider"></div>
-  <h2>How it works</h2>
-  <div class="contact-block"><div class="contact-label">Step 1</div><div class="contact-val">Book online consultation — video call, typically £50–150</div></div>
-  <div class="contact-block"><div class="contact-label">Step 2</div><div class="contact-val">You'll need to have tried 2+ previous treatments that didn't work</div></div>
-  <div class="contact-block"><div class="contact-label">Step 3</div><div class="contact-val">Get prescribed. Pharmacy delivers to your door.</div></div>
-  <div class="contact-block"><div class="contact-label">Website</div><div class="contact-val">alternaleaf.co.uk</div></div>
+  <h2>Temperature guide — from PAX's own science</h2>
+  <p style="color:var(--smoke);font-size:0.95rem;margin-bottom:20px">Source: pax.com/science — built into Ask Terp.</p>
+  <div class="temp-row"><div><div class="temp-label">Low · 175–185°C</div><div class="temp-desc">Maximum terpene preservation. Uplifting, cerebral. Daytime and first-timers.</div></div></div>
+  <div class="temp-row"><div><div class="temp-label">Medium · 185–195°C</div><div class="temp-desc">Balanced extraction. Broader cannabinoid profile. Versatile.</div></div></div>
+  <div class="temp-row"><div><div class="temp-label">High · 195–210°C</div><div class="temp-desc">Dense vapour, deeper extraction. Sedating, body-heavy. Pain, sleep, evening.</div></div></div>
 
-  <a href="https://alternaleaf.co.uk" class="visit-btn" target="_blank">Book a consultation &rarr;</a>
+  <div class="divider"></div>
+  <a href="https://pax.com" class="visit-btn" target="_blank">Visit PAX &rarr;</a>
+
+  <h2>Contact</h2>
+  <div class="contact-block"><div class="contact-label">EU Sales</div><div class="contact-val">James Harrison — james.harrison@pax.com</div></div>
+  <div class="contact-block"><div class="contact-label">Science</div><div class="contact-val">pax.com/science</div></div>
+  <div class="contact-block"><div class="contact-label">In Ask Terp</div><div class="contact-val">cannabin-oid.co.uk — temperature data live</div></div>
 
   <div class="divider"></div>
   <h2>Generate a meeting point QR</h2>
   <p style="color:var(--smoke);font-size:0.95rem;margin-bottom:16px">Type any URL or location. Hit Generate. Show them the code.</p>
   <div class="quick-row">
-    <button class="quick-btn" onclick="fill('https://alternaleaf.co.uk')">Alternaleaf site</button>
+    <button class="quick-btn" onclick="fill('https://pax.com/science')">PAX Science</button>
+    <button class="quick-btn" onclick="fill('https://pax.com')">PAX site</button>
     <button class="quick-btn" onclick="fill('https://cannabin-oid.co.uk')">Cannabin-Oid</button>
     <button class="quick-btn" onclick="fill('https://feelfamous.co.uk')">FeelFamous</button>
   </div>
-  <input type="text" id="url-input" placeholder="URL or location" value="https://alternaleaf.co.uk" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="text" id="url-input" placeholder="URL or location" value="https://pax.com/science" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <button id="generate-btn" onclick="generate()">Generate QR Code</button>
   <div class="qr-wrap" id="qr-wrap"><div id="qrcode"></div><button id="save-btn" onclick="saveQR()">Save as Image</button></div>
   <footer>FeelFamous Basecamp &middot; cannabin-oid.co.uk &middot; Berlin June 2026</footer>
