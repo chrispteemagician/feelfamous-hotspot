@@ -50,7 +50,7 @@
   <div class="step"><div class="step-num">3</div><div class="step-text">Connect their phone to <strong>FeelFamous</strong> WiFi</div></div>
   <div class="step"><div class="step-num">4</div><div class="step-text">Send them to: <span class="mono">192.168.50.95:8080/files/index.html</span> (or your phone's actual IP &mdash; check the Slowscript screen)</div></div>
   <div class="step"><div class="step-num">5</div><div class="step-text">Or show them the QR on the lockscreen (<a href="qr.html">generate one here</a>, or use <a href="lockscreen.html">lockscreen.html</a>)</div></div>
-  <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">This pattern was already the right call for a no-power pitch &mdash; it only needs the phone's own battery, topped up from the van's 12V/power bank, not mains.</div>
+  <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">This pattern was already the right call for a no-power pitch &mdash; it only needs the phone's own battery, topped up off the van's own supply, not mains. See the power budget card below &mdash; there's plenty of headroom.</div>
 </div>
 
 <div class="card">
@@ -60,8 +60,21 @@
   </div>
   <div class="item" style="padding-top:10px"><span class="label">Hardware, per MeshCB notes</span><span class="val">Heltec v3 (you have two) &mdash; ESP32 + LoRa, can run MeshCore or Bit Pirate firmware</span></div>
   <div class="item"><span class="label">Antennas</span><span class="val">Scrap-build options exist (Flowerpot/T2LT, Moxon) &mdash; DocBrain <span class="mono">tech/scrap-antennas</span> has the build guides if you're making rather than buying</span></div>
-  <div class="item"><span class="label">Power</span><span class="val amber">No mains here either &mdash; Heltec/LoRa draw is low, run off the same van battery/power bank as the phone</span></div>
   <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">Not wired into the FeelFamous hotspot pages &mdash; it's a parallel offer, not something to route through <span class="mono">chill-zone.html</span>. If you want the chill zone page to actively invite people to ask about the radio kit, say so and I'll add a line to it.</div>
+</div>
+
+<div class="card">
+  <div class="card-title">🔋 Power Budget (no mains, 16&ndash;19 July)</div>
+  <div class="item"><span class="label">Leisure battery</span><span class="val">110Ah</span></div>
+  <div class="item"><span class="label">Under-seat batteries</span><span class="val">2 &times; 70Ah = 140Ah</span></div>
+  <div class="item"><span class="label">Golf trolley batteries</span><span class="val amber">2, dedicated to radio &mdash; capacity TBC</span></div>
+  <div class="item"><span class="label">Jackery 300</span><span class="val">300Wh lithium, self-contained</span></div>
+  <div class="item"><span class="label">Solar (current)</span><span class="val green">200W (2 panels)</span></div>
+  <div class="item"><span class="label">Solar (if you buy the flexible panels)</span><span class="val">+260W &rarr; 460W total</span></div>
+  <div style="font-size:0.85rem;color:var(--muted);padding-top:10px">
+    Rough numbers, not measured: 250Ah battery bank alone is ~3000Wh nominal, call it ~1500Wh usable at a sane depth of discharge &mdash; that's several days of buffer before solar even counts. Daily loads (phone hotspot, 2 Heltec nodes, evening marquee lighting) are all small, tens of Wh each. The one real unknown is the actual CB/ham rig's draw &mdash; mostly-receive use is light, heavy transmitting is the only way this gets stressed, and the golf trolley batteries are dedicated to exactly that. Current 200W solar in July daylight should cover daily use on its own. <strong>Verdict: this is comfortably enough for the trip as it stands</strong> &mdash; the extra 260W panels are a good long-term buy, not something you need before Thursday.
+  </div>
+</div>
 </div>
 
 <div class="card">
