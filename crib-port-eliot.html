@@ -30,22 +30,38 @@
 </head><body>
 
 <h1>🌳 Doc's Port Eliot Crib</h1>
-<div class="sub">Port Eliot Festival &middot; July 2026</div>
+<div class="sub">Tunes Festivals @ Port Eliot &middot; 16&ndash;19 July 2026</div>
 
 <div class="card">
-  <div class="card-title">⚠️ Confirm before you go</div>
-  <div class="item"><span class="label">Exact dates</span><span class="val amber"><span class="pill pill-amber">CHECK</span></span></div>
-  <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">DocBrain has two notes that don't quite agree: your 2026-07-11 voice note says "next weekend," the outreach tracker's Tier 1 list says 23&ndash;26 Jul. Pin down which is real and this page gets fixed to match. Venue per your note: a drum and bass nature reserve.</div>
+  <div class="card-title">📍 The Booking (from your email thread with Carmen)</div>
+  <div class="item"><span class="label">Venue</span><span class="val">Port Eliot House &amp; Gardens, St Germans, Cornwall, PL12 5ND</span></div>
+  <div class="item"><span class="label">Organiser</span><span class="val">Tunes Festivals Ltd (Tunes in the Dunes Ltd) &mdash; Carmen Peston, Traders Manager</span></div>
+  <div class="item"><span class="label">Dates</span><span class="val green">16th&ndash;19th July</span></div>
+  <div class="item"><span class="label">Pitch</span><span class="val">Field ID #2, close to site, not in the main arena &mdash; ask on arrival for the exact spot</span></div>
+  <div class="item"><span class="label">Power</span><span class="val red"><span class="pill" style="background:rgba(248,113,113,0.15);color:var(--red);border:1px solid rgba(248,113,113,0.3)">NONE &mdash; confirmed</span></span></div>
+  <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">Carmen's exact words: "No power available for this event, due to lateness of application." You replied "I shall come prepared." Everything below needs to run off the van's own battery/leisure system &mdash; no mains, no hookup.</div>
+  <div class="item" style="padding-top:10px"><span class="label">Your setup as given to Carmen</span><span class="val">3m&times;3m pop-up marquee + awning off the passenger sliding door. Ideal 10m&times;10m plot, workable down to 7m&times;7m.</span></div>
 </div>
 
 <div class="card">
-  <div class="card-title">📡 Hotspot Setup</div>
+  <div class="card-title">📡 WiFi Hotspot Setup (phone-based, battery only)</div>
   <div class="step"><div class="step-num">1</div><div class="step-text">Old Android phone &rarr; open <strong>Slowscript</strong> app (same as Berlin)</div></div>
   <div class="step"><div class="step-num">2</div><div class="step-text">Start HTTP server on port <strong>8080</strong>, root = Internal Storage/basecamp/</div></div>
   <div class="step"><div class="step-num">3</div><div class="step-text">Connect their phone to <strong>FeelFamous</strong> WiFi</div></div>
   <div class="step"><div class="step-num">4</div><div class="step-text">Send them to: <span class="mono">192.168.50.95:8080/files/index.html</span> (or your phone's actual IP &mdash; check the Slowscript screen)</div></div>
   <div class="step"><div class="step-num">5</div><div class="step-text">Or show them the QR on the lockscreen (<a href="qr.html">generate one here</a>, or use <a href="lockscreen.html">lockscreen.html</a>)</div></div>
-  <div class="todo">You mentioned antennas this time &mdash; if you're bringing a proper WiFi router instead of the phone-hotspot pattern, these steps change. Tell me the actual hardware and I'll rewrite this section properly.</div>
+  <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">This pattern was already the right call for a no-power pitch &mdash; it only needs the phone's own battery, topped up from the van's 12V/power bank, not mains.</div>
+</div>
+
+<div class="card">
+  <div class="card-title">📻 CB / Ham / MeshCore Node</div>
+  <div style="font-size:0.9rem;color:var(--text);line-height:1.7">
+    A second, separate layer alongside the WiFi hotspot &mdash; different tech, different crowd. The WiFi hotspot hands people the ecosystem download. The radio side is for anyone who stops because they recognise the aerial and want to talk shop, or for off-grid resilience comms if mobile signal at the site is patchy.
+  </div>
+  <div class="item" style="padding-top:10px"><span class="label">Hardware, per MeshCB notes</span><span class="val">Heltec v3 (you have two) &mdash; ESP32 + LoRa, can run MeshCore or Bit Pirate firmware</span></div>
+  <div class="item"><span class="label">Antennas</span><span class="val">Scrap-build options exist (Flowerpot/T2LT, Moxon) &mdash; DocBrain <span class="mono">tech/scrap-antennas</span> has the build guides if you're making rather than buying</span></div>
+  <div class="item"><span class="label">Power</span><span class="val amber">No mains here either &mdash; Heltec/LoRa draw is low, run off the same van battery/power bank as the phone</span></div>
+  <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">Not wired into the FeelFamous hotspot pages &mdash; it's a parallel offer, not something to route through <span class="mono">chill-zone.html</span>. If you want the chill zone page to actively invite people to ask about the radio kit, say so and I'll add a line to it.</div>
 </div>
 
 <div class="card">
