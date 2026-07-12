@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Doc's Port Eliot Crib Sheet</title>
+<style>
+  :root{--bg:#0d0d10;--panel:#16161c;--border:#2a2a38;--green:#34d399;--amber:#f59e0b;--red:#f87171;--text:#f0f0f5;--muted:#9ca3af}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;font-size:17px;line-height:1.6;padding:16px;max-width:480px;margin:0 auto}
+  h1{font-size:1.4rem;font-weight:900;color:var(--green);margin:0 0 4px}
+  .sub{font-size:0.8rem;color:var(--muted);margin-bottom:20px;letter-spacing:0.05em;text-transform:uppercase}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+  .card-title{font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .item{display:flex;justify-content:space-between;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border)}
+  .item:last-child{border-bottom:none}
+  .label{color:var(--muted);font-size:0.9rem}
+  .val{font-weight:700;text-align:right;max-width:60%}
+  .green{color:var(--green)}
+  .amber{color:var(--amber)}
+  .red{color:var(--red)}
+  .pill{display:inline-block;padding:3px 10px;border-radius:20px;font-size:0.75rem;font-weight:700;letter-spacing:0.05em}
+  .pill-amber{background:rgba(245,158,11,0.15);color:var(--amber);border:1px solid rgba(245,158,11,0.3)}
+  .step{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--border)}
+  .step:last-child{border-bottom:none}
+  .step-num{min-width:26px;height:26px;border-radius:50%;background:rgba(52,211,153,0.2);color:var(--green);font-weight:900;font-size:0.85rem;display:flex;align-items:center;justify-content:center}
+  .step-text{font-size:0.95rem}
+  .mono{font-family:monospace;background:rgba(255,255,255,0.06);padding:2px 8px;border-radius:4px;font-size:0.9rem}
+  a{color:var(--green);text-decoration:none}
+  .todo{font-size:0.9rem;color:var(--amber)}
+</style>
+</head><body>
+
+<h1>🌳 Doc's Port Eliot Crib</h1>
+<div class="sub">Port Eliot Festival &middot; July 2026</div>
+
+<div class="card">
+  <div class="card-title">⚠️ Confirm before you go</div>
+  <div class="item"><span class="label">Exact dates</span><span class="val amber"><span class="pill pill-amber">CHECK</span></span></div>
+  <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">DocBrain has two notes that don't quite agree: your 2026-07-11 voice note says "next weekend," the outreach tracker's Tier 1 list says 23&ndash;26 Jul. Pin down which is real and this page gets fixed to match. Venue per your note: a drum and bass nature reserve.</div>
+</div>
+
+<div class="card">
+  <div class="card-title">📡 Hotspot Setup</div>
+  <div class="step"><div class="step-num">1</div><div class="step-text">Old Android phone &rarr; open <strong>Slowscript</strong> app (same as Berlin)</div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-text">Start HTTP server on port <strong>8080</strong>, root = Internal Storage/basecamp/</div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-text">Connect their phone to <strong>FeelFamous</strong> WiFi</div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-text">Send them to: <span class="mono">192.168.50.95:8080/files/index.html</span> (or your phone's actual IP &mdash; check the Slowscript screen)</div></div>
+  <div class="step"><div class="step-num">5</div><div class="step-text">Or show them the QR on the lockscreen (<a href="qr.html">generate one here</a>, or use <a href="lockscreen.html">lockscreen.html</a>)</div></div>
+  <div class="todo">You mentioned antennas this time &mdash; if you're bringing a proper WiFi router instead of the phone-hotspot pattern, these steps change. Tell me the actual hardware and I'll rewrite this section properly.</div>
+</div>
+
+<div class="card">
+  <div class="card-title">🌳 The Chill Zone Pitch (if anyone asks what this is)</div>
+  <div style="font-size:0.95rem;color:var(--text);line-height:1.7">
+    "I'm Chris P Tee, also known as Doc. I'm offering a free, self-contained chill-out space &mdash; shade, quiet liquid drum and bass, magic when the moment calls for it. It's AuDHD-aware, no pressure on anyone who walks in. The only things I give away are good vibes and something people can take home on their phones."
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-title">🌐 URLs to Demo</div>
+  <div class="item"><span class="label">Chill Zone (this hotspot)</span><span class="val"><a href="chill-zone.html">chill-zone.html</a></span></div>
+  <div class="item"><span class="label">FeelFamous</span><span class="val"><a href="https://feelfamous.co.uk">feelfamous.co.uk</a></span></div>
+  <div class="item"><span class="label">Cannabin-Oid</span><span class="val"><a href="https://cannabin-oid.co.uk">cannabin-oid.co.uk</a></span></div>
+  <div class="item"><span class="label">Motor-Oid</span><span class="val"><a href="https://motor-oid.co.uk">motor-oid.co.uk</a></span></div>
+  <div class="item"><span class="label">Symbiosis Engine</span><span class="val"><a href="https://symbiosis-engine.netlify.app">symbiosis-engine.netlify.app</a></span></div>
+</div>
+
+<div class="card">
+  <div class="card-title">📞 Key Contacts</div>
+  <div class="item"><span class="label">Chris</span><span class="val"><a href="mailto:chris@chrisptee.co.uk">chris@chrisptee.co.uk</a></span></div>
+  <div class="item"><span class="label">WhatsApp</span><span class="val"><a href="https://wa.me/447976884254">+44 7976 884254</a></span></div>
+</div>
+
+<div style="text-align:center;padding:24px 0 8px;color:var(--muted);font-size:0.8rem">
+  World domination through kindness. One ember at a time.<br>
+  <a href="index.html" style="color:var(--muted)">&larr; Basecamp</a>
+</div>
+
+</body></html>
