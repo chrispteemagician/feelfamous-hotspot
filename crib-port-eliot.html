@@ -54,13 +54,17 @@
 </div>
 
 <div class="card">
-  <div class="card-title">📻 CB / Ham / MeshCore Node</div>
+  <div class="card-title">📻 Radio Setup (CB / Ham / MeshCore)</div>
   <div style="font-size:0.9rem;color:var(--text);line-height:1.7">
-    A second, separate layer alongside the WiFi hotspot &mdash; different tech, different crowd. The WiFi hotspot hands people the ecosystem download. The radio side is for anyone who stops because they recognise the aerial and want to talk shop, or for off-grid resilience comms if mobile signal at the site is patchy.
+    A second, separate layer alongside the WiFi hotspot &mdash; different tech, different crowd. The WiFi hotspot hands people the ecosystem download. The radio side is for anyone who stops because they recognise the setup and want to talk shop, or for off-grid resilience comms if mobile signal at the site is patchy. This turned out to be a proper station, not a spare box in the van.
   </div>
-  <div class="item" style="padding-top:10px"><span class="label">Hardware, per MeshCB notes</span><span class="val">Heltec v3 (you have two) &mdash; ESP32 + LoRa, can run MeshCore or Bit Pirate firmware</span></div>
-  <div class="item"><span class="label">Antennas</span><span class="val">Scrap-build options exist (Flowerpot/T2LT, Moxon) &mdash; DocBrain <span class="mono">tech/scrap-antennas</span> has the build guides if you're making rather than buying</span></div>
-  <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">Not wired into the FeelFamous hotspot pages &mdash; it's a parallel offer, not something to route through <span class="mono">chill-zone.html</span>. If you want the chill zone page to actively invite people to ask about the radio kit, say so and I'll add a line to it.</div>
+  <div class="item" style="padding-top:10px"><span class="label">HF</span><span class="val">Kenwood TS-480SAT &mdash; running 10W, deliberately low draw</span></div>
+  <div class="item"><span class="label">10m / CB</span><span class="val">CRT SS-9900</span></div>
+  <div class="item"><span class="label">2m</span><span class="val">Pre-programmed 2m rig (brand as heard on the voice note &mdash; correct this if it's wrong)</span></div>
+  <div class="item"><span class="label">Handhelds</span><span class="val">Walkie talkies / handheld sets</span></div>
+  <div class="item"><span class="label">MeshCore</span><span class="val">2 &times; Heltec v3 &mdash; ESP32 + LoRa, can run MeshCore or Bit Pirate firmware</span></div>
+  <div class="item"><span class="label">The antenna farm</span><span class="val">Yagi beam, a Moxon, ~15 verticals across different bands, ~8 wire antennas including a delta loop and various long wires</span></div>
+  <div style="font-size:0.85rem;color:var(--muted);padding-top:6px">Power-wise this is all comfortably covered &mdash; see the power budget card below, the golf trolley batteries are dedicated to exactly this load and the TS-480SAT at 10W is genuinely light. Not wired into the FeelFamous hotspot pages &mdash; it's a parallel offer, not something to route through <span class="mono">chill-zone.html</span>. If you want the chill zone page to actively invite people to ask about the radio kit, say so and I'll add a line to it.</div>
 </div>
 
 <div class="card">
@@ -72,7 +76,7 @@
   <div class="item"><span class="label">Solar (current)</span><span class="val green">200W (2 panels)</span></div>
   <div class="item"><span class="label">Solar (if you buy the flexible panels)</span><span class="val">+260W &rarr; 460W total</span></div>
   <div style="font-size:0.85rem;color:var(--muted);padding-top:10px">
-    Rough numbers, not measured: 250Ah battery bank alone is ~3000Wh nominal, call it ~1500Wh usable at a sane depth of discharge &mdash; that's several days of buffer before solar even counts. Daily loads (phone hotspot, 2 Heltec nodes, evening marquee lighting) are all small, tens of Wh each. The one real unknown is the actual CB/ham rig's draw &mdash; mostly-receive use is light, heavy transmitting is the only way this gets stressed, and the golf trolley batteries are dedicated to exactly that. Current 200W solar in July daylight should cover daily use on its own. <strong>Verdict: this is comfortably enough for the trip as it stands</strong> &mdash; the extra 260W panels are a good long-term buy, not something you need before Thursday.
+    Rough numbers, not measured: 250Ah battery bank alone is ~3000Wh nominal, call it ~1500Wh usable at a sane depth of discharge &mdash; that's several days of buffer before solar even counts. Daily loads (phone hotspot, 2 Heltec nodes, evening marquee lighting) are all small, tens of Wh each. The radio side (TS-480SAT at 10W, CRT SS-9900, 2m rig, handhelds) is confirmed light &mdash; you're deliberately running the HF rig low, and the golf trolley batteries are dedicated to that load specifically. Current 200W solar in July daylight should cover daily use on its own. <strong>Verdict: this is comfortably enough for the trip as it stands</strong> &mdash; the extra 260W panels are a good long-term buy, not something you need before Thursday.
   </div>
 </div>
 </div>
