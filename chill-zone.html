@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chill Zone — FeelFamous Basecamp</title>
+<style>
+  @font-face { font-family: 'Crimson Pro'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300italic.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/CrimsonPro-600.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/SpaceMono-400.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/SpaceMono-700.ttf') format('truetype'); }
+  :root{--deep:#12100a;--ember:#d4891f;--gold:#f0b830;--cream:#f8f0de;--smoke:#b8a88a;--ash:#2a2218}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--deep);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.75;min-height:100vh;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 110%,rgba(201,126,26,.12) 0%,transparent 60%);pointer-events:none;z-index:0}
+  .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;position:relative;z-index:1}
+  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);text-decoration:none;margin-bottom:48px;transition:color .2s}
+  .back:hover{color:var(--ember)}
+  .section-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--ember);margin-bottom:16px}
+  h1{font-weight:300;font-size:clamp(2.2rem,5vw,3rem);line-height:1.2;margin-bottom:32px}
+  h1 em{font-style:italic;color:var(--gold)}
+  h2{font-weight:600;font-size:1.3rem;color:var(--gold);margin:40px 0 16px}
+  p{margin-bottom:22px}
+  strong{color:var(--gold);font-weight:600}
+  .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--ember),transparent);margin:40px 0}
+  .card-grid{display:grid;grid-template-columns:1fr;gap:2px;margin:24px 0}
+  .card{background:var(--ash);padding:22px 26px}
+  .card-title{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  .card-desc{font-size:.95rem;color:var(--cream)}
+  .cta{display:inline-block;margin-top:8px;padding:14px 26px;background:var(--ember);color:var(--deep);font-family:'Space Mono',monospace;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .cta:hover{background:var(--gold)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+  footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--ash);font-size:1rem;color:var(--smoke);font-style:italic}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="index.html" class="back">&larr; Basecamp</a>
+  <div class="section-label">The Chill Zone</div>
+  <h1>You don&rsquo;t have to<br><em>perform right now.</em></h1>
+
+  <p>See the van? That&rsquo;s Chris &mdash; Chris P Tee, also known as Doc. He&rsquo;s parked up, shade&rsquo;s out, quiet liquid drum and bass is playing. This spot exists for one reason: somewhere to actually breathe.</p>
+
+  <p>If the festival&rsquo;s a lot right now &mdash; too loud, too bright, too many people, too much of everything &mdash; come and sit down. No entry fee. No small talk required. No performance required, from you or anyone.</p>
+
+  <p>Magic happens when the moment calls for it, not on a schedule. Kids get puppets and characters and made to feel genuinely magical. Adults get somewhere to stop. It&rsquo;s an AuDHD-aware space &mdash; positive vibes only, nobody&rsquo;s judged for being quiet, loud, weird, or somewhere in between.</p>
+
+  <div class="divider"></div>
+
+  <h2>Talk about the weird stuff</h2>
+  <p>Chris likes talking about the things most small talk avoids &mdash; AuDHD, mental health, radio, old tech, whatever's actually on your mind. If you want a proper conversation instead of festival chit-chat, that's exactly what this spot is for.</p>
+  <p>If you spot an aerial sticking out of the van, that's not decoration &mdash; there's CB, ham radio, and a MeshCore off-grid comms node running alongside the WiFi hotspot. If any of that means something to you, come and say hello. If it doesn't, ignore it completely; it changes nothing about the shade and the quiet.</p>
+  <p>Never used a CB radio? Curious what one even is? Ask. Chris will pull one out and show you how it works, on the spot &mdash; same thing he was doing with them as a kid.</p>
+
+  <div class="divider"></div>
+
+  <h2>Take the whole thing home</h2>
+  <p>You&rsquo;re connected to a <strong>wandering hotspot</strong>, carried in the van. Everything on it &mdash; every page, every link &mdash; is yours to keep. No algorithm put this in front of you. No ad paid for it. Someone wanted you to find it.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <div class="card-title">🔥 The Whole Ecosystem</div>
+      <div class="card-desc">FeelFamous &mdash; free community villages, tools, and characters. No ads, no data harvesting, owned by nobody.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">💾 Take a Copy</div>
+      <div class="card-desc">Copy these files to your own phone or a USB stick before you go. Share it with the next person. That&rsquo;s how it spreads &mdash; peer to peer, no server required.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🍄 Become a Spore</div>
+      <div class="card-desc">Carry this hotspot yourself. Full instructions on the Basecamp home page.</div>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a href="feelfamous.html" class="cta">The Ecosystem &rarr;</a>
+    <a href="spore.html" class="cta">Become a Spore &rarr;</a>
+    <a href="connect.html" class="cta">Connect &rarr;</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <p>And if you&rsquo;d like to visit FeelFamous properly once you're home &mdash; <strong>feelfamous.co.uk</strong> &mdash; it's all there, and every page on this hotspot links back to it.</p>
+
+  <footer>
+    World domination through kindness. One ember at a time.<br>
+    Chris P Tee / Doc &middot; feelfamous.co.uk
+  </footer>
+</div>
+</body>
+</html>
