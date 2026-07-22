@@ -59,6 +59,7 @@
   h2{font-family:'Space Mono',monospace;font-size:0.95rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
 
   .tagline{text-align:center;color:var(--cream);font-style:italic;font-size:1.2rem;margin-bottom:56px;animation:fadeIn 2s ease 0.6s both}
+  .index-label{text-align:center;color:var(--gold);font-style:italic;font-size:1.3rem;line-height:1.5;margin:8px 0 24px}
   .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--ember),transparent);margin:40px auto}
 
   .lede{font-size:1.2rem;line-height:1.75;color:var(--cream);margin-bottom:28px;animation:fadeIn 2s ease 0.9s both}
@@ -135,6 +136,8 @@
   </div>
 
   <div class="divider"></div>
+
+  <p class="index-label" data-i18n="index_label">Here&rsquo;s your index of wonderful things. Free to use, to gift and to share with love.</p>
 
   <nav class="nav-grid">
     <a href="who.html" class="nav-card">
@@ -229,7 +232,7 @@
 var t = {
   en: {
     h1: 'You found<br><em>the fire.</em>',
-    tagline: 'World domination through kindness. One ember at a time.',
+    tagline: 'Just trying to be useful. One ember at a time.',
     lede1: 'You\u2019re connected to a <strong>wandering hotspot</strong> carried by a human. No algorithm fed you this. No ad paid for your attention. Someone wanted you to find it.',
     lede2: 'This is <strong>FeelFamous Basecamp</strong> \u2014 a pocket ecosystem built on kindness, run on free tools, owned by nobody, open to everyone. PLUR. The Dude Abides.',
     get_title: '📥 Take This With You',
@@ -251,11 +254,12 @@ var t = {
     footer_p1: 'On the hotspot, this runs from a USB drive \u2014 no internet needed. Online? Download the zip and it works the same way.',
     footer_p2: 'Copy it. Share it. Update it when you find a newer version.',
     footer_support: 'Free to use, tell a mate if it helped. When you\u2019re back online: <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">buy Chris a coffee</a> if you want to say thanks, or <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">join on Patreon</a> if you want to be a regular. Not a gate, not gamified \u2014 just the ask, once.',
-    wifi_label: 'Connected to FeelFamous'
+    wifi_label: 'Connected to FeelFamous',
+    index_label: 'Here’s your index of wonderful things. Free to use, to gift and to share with love.'
   },
   es: {
     h1: 'Encontraste<br><em>el fuego.</em>',
-    tagline: 'Dominación mundial a través de la bondad. Una brasa a la vez.',
+    tagline: 'Solo intentando ser útil. Una brasa a la vez.',
     lede1: 'Estás conectado a un <strong>hotspot errante</strong> que lleva un ser humano. Ningún algoritmo te trajo aquí. Ningún anuncio compró tu atención. Alguien quería que lo encontraras.',
     lede2: 'Este es <strong>FeelFamous Basecamp</strong> \u2014 un ecosistema de bolsillo construido sobre la bondad, funcionando con herramientas gratuitas, sin dueño, abierto a todos. PLUR. El Dude Abides.',
     get_title: '📥 Llévate Esto Contigo',
@@ -277,11 +281,12 @@ var t = {
     footer_p1: 'Esta página funciona sin internet. Todo aquí es tuyo.',
     footer_p2: 'Cópialo. Compártelo. Actualízalo cuando encuentres una versión más nueva.',
     footer_support: 'Gratis de usar, cuéntaselo a un amigo si te ha ayudado. Cuando vuelvas a tener internet: <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">invita a Chris a un café</a> si quieres darle las gracias, o <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">únete en Patreon</a> si quieres ser habitual. No es una barrera, no es un juego — solo se pide una vez.',
-    wifi_label: 'Conectado a FeelFamous'
+    wifi_label: 'Conectado a FeelFamous',
+    index_label: 'Aquí tienes tu índice de cosas maravillosas. Gratis para usar, regalar y compartir con cariño.'
   },
   fr: {
     h1: 'Tu as trouvé<br><em>le feu.</em>',
-    tagline: 'Domination mondiale par la gentillesse. Une braise à la fois.',
+    tagline: 'Juste essayer d’être utile. Une braise à la fois.',
     lede1: 'Tu es connecté à un <strong>hotspot nomade</strong> porté par un humain. Aucun algorithme ne t\u2019a amené ici. Aucune pub n\u2019a payé pour ton attention. Quelqu\u2019un voulait que tu le trouves.',
     lede2: 'Voici <strong>FeelFamous Basecamp</strong> \u2014 un écosystème de poche construit sur la gentillesse, fonctionnant avec des outils gratuits, sans propriétaire, ouvert à tous. PLUR. The Dude Abides.',
     get_title: '📥 Emporte Ça Avec Toi',
@@ -303,11 +308,12 @@ var t = {
     footer_p1: 'Cette page fonctionne sans internet. Tout ici est à toi.',
     footer_p2: 'Copie-le. Partage-le. Mets-le à jour quand tu trouves une version plus récente.',
     footer_support: 'Gratuit à utiliser, parles-en à un ami si ça t’a aidé. Une fois reconnecté : <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">offre un café à Chris</a> si tu veux le remercier, ou <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">rejoins-le sur Patreon</a> si tu veux devenir un habitué. Pas une barrière, pas un jeu — juste demandé une fois.',
-    wifi_label: 'Connecté à FeelFamous'
+    wifi_label: 'Connecté à FeelFamous',
+    index_label: 'Voici ton index de choses merveilleuses. Gratuit à utiliser, à offrir et à partager avec amour.'
   },
   de: {
     h1: 'Du hast<br><em>das Feuer gefunden.</em>',
-    tagline: 'Weltherrschaft durch Freundlichkeit. Eine Glut nach der anderen.',
+    tagline: 'Nur der Versuch, nützlich zu sein. Eine Glut nach der anderen.',
     lede1: 'Du bist mit einem <strong>wandernden Hotspot</strong> verbunden, der von einem Menschen getragen wird. Kein Algorithmus hat dir das gebracht. Keine Werbung hat deine Aufmerksamkeit bezahlt. Jemand wollte, dass du es findest.',
     lede2: 'Das ist <strong>FeelFamous Basecamp</strong> \u2014 ein Taschenkosystem, aufgebaut auf Freundlichkeit, betrieben mit kostenlosen Tools, niemandem gehörend, offen für alle. PLUR. The Dude Abides.',
     get_title: '📥 Nimm Das Mit',
@@ -329,11 +335,12 @@ var t = {
     footer_p1: 'Diese Seite funktioniert ohne Internet. Alles hier gehört dir.',
     footer_p2: 'Kopiere es. Teile es. Aktualisiere es, wenn du eine neuere Version findest.',
     footer_support: 'Kostenlos nutzbar, erzähl einem Freund davon, wenn es geholfen hat. Wenn du wieder online bist: <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">spendier Chris einen Kaffee</a>, wenn du dich bedanken möchtest, oder <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">werde Mitglied auf Patreon</a>, wenn du regelmäßig unterstützen willst. Keine Hürde, kein Spiel — nur einmal gefragt.',
-    wifi_label: 'Verbunden mit FeelFamous'
+    wifi_label: 'Verbunden mit FeelFamous',
+    index_label: 'Hier ist dein Index wundervoller Dinge. Kostenlos zu nutzen, zu verschenken und mit Liebe zu teilen.'
   },
   eu: {
     h1: 'Sua<br><em>aurkitu duzu.</em>',
-    tagline: 'Munduko nagusitasuna adeitasunaren bidez. Txinpart bat aldi berean.',
+    tagline: 'Erabilgarria izaten saiatzen, besterik ez. Txinpart bat aldi berean.',
     lede1: 'Gizaki batek eramaten duen <strong>hotspot ibiltari</strong> batekin konektatuta zaude. Ezein algoritmok ez zaitu hona ekarri. Ezein iragarkirik ez du zure arreta ordaindu. Norbaitek nahi zuen aurkitzea.',
     lede2: 'Hau da <strong>FeelFamous Basecamp</strong> \u2014 adeitasunaren gainean eraikitako poltsikoko ekosistema bat, doako tresnez funtzionatzen duena, inorena ez dena, guztientzat irekia. PLUR. The Dude Abides.',
     get_title: '📥 Eraman Hau Zurekin',
@@ -355,7 +362,8 @@ var t = {
     footer_p1: 'Orri hau internetik gabe funtzionatzen du. Hemen dagoen guztia zurea da.',
     footer_p2: 'Kopiatu. Partekatu. Eguneratu bertsio berriagoa aurkitzen duzunean.',
     footer_support: 'Erabiltzeko doakoa, esan lagun bati lagundu badizu. Berriro konektatzean: <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">gonbidatu Chris kafe batera</a> eskerrak eman nahi badizkiozu, edo <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">elkartu Patreon-en</a> ohiko bat izan nahi baduzu. Ez da oztopo bat, ez da jokoa — behin bakarrik eskatzen da.',
-    wifi_label: 'FeelFamous-era konektatuta'
+    wifi_label: 'FeelFamous-era konektatuta',
+    index_label: 'Hona hemen gauza zoragarrien zure indizea. Doan erabiltzeko, oparitzeko eta maitasunez partekatzeko.'
   }
 };
 
