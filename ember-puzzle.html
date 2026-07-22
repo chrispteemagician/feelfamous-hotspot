@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find the Fire — FeelFamous Basecamp</title>
+<style>
+  @font-face { font-family: 'Crimson Pro'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300italic.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/CrimsonPro-600.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/SpaceMono-400.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/SpaceMono-700.ttf') format('truetype'); }
+  :root{--deep:#12100a;--ember:#d4891f;--gold:#f0b830;--cream:#f8f0de;--smoke:#b8a88a;--ash:#2a2218}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--deep);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.75;min-height:100vh;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 110%,rgba(201,126,26,.12) 0%,transparent 60%);pointer-events:none;z-index:0}
+  .container{max-width:520px;margin:0 auto;padding:48px 24px 80px;position:relative;z-index:1}
+  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.9rem;letter-spacing:1px;text-transform:uppercase;color:var(--cream);text-decoration:none;margin-bottom:48px;transition:color .2s}
+  .back:hover{color:var(--gold)}
+  .section-label{font-family:'Space Mono',monospace;font-size:.9rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  h1{font-weight:300;font-size:clamp(2.2rem,5vw,3rem);line-height:1.2;margin-bottom:20px}
+  h1 em{font-style:italic;color:var(--gold)}
+  p{margin-bottom:22px;font-size:1.05rem}
+  strong{color:var(--gold);font-weight:600}
+  .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--ember),transparent);margin:32px 0}
+
+  .board{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
+    width:100%;
+    max-width:360px;
+    aspect-ratio:1/1;
+    margin:24px auto;
+    background:var(--ash);
+    padding:6px;
+    border-radius:4px;
+  }
+  .tile{
+    background:linear-gradient(160deg,var(--ember),#a5620f);
+    color:var(--deep);
+    font-family:'Space Mono',monospace;
+    font-weight:700;
+    font-size:clamp(1.8rem,7vw,2.6rem);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:3px;
+    cursor:pointer;
+    user-select:none;
+    transition:transform .12s ease, background .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .tile:active{transform:scale(.94)}
+  .tile.blank{background:transparent;cursor:default}
+  .tile.blank:active{transform:none}
+
+  .status{
+    text-align:center;
+    font-family:'Space Mono',monospace;
+    font-size:.95rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--smoke);
+    margin-top:8px;
+    min-height:1.4em;
+  }
+  .status.won{color:var(--gold)}
+
+  .controls{display:flex;justify-content:center;gap:12px;margin-top:20px}
+  .btn{
+    display:inline-block;
+    padding:14px 24px;
+    background:var(--ember);
+    color:var(--deep);
+    font-family:'Space Mono',monospace;
+    font-size:.85rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-decoration:none;
+    border:none;
+    border-radius:3px;
+    cursor:pointer;
+    transition:background .2s;
+  }
+  .btn:hover{background:var(--gold)}
+
+  .won-banner{
+    display:none;
+    text-align:center;
+    margin-top:20px;
+    padding:20px;
+    background:var(--ash);
+    border-left:3px solid var(--gold);
+  }
+  .won-banner.show{display:block}
+  .won-banner .flame{font-size:2.4rem;margin-bottom:8px}
+
+  footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--ash);font-size:1.05rem;color:var(--cream);font-style:italic}
+</style>
+</head>
+<body>
+<div class="container">
+  <a href="chill-zone.html" class="back">&larr; The Chill Zone</a>
+  <div class="section-label">No signal needed</div>
+  <h1>Slide it back<br><em>into the fire.</em></h1>
+
+  <p>No app. No account. No download. Everything here already loaded on your phone the moment you connected &mdash; this just proves it. Put the eight pieces back in order.</p>
+
+  <div class="board" id="board"></div>
+  <div class="status" id="status">Tap a tile next to the gap to slide it.</div>
+
+  <div class="controls">
+    <button class="btn" id="shuffleBtn">Shuffle Again</button>
+  </div>
+
+  <div class="won-banner" id="wonBanner">
+    <div class="flame">🔥</div>
+    <div>You found it. That&rsquo;s the whole trick &mdash; nothing here needed the internet, nothing needed you to sign in. It was already yours.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <p style="font-size:.95rem;color:var(--smoke)">Headphones on, own music, sit for two minutes &mdash; that's the whole point of this one. Come back and shuffle again whenever.</p>
+
+  <footer>
+    <a href="index.html" style="color:var(--gold);text-decoration:none">&larr; Back to the Basecamp</a>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var SIZE = 3;
+  var TOTAL = SIZE * SIZE;
+  var board = document.getElementById('board');
+  var statusEl = document.getElementById('status');
+  var wonBanner = document.getElementById('wonBanner');
+  var tiles = [];
+  var won = false;
+
+  function solvedOrder(){
+    var arr = [];
+    for (var i = 1; i < TOTAL; i++) arr.push(i);
+    arr.push(0); // 0 = blank
+    return arr;
+  }
+
+  function isSolvable(arr){
+    var inv = 0;
+    var flat = arr.filter(function(n){ return n !== 0; });
+    for (var i = 0; i < flat.length; i++){
+      for (var j = i + 1; j < flat.length; j++){
+        if (flat[i] > flat[j]) inv++;
+      }
+    }
+    return inv % 2 === 0;
+  }
+
+  function shuffledOrder(){
+    var arr;
+    do {
+      arr = solvedOrder();
+      for (var i = arr.length - 1; i > 0; i--){
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+      }
+    } while (!isSolvable(arr) || arraysEqual(arr, solvedOrder()));
+    return arr;
+  }
+
+  function arraysEqual(a, b){
+    for (var i = 0; i < a.length; i++) if (a[i] !== b[i]) return false;
+    return true;
+  }
+
+  function render(){
+    board.innerHTML = '';
+    tiles.forEach(function(val, idx){
+      var el = document.createElement('div');
+      if (val === 0){
+        el.className = 'tile blank';
+      } else {
+        el.className = 'tile';
+        el.textContent = val;
+        el.addEventListener('click', function(){ trySlide(idx); });
+      }
+      board.appendChild(el);
+    });
+  }
+
+  function trySlide(idx){
+    if (won) return;
+    var blankIdx = tiles.indexOf(0);
+    var row = Math.floor(idx / SIZE), col = idx % SIZE;
+    var brow = Math.floor(blankIdx / SIZE), bcol = blankIdx % SIZE;
+    var adjacent = (row === brow && Math.abs(col - bcol) === 1) ||
+                   (col === bcol && Math.abs(row - brow) === 1);
+    if (!adjacent) return;
+    tiles[blankIdx] = tiles[idx];
+    tiles[idx] = 0;
+    render();
+    checkWin();
+  }
+
+  function checkWin(){
+    if (arraysEqual(tiles, solvedOrder())){
+      won = true;
+      statusEl.textContent = '';
+      statusEl.className = 'status won';
+      wonBanner.classList.add('show');
+    }
+  }
+
+  function shuffle(){
+    won = false;
+    wonBanner.classList.remove('show');
+    statusEl.className = 'status';
+    statusEl.textContent = 'Tap a tile next to the gap to slide it.';
+    tiles = shuffledOrder();
+    render();
+  }
+
+  document.getElementById('shuffleBtn').addEventListener('click', shuffle);
+  shuffle();
+})();
+</script>
+</body>
+</html>

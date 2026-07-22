@@ -15,9 +15,9 @@
   body{background:var(--deep);color:var(--cream);font-family:'Crimson Pro',Georgia,serif;font-size:20px;line-height:1.75;min-height:100vh;overflow-x:hidden}
   body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 40% at 50% 110%,rgba(201,126,26,.12) 0%,transparent 60%);pointer-events:none;z-index:0}
   .container{max-width:680px;margin:0 auto;padding:48px 24px 80px;position:relative;z-index:1}
-  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--smoke);text-decoration:none;margin-bottom:48px;transition:color .2s}
-  .back:hover{color:var(--ember)}
-  .section-label{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:4px;text-transform:uppercase;color:var(--ember);margin-bottom:16px}
+  .back{display:inline-block;font-family:'Space Mono',monospace;font-size:.9rem;letter-spacing:1px;text-transform:uppercase;color:var(--cream);text-decoration:none;margin-bottom:48px;transition:color .2s}
+  .back:hover{color:var(--gold)}
+  .section-label{font-family:'Space Mono',monospace;font-size:.9rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
   h1{font-weight:300;font-size:clamp(2.2rem,5vw,3rem);line-height:1.2;margin-bottom:32px}
   h1 em{font-style:italic;color:var(--gold)}
   h2{font-weight:600;font-size:1.3rem;color:var(--gold);margin:40px 0 16px}
@@ -26,12 +26,12 @@
   .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--ember),transparent);margin:40px 0}
   .card-grid{display:grid;grid-template-columns:1fr;gap:2px;margin:24px 0}
   .card{background:var(--ash);padding:22px 26px}
-  .card-title{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-  .card-desc{font-size:.95rem;color:var(--cream)}
-  .cta{display:inline-block;margin-top:8px;padding:14px 26px;background:var(--ember);color:var(--deep);font-family:'Space Mono',monospace;font-size:.75rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .card-title{font-family:'Space Mono',monospace;font-size:.9rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  .card-desc{font-size:1.05rem;color:var(--cream)}
+  .cta{display:inline-block;margin-top:8px;padding:16px 28px;background:var(--ember);color:var(--deep);font-family:'Space Mono',monospace;font-size:.9rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:background .2s}
   .cta:hover{background:var(--gold)}
   .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
-  footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--ash);font-size:1rem;color:var(--smoke);font-style:italic}
+  footer{margin-top:64px;padding-top:32px;border-top:1px solid var(--ash);font-size:1.05rem;color:var(--cream);font-style:italic}
 </style>
 </head>
 <body>
@@ -60,9 +60,21 @@
 
   <div class="card-grid">
     <div class="card">
+      <div class="card-title">🎪 What&rsquo;s On</div>
+      <div class="card-desc">The whole Wild Gardens weekend in one place &mdash; lineup, stages, wellbeing, weather. No app, no sign-in.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🌀 Were You There?</div>
+      <div class="card-desc">Bristol or Cardiff raver, 90s&ndash;2000s? Free party crew? Step back in time &mdash; 1,000+ photos from Lakota, Trinity, Bionic and more, over on GlowGadgets.</div>
+    </div>
+    <div class="card">
       <div class="card-title">🔥 The Whole Ecosystem</div>
       <div class="card-desc">FeelFamous &mdash; free community villages, tools, and characters. No ads, no data harvesting, owned by nobody.</div>
     </div>
+    <a href="ember-puzzle.html" class="card" style="display:block;text-decoration:none;color:inherit">
+      <div class="card-title">🔥 Find the Fire</div>
+      <div class="card-desc">Headphones on, own music, two minutes with your hands instead of your thumbs. A little sliding puzzle &mdash; no signal needed, nothing to install.</div>
+    </a>
     <div class="card">
       <div class="card-title">💾 Take a Copy</div>
       <div class="card-desc">Copy these files to your own phone or a USB stick before you go. Share it with the next person. That&rsquo;s how it spreads &mdash; peer to peer, no server required.</div>
@@ -74,6 +86,8 @@
   </div>
 
   <div class="cta-row">
+    <a href="whats-on.html" class="cta">What&rsquo;s On &rarr;</a>
+    <a href="https://glowgadgets.co.uk/gallery.html" target="_blank" rel="noopener" class="cta">Were You There? &rarr;</a>
     <a href="feelfamous.html" class="cta">The Ecosystem &rarr;</a>
     <a href="spore.html" class="cta">Become a Spore &rarr;</a>
     <a href="connect.html" class="cta">Connect &rarr;</a>
