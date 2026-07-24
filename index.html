@@ -29,19 +29,19 @@
 
   .version-bar{
     text-align:center;padding:16px 0 0;
-    font-family:'Space Mono',monospace;font-size:0.65rem;
-    letter-spacing:3px;color:var(--smoke);text-transform:uppercase;
+    font-family:'Space Mono',monospace;font-size:0.85rem;
+    letter-spacing:2px;color:var(--cream);text-transform:uppercase;
   }
 
   .lang-switcher{display:flex;gap:6px;justify-content:center;padding:16px 0 0}
-  .lang-btn{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;padding:5px 12px;border:1px solid var(--ash);background:none;color:var(--smoke);cursor:pointer;transition:all .2s}
-  .lang-btn.active{border-color:var(--ember);color:var(--ember)}
-  .lang-btn:hover{border-color:var(--smoke);color:var(--cream)}
+  .lang-btn{font-family:'Space Mono',monospace;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;padding:8px 14px;border:1px solid var(--ash);background:none;color:var(--cream);cursor:pointer;transition:all .2s}
+  .lang-btn.active{border-color:var(--ember);color:var(--gold)}
+  .lang-btn:hover{border-color:var(--smoke);color:var(--gold)}
 
   .flame-mark{
     text-align:center;padding:48px 0 24px;
-    font-family:'Space Mono',monospace;font-size:11px;
-    letter-spacing:4px;color:var(--smoke);text-transform:uppercase;
+    font-family:'Space Mono',monospace;font-size:14px;
+    letter-spacing:3px;color:var(--cream);text-transform:uppercase;
     animation:fadeIn 2s ease;
   }
   .flame-mark::before{content:'\1F525';display:block;font-size:40px;margin-bottom:16px;animation:flicker 3s ease-in-out infinite}
@@ -56,20 +56,29 @@
 
   h1{font-family:'Crimson Pro',serif;font-weight:300;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.15;color:var(--cream);text-align:center;margin-bottom:12px;animation:fadeIn 2s ease 0.3s both}
   h1 em{font-style:italic;color:var(--gold)}
-  h2{font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--ember);margin-bottom:16px}
+  h2{font-family:'Space Mono',monospace;font-size:0.95rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
 
-  .tagline{text-align:center;color:var(--smoke);font-style:italic;font-size:1.1rem;margin-bottom:56px;animation:fadeIn 2s ease 0.6s both}
+  .tagline{text-align:center;color:var(--cream);font-style:italic;font-size:1.2rem;margin-bottom:56px;animation:fadeIn 2s ease 0.6s both}
   .divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--ember),transparent);margin:40px auto}
 
   .lede{font-size:1.2rem;line-height:1.75;color:var(--cream);margin-bottom:28px;animation:fadeIn 2s ease 0.9s both}
   .lede strong{color:var(--gold);font-weight:600}
+
+  .get-box{
+    border:2px solid var(--gold);padding:28px;margin:40px 0;
+    background:rgba(240,184,48,0.1);text-align:center;
+  }
+  .get-box-title{font-family:'Space Mono',monospace;font-size:1.1rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+  .get-box p{font-size:1.1rem;color:var(--cream);margin-bottom:20px;line-height:1.6}
+  .get-box-btn{display:block;width:100%;padding:20px 24px;background:var(--gold);color:var(--deep);font-family:'Space Mono',monospace;font-size:1.05rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .get-box-btn:hover{background:var(--ember)}
 
   .update-box{
     border:1px solid var(--ash);padding:24px 28px;margin:40px 0;
     background:rgba(46,40,24,0.6);
   }
   .update-box p{font-size:1rem;color:var(--cream);margin-bottom:12px;line-height:1.7}
-  .update-box p:last-child{margin:0;color:var(--smoke);font-style:italic;font-size:0.9rem}
+  .update-box p:last-child{margin:0;color:var(--cream);font-style:italic;font-size:1rem}
   .update-box strong{color:var(--gold)}
 
   .nav-grid{display:grid;grid-template-columns:1fr;gap:2px;margin:48px 0;animation:fadeIn 2s ease 1.2s both}
@@ -77,22 +86,22 @@
   .nav-card::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(212,137,31,0.06),transparent);opacity:0;transition:opacity 0.2s}
   .nav-card:hover{border-left-color:var(--ember);background:#16120a}
   .nav-card:hover::before{opacity:1}
-  .nav-card-title{font-family:'Space Mono',monospace;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
-  .nav-card-desc{color:var(--cream);font-size:1rem}
-  .nav-card-arrow{position:absolute;right:24px;top:50%;transform:translateY(-50%);color:var(--smoke);font-size:1.2rem;transition:all 0.2s}
+  .nav-card-title{font-family:'Space Mono',monospace;font-size:0.95rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .nav-card-desc{color:var(--cream);font-size:1.05rem}
+  .nav-card-arrow{position:absolute;right:24px;top:50%;transform:translateY(-50%);color:var(--cream);font-size:1.3rem;transition:all 0.2s}
   .nav-card:hover .nav-card-arrow{color:var(--ember);transform:translateY(-50%) translateX(4px)}
-  .nav-card-new{position:absolute;right:52px;top:50%;transform:translateY(-50%);font-family:'Space Mono',monospace;font-size:0.55rem;letter-spacing:1px;text-transform:uppercase;color:var(--ember);border:1px solid var(--ember);padding:2px 6px}
+  .nav-card-new{position:absolute;right:52px;top:50%;transform:translateY(-50%);font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 8px}
 
   footer{padding:48px 0 64px;text-align:center;animation:fadeIn 2s ease 1.5s both}
-  footer p{font-size:1rem;color:var(--smoke);font-style:italic;margin-bottom:8px}
-  .wifi-badge{display:inline-block;margin-top:16px;padding:8px 20px;border:1px solid var(--ash);font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:2px;color:var(--smoke);text-transform:uppercase}
-  .version-footer{margin-top:16px;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:2px;color:var(--ash);text-transform:uppercase}
+  footer p{font-size:1.05rem;color:var(--cream);font-style:italic;margin-bottom:8px}
+  .wifi-badge{display:inline-block;margin-top:16px;padding:10px 22px;border:1px solid var(--ash);font-family:'Space Mono',monospace;font-size:0.85rem;letter-spacing:1px;color:var(--cream);text-transform:uppercase}
+  .version-footer{margin-top:16px;font-family:'Space Mono',monospace;font-size:0.85rem;letter-spacing:1px;color:var(--smoke);text-transform:uppercase}
 </style>
 </head>
 <body>
 <div class="container">
 
-  <div class="version-bar">Basecamp v3 &middot; Mary Jane Berlin &middot; June 2026</div>
+  <div class="version-bar">Basecamp v4 &middot; Port Eliot Festival &middot; July 2026</div>
 
   <div class="lang-switcher">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
@@ -112,11 +121,17 @@
   <p class="lede" data-i18n="lede1">You&rsquo;re connected to a <strong>wandering hotspot</strong> carried by a human. No algorithm fed you this. No ad paid for your attention. Someone wanted you to find it.</p>
   <p class="lede" data-i18n="lede2">This is <strong>FeelFamous Basecamp</strong> &mdash; a pocket ecosystem built on kindness, run on free tools, owned by nobody, open to everyone. PLUR. The Dude Abides.</p>
 
+  <div class="get-box">
+    <div class="get-box-title" data-i18n="get_title">📥 Take This With You</div>
+    <p data-i18n="get_desc">Save the whole thing to your phone right now. No internet needed after that. Share it with a mate &mdash; hand them your phone, AirDrop it, whatever&rsquo;s easiest. It&rsquo;s free. No catch.</p>
+    <a class="get-box-btn" href="feelfamous-basecamp.zip" download data-i18n="get_btn">⬇ Save to My Phone</a>
+  </div>
+
   <div class="update-box">
     <h2 data-i18n="box_title">This file is alive</h2>
     <p data-i18n="box_p1">Everything on this hotspot is <strong>yours to keep</strong>. Copy it. Share it. Carry it. The person who gave you this connection is carrying a library &mdash; tools, knowledge, community &mdash; all offline, all free.</p>
     <p data-i18n="box_p2">When you meet someone else carrying this, check the version at the top of this page. <strong>Newer version wins.</strong> Ask them to share the updated files. That&rsquo;s how the fire spreads. Peer to peer. No servers. No middlemen.</p>
-    <p data-i18n="box_p3">Version stamp: <strong>v2 &middot; April 2026</strong>. If theirs is newer, grab it.</p>
+    <p data-i18n="box_p3">Version stamp: <strong>v4 &middot; July 2026</strong>. If theirs is newer, grab it.</p>
   </div>
 
   <div class="divider"></div>
@@ -125,6 +140,24 @@
     <a href="who.html" class="nav-card">
       <div class="nav-card-title" data-i18n="nav_who_title">The Story</div>
       <div class="nav-card-desc" data-i18n="nav_who_desc">Who built this fire and why</div>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+    <a href="chill-zone.html" class="nav-card">
+      <div class="nav-card-title">🌳 The Chill Zone</div>
+      <div class="nav-card-desc">Why this van is here. Shade, quiet music, no pressure. Sit down.</div>
+      <span class="nav-card-new">New</span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+    <a href="whats-on.html" class="nav-card">
+      <div class="nav-card-title">🎪 What&rsquo;s On</div>
+      <div class="nav-card-desc">The whole Wild Gardens weekend &mdash; lineup, times, wellbeing, weather. No app, no sign-in.</div>
+      <span class="nav-card-new">New</span>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
+    <a href="https://glowgadgets.co.uk/gallery.html" target="_blank" rel="noopener" class="nav-card">
+      <div class="nav-card-title">🌀 Were You There?</div>
+      <div class="nav-card-desc">Bristol or Cardiff raver, 90s&ndash;2000s? Free party crew? Calling all ravers &mdash; step back in time. 1,000+ photos from Lakota, Trinity, Bionic and more.</div>
+      <span class="nav-card-new">New</span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="feelfamous.html" class="nav-card">
@@ -137,21 +170,10 @@
       <div class="nav-card-desc" data-i18n="nav_cb_desc">Cannabis knowledge. Harm reduction. Community.</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
-    <a href="partners.html" class="nav-card">
-      <div class="nav-card-title" data-i18n="nav_partners_title">Mary Jane Partners</div>
-      <div class="nav-card-desc" data-i18n="nav_partners_desc">The people worth knowing. Tap for their page + meeting QR.</div>
-      <span class="nav-card-new" data-i18n="nav_new">New</span>
-      <span class="nav-card-arrow">&rarr;</span>
-    </a>
     <a href="symbiosis-engine.html" class="nav-card">
       <div class="nav-card-title">The Symbiosis Engine ⚙️</div>
       <div class="nav-card-desc">AI inbox automation. Your staff get their time back. Built from a suitcase. 14-day deployment.</div>
       <span class="nav-card-new">New</span>
-      <span class="nav-card-arrow">&rarr;</span>
-    </a>
-    <a href="crib.html" class="nav-card">
-      <div class="nav-card-title">🌿 Doc's Berlin Crib</div>
-      <div class="nav-card-desc">Hotspot setup, partner stands, vaping rules, pitch notes. For Doc's eyes.</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="spore.html" class="nav-card">
@@ -191,8 +213,9 @@
   <footer>
     <p data-i18n="footer_p1">If you're reading this on the hotspot, it's running from a USB drive — no internet needed. If you're online, download the zip and it works the same way.</p>
     <p data-i18n="footer_p2">Copy it. Share it. Update it when you find a newer version.</p>
+    <p data-i18n="footer_support">Free to use, tell a mate if it helped. When you're back online: <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">buy Chris a coffee</a> if you want to say thanks, or <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">join on Patreon</a> if you want to be a regular. Not a gate, not gamified — just the ask, once.</p>
     <div class="wifi-badge">📶 <span data-i18n="wifi_label">Connected to FeelFamous</span></div>
-    <div class="version-footer">v3 &middot; June 2026 &middot; feelfamous.co.uk</div>
+    <div class="version-footer">v4 &middot; July 2026 &middot; feelfamous.co.uk</div>
   </footer>
 
 </div>
@@ -203,10 +226,13 @@ var t = {
     tagline: 'World domination through kindness. One ember at a time.',
     lede1: 'You\u2019re connected to a <strong>wandering hotspot</strong> carried by a human. No algorithm fed you this. No ad paid for your attention. Someone wanted you to find it.',
     lede2: 'This is <strong>FeelFamous Basecamp</strong> \u2014 a pocket ecosystem built on kindness, run on free tools, owned by nobody, open to everyone. PLUR. The Dude Abides.',
+    get_title: '📥 Take This With You',
+    get_desc: 'Save the whole thing to your phone right now. No internet needed after that. Share it with a mate — hand them your phone, AirDrop it, whatever’s easiest. It’s free. No catch.',
+    get_btn: '⬇ Save to My Phone',
     box_title: 'This file is alive',
     box_p1: 'Everything on this hotspot is <strong>yours to keep</strong>. Copy it. Share it. Carry it. The person who gave you this connection is carrying a library \u2014 tools, knowledge, community \u2014 all offline, all free.',
     box_p2: 'When you meet someone else carrying this, check the version at the top of this page. <strong>Newer version wins.</strong> Ask them to share the updated files. That\u2019s how the fire spreads. Peer to peer. No servers. No middlemen.',
-    box_p3: 'Version stamp: <strong>v3 \u00b7 June 2026</strong>. If theirs is newer, grab it.',
+    box_p3: 'Version stamp: <strong>v4 \u00b7 July 2026</strong>. If theirs is newer, grab it.',
     nav_who_title: 'The Story', nav_who_desc: 'Who built this fire and why',
     nav_ff_desc: 'The ecosystem. 10 free community villages. The plan.',
     nav_cb_desc: 'Cannabis knowledge. Harm reduction. Community.',
@@ -218,6 +244,7 @@ var t = {
     nav_qr_title: '🔲 Make a QR Code', nav_qr_desc: 'Generate and save QR codes for anything. Fully offline.',
     footer_p1: 'On the hotspot, this runs from a USB drive \u2014 no internet needed. Online? Download the zip and it works the same way.',
     footer_p2: 'Copy it. Share it. Update it when you find a newer version.',
+    footer_support: 'Free to use, tell a mate if it helped. When you\u2019re back online: <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">buy Chris a coffee</a> if you want to say thanks, or <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">join on Patreon</a> if you want to be a regular. Not a gate, not gamified \u2014 just the ask, once.',
     wifi_label: 'Connected to FeelFamous'
   },
   es: {
@@ -225,10 +252,13 @@ var t = {
     tagline: 'Dominación mundial a través de la bondad. Una brasa a la vez.',
     lede1: 'Estás conectado a un <strong>hotspot errante</strong> que lleva un ser humano. Ningún algoritmo te trajo aquí. Ningún anuncio compró tu atención. Alguien quería que lo encontraras.',
     lede2: 'Este es <strong>FeelFamous Basecamp</strong> \u2014 un ecosistema de bolsillo construido sobre la bondad, funcionando con herramientas gratuitas, sin dueño, abierto a todos. PLUR. El Dude Abides.',
+    get_title: '📥 Llévate Esto Contigo',
+    get_desc: 'Guarda todo en tu teléfono ahora mismo. No necesitarás internet después. Compártelo con un amigo — dale tu teléfono, usa AirDrop, lo que sea más fácil. Es gratis. Sin trampa.',
+    get_btn: '⬇ Guardar en Mi Teléfono',
     box_title: 'Este archivo está vivo',
     box_p1: 'Todo en este hotspot es <strong>tuyo para quedártelo</strong>. Cópialo. Compártelo. Llévalo. La persona que te dio esta conexión lleva una biblioteca \u2014 herramientas, conocimiento, comunidad \u2014 todo sin internet, todo gratis.',
     box_p2: 'Cuando encuentres a otra persona que lleve esto, comprueba la versión en la parte superior de esta página. <strong>La versión más nueva gana.</strong> Pídeles que compartan los archivos actualizados. Así se extiende el fuego. De persona a persona. Sin servidores. Sin intermediarios.',
-    box_p3: 'Versión: <strong>v2 \u00b7 Abril 2026</strong>. Si la suya es más nueva, cógela.',
+    box_p3: 'Versión: <strong>v4 \u00b7 Julio 2026</strong>. Si la suya es más nueva, cógela.',
     nav_who_title: 'La Historia', nav_who_desc: 'Quién encendió este fuego y por qué',
     nav_ff_desc: 'El ecosistema. 10 comunidades gratuitas. El plan.',
     nav_cb_desc: 'Conocimiento cannábico. Reducción de daños. Comunidad.',
@@ -240,6 +270,7 @@ var t = {
     nav_qr_title: '🔲 Crear un Código QR', nav_qr_desc: 'Genera y guarda códigos QR para cualquier cosa. Sin internet.',
     footer_p1: 'Esta página funciona sin internet. Todo aquí es tuyo.',
     footer_p2: 'Cópialo. Compártelo. Actualízalo cuando encuentres una versión más nueva.',
+    footer_support: 'Gratis de usar, cuéntaselo a un amigo si te ha ayudado. Cuando vuelvas a tener internet: <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">invita a Chris a un café</a> si quieres darle las gracias, o <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">únete en Patreon</a> si quieres ser habitual. No es una barrera, no es un juego — solo se pide una vez.',
     wifi_label: 'Conectado a FeelFamous'
   },
   fr: {
@@ -247,10 +278,13 @@ var t = {
     tagline: 'Domination mondiale par la gentillesse. Une braise à la fois.',
     lede1: 'Tu es connecté à un <strong>hotspot nomade</strong> porté par un humain. Aucun algorithme ne t\u2019a amené ici. Aucune pub n\u2019a payé pour ton attention. Quelqu\u2019un voulait que tu le trouves.',
     lede2: 'Voici <strong>FeelFamous Basecamp</strong> \u2014 un écosystème de poche construit sur la gentillesse, fonctionnant avec des outils gratuits, sans propriétaire, ouvert à tous. PLUR. The Dude Abides.',
+    get_title: '📥 Emporte Ça Avec Toi',
+    get_desc: 'Enregistre tout sur ton téléphone maintenant. Plus besoin d’internet après. Partage-le avec un ami — donne-lui ton téléphone, utilise AirDrop, ce qui est le plus simple. C’est gratuit. Sans piège.',
+    get_btn: '⬇ Enregistrer Sur Mon Téléphone',
     box_title: 'Ce fichier est vivant',
     box_p1: 'Tout sur ce hotspot est <strong>à toi pour le garder</strong>. Copie-le. Partage-le. Porte-le. La personne qui t\u2019a donné cette connexion porte une bibliothèque \u2014 outils, savoirs, communauté \u2014 tout hors ligne, tout gratuit.',
     box_p2: 'Quand tu rencontres quelqu\u2019un d\u2019autre qui porte ça, vérifie la version en haut de cette page. <strong>La version la plus récente l\u2019emporte.</strong> Demande-leur de partager les fichiers mis à jour. C\u2019est comme ça que le feu se propage. De pair à pair. Pas de serveurs. Pas d\u2019intermédiaires.',
-    box_p3: 'Timbre de version : <strong>v2 \u00b7 Avril 2026</strong>. Si la leur est plus récente, prends-la.',
+    box_p3: 'Timbre de version : <strong>v4 \u00b7 Juillet 2026</strong>. Si la leur est plus récente, prends-la.',
     nav_who_title: 'L\u2019Histoire', nav_who_desc: 'Qui a allumé ce feu et pourquoi',
     nav_ff_desc: 'L\u2019écosystème. 10 villages communautaires gratuits. Le plan.',
     nav_cb_desc: 'Connaissances cannabis. Réduction des risques. Communauté.',
@@ -262,6 +296,7 @@ var t = {
     nav_qr_title: '🔲 Créer un QR Code', nav_qr_desc: 'Génère et sauvegarde des QR codes pour tout. Hors ligne.',
     footer_p1: 'Cette page fonctionne sans internet. Tout ici est à toi.',
     footer_p2: 'Copie-le. Partage-le. Mets-le à jour quand tu trouves une version plus récente.',
+    footer_support: 'Gratuit à utiliser, parles-en à un ami si ça t’a aidé. Une fois reconnecté : <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">offre un café à Chris</a> si tu veux le remercier, ou <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">rejoins-le sur Patreon</a> si tu veux devenir un habitué. Pas une barrière, pas un jeu — juste demandé une fois.',
     wifi_label: 'Connecté à FeelFamous'
   },
   de: {
@@ -269,10 +304,13 @@ var t = {
     tagline: 'Weltherrschaft durch Freundlichkeit. Eine Glut nach der anderen.',
     lede1: 'Du bist mit einem <strong>wandernden Hotspot</strong> verbunden, der von einem Menschen getragen wird. Kein Algorithmus hat dir das gebracht. Keine Werbung hat deine Aufmerksamkeit bezahlt. Jemand wollte, dass du es findest.',
     lede2: 'Das ist <strong>FeelFamous Basecamp</strong> \u2014 ein Taschenkosystem, aufgebaut auf Freundlichkeit, betrieben mit kostenlosen Tools, niemandem gehörend, offen für alle. PLUR. The Dude Abides.',
+    get_title: '📥 Nimm Das Mit',
+    get_desc: 'Speichere alles jetzt auf deinem Handy. Danach brauchst du kein Internet mehr. Teile es mit einem Freund — gib ihm dein Handy, nutze AirDrop, was auch immer am einfachsten ist. Es ist kostenlos. Kein Haken.',
+    get_btn: '⬇ Auf Meinem Handy Speichern',
     box_title: 'Diese Datei lebt',
     box_p1: 'Alles auf diesem Hotspot gehört <strong>dir zum Behalten</strong>. Kopiere es. Teile es. Trage es. Die Person, die dir diese Verbindung gegeben hat, trägt eine Bibliothek \u2014 Werkzeuge, Wissen, Gemeinschaft \u2014 alles offline, alles kostenlos.',
     box_p2: 'Wenn du jemand anderen triffst, der das trägt, überprüfe die Version oben auf dieser Seite. <strong>Die neuere Version gewinnt.</strong> Bitte sie, die aktualisierten Dateien zu teilen. So verbreitet sich das Feuer. Von Mensch zu Mensch. Keine Server. Keine Mittelsleute.',
-    box_p3: 'Versionsstempel: <strong>v3 \u00b7 June 2026</strong>. Wenn ihre neuer ist, nimm sie.',
+    box_p3: 'Versionsstempel: <strong>v4 \u00b7 Juli 2026</strong>. Wenn ihre neuer ist, nimm sie.',
     nav_who_title: 'Die Geschichte', nav_who_desc: 'Wer dieses Feuer entfacht hat und warum',
     nav_ff_desc: 'Das Ökosystem. 10 kostenlose Gemeinschaftsdörfer. Der Plan.',
     nav_cb_desc: 'Cannabis-Wissen. Schadensminimierung. Gemeinschaft.',
@@ -284,6 +322,7 @@ var t = {
     nav_qr_title: '🔲 QR-Code erstellen', nav_qr_desc: 'Erstelle und speichere QR-Codes für alles. Vollständig offline.',
     footer_p1: 'Diese Seite funktioniert ohne Internet. Alles hier gehört dir.',
     footer_p2: 'Kopiere es. Teile es. Aktualisiere es, wenn du eine neuere Version findest.',
+    footer_support: 'Kostenlos nutzbar, erzähl einem Freund davon, wenn es geholfen hat. Wenn du wieder online bist: <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">spendier Chris einen Kaffee</a>, wenn du dich bedanken möchtest, oder <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">werde Mitglied auf Patreon</a>, wenn du regelmäßig unterstützen willst. Keine Hürde, kein Spiel — nur einmal gefragt.',
     wifi_label: 'Verbunden mit FeelFamous'
   },
   eu: {
@@ -291,10 +330,13 @@ var t = {
     tagline: 'Munduko nagusitasuna adeitasunaren bidez. Txinpart bat aldi berean.',
     lede1: 'Gizaki batek eramaten duen <strong>hotspot ibiltari</strong> batekin konektatuta zaude. Ezein algoritmok ez zaitu hona ekarri. Ezein iragarkirik ez du zure arreta ordaindu. Norbaitek nahi zuen aurkitzea.',
     lede2: 'Hau da <strong>FeelFamous Basecamp</strong> \u2014 adeitasunaren gainean eraikitako poltsikoko ekosistema bat, doako tresnez funtzionatzen duena, inorena ez dena, guztientzat irekia. PLUR. The Dude Abides.',
+    get_title: '📥 Eraman Hau Zurekin',
+    get_desc: 'Gorde dena zure telefonoan orain. Ez duzu internetik behar izango ondoren. Partekatu lagun batekin — eman zure telefonoa, erabili AirDrop, errazena dena. Doakoa da. Trikimailurik gabe.',
+    get_btn: '⬇ Nire Telefonoan Gorde',
     box_title: 'Fitxategi hau bizirik dago',
     box_p1: 'Hotspot honetan dagoen guztia <strong>zure gordetzeko da</strong>. Kopiatu. Partekatu. Eraman. Konexio hau eman dizun pertsonak liburutegi bat darama \u2014 tresnak, ezagutzak, komunitatea \u2014 dena lineaz kanpo, dena doan.',
     box_p2: 'Hau daraman beste norbait topatzen duzunean, egiaztatu orri honen goiko bertsioa. <strong>Bertsio berriena irabazten du.</strong> Eskatu eguneratutako fitxategiak parteka ditzaten. Horrela hedatzen da sua. Pertsona batetik bestera. Zerbitzaririk gabe. Bitartekorik gabe.',
-    box_p3: 'Bertsio zigilua: <strong>v2 \u00b7 2026ko apirila</strong>. Eurena berriagoa bada, hartu.',
+    box_p3: 'Bertsio zigilua: <strong>v4 \u00b7 2026ko uztaila</strong>. Eurena berriagoa bada, hartu.',
     nav_who_title: 'Historia', nav_who_desc: 'Nork piztu zuen su hau eta zergatik',
     nav_ff_desc: 'Ekosistema. 10 komunitate herri doako. Plana.',
     nav_cb_desc: 'Cannabis ezagutzak. Kalte murrizketa. Komunitatea.',
@@ -306,6 +348,7 @@ var t = {
     nav_qr_title: '🔲 QR Kode bat sortu', nav_qr_desc: 'Sortu eta gorde QR kodeak edozertarako. Lineaz kanpo.',
     footer_p1: 'Orri hau internetik gabe funtzionatzen du. Hemen dagoen guztia zurea da.',
     footer_p2: 'Kopiatu. Partekatu. Eguneratu bertsio berriagoa aurkitzen duzunean.',
+    footer_support: 'Erabiltzeko doakoa, esan lagun bati lagundu badizu. Berriro konektatzean: <a href="https://buymeacoffee.com/chrispteemagician" style="color:var(--gold)">gonbidatu Chris kafe batera</a> eskerrak eman nahi badizkiozu, edo <a href="https://www.patreon.com/chrisptee" style="color:var(--gold)">elkartu Patreon-en</a> ohiko bat izan nahi baduzu. Ez da oztopo bat, ez da jokoa — behin bakarrik eskatzen da.',
     wifi_label: 'FeelFamous-era konektatuta'
   }
 };
