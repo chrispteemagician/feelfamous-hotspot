@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /crib.html
+
+Sitemap: https://feelfamous-basecamp.netlify.app/sitemap.xml
