@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bare Phone Kit — FeelFamous Basecamp</title>
+<meta name="description" content="Just reset a phone and it's got nothing on it? Here's what to put on it — safe, useful, no Google Play account needed.">
+<link rel="canonical" href="https://feelfamous-basecamp.netlify.app/phone-kit.html">
+<style>
+  @font-face { font-family: 'Crimson Pro'; font-style: italic; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300italic.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 300; font-display: swap; src: url('fonts/CrimsonPro-300.ttf') format('truetype'); }
+  @font-face { font-family: 'Crimson Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/CrimsonPro-600.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/SpaceMono-400.ttf') format('truetype'); }
+  @font-face { font-family: 'Space Mono'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/SpaceMono-700.ttf') format('truetype'); }
+  :root { --deep:#12100a; --ember:#d4891f; --gold:#f0b830; --cream:#f8f0de; --smoke:#b8a88a; --ash:#2e2818; --green:#4a7c59; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--deep); color:var(--cream); font-family:'Crimson Pro',Georgia,serif; font-size:20px; line-height:1.75; min-height:100vh; overflow-x:hidden; }
+  body::before { content:''; position:fixed; inset:0; background:radial-gradient(ellipse 60% 40% at 50% 110%,rgba(212,137,31,0.15) 0%,transparent 60%); pointer-events:none; z-index:0; }
+  .container { max-width:680px; margin:0 auto; padding:48px 24px 80px; position:relative; z-index:1; }
+  .back { display:inline-block; font-family:'Space Mono',monospace; font-size:.7rem; letter-spacing:2px; text-transform:uppercase; color:var(--smoke); text-decoration:none; margin-bottom:48px; transition:color .2s; }
+  .back:hover { color:var(--ember); }
+  .section-label { font-family:'Space Mono',monospace; font-size:.7rem; letter-spacing:4px; text-transform:uppercase; color:var(--ember); margin-bottom:16px; }
+  h1 { font-weight:300; font-size:clamp(2.2rem,5vw,3rem); line-height:1.2; margin-bottom:40px; }
+  h1 em { font-style:italic; color:var(--gold); }
+  h2 { font-weight:600; font-size:1.3rem; color:var(--gold); margin:48px 0 12px; }
+  p { margin-bottom:20px; }
+  strong { color:var(--gold); font-weight:600; }
+  .lede { font-size:1.2rem; font-style:italic; border-left:3px solid var(--ember); padding-left:24px; margin-bottom:40px; color:var(--cream); }
+  .divider { width:60px; height:1px; background:linear-gradient(90deg,transparent,var(--ember),transparent); margin:40px 0; }
+
+  .callout { background:var(--ash); padding:28px 32px; margin:32px 0; border-left:3px solid var(--ember); }
+  .callout p:last-child { margin-bottom:0; }
+  .callout .btn-row { display:flex; flex-direction:column; gap:10px; margin-top:16px; }
+
+  .app-card { background:rgba(46,40,24,0.6); border:1px solid var(--ash); padding:24px 28px; margin:20px 0; }
+  .app-top { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:8px; }
+  .app-icon { font-size:1.5rem; }
+  .app-name { font-family:'Space Mono',monospace; font-size:1rem; letter-spacing:.5px; color:var(--cream); font-weight:700; }
+  .app-tag { font-family:'Space Mono',monospace; font-size:.65rem; letter-spacing:1px; text-transform:uppercase; color:var(--gold); border:1px solid var(--gold); padding:3px 8px; }
+  .app-desc { font-size:1rem; color:var(--cream); margin-bottom:16px; }
+  .app-desc:last-of-type { margin-bottom:0; }
+  .app-btn { display:inline-block; padding:12px 20px; background:var(--gold); color:var(--deep); font-family:'Space Mono',monospace; font-size:.8rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; text-decoration:none; transition:background .2s; }
+  .app-btn:hover { background:var(--ember); }
+  .app-btn.secondary { background:none; border:1px solid var(--ash); color:var(--cream); }
+  .app-btn.secondary:hover { border-color:var(--ember); color:var(--gold); }
+
+  .warn-box { background:rgba(232,93,32,0.1); border:1px solid var(--ember); padding:20px 24px; margin:32px 0; font-size:1rem; }
+  .warn-box strong { color:var(--gold); }
+
+  .pull-quote { background:var(--ash); border-left:3px solid var(--ember); padding:24px 28px; margin:40px 0; font-style:italic; font-size:1.15rem; color:var(--cream); }
+  footer { margin-top:64px; padding-top:32px; border-top:1px solid var(--ash); font-size:1rem; color:var(--smoke); font-style:italic; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <a href="index.html" class="back">← Basecamp</a>
+  <div class="section-label">📲 The Bare Phone Kit</div>
+
+  <h1>Nothing on it?<br><em>Good place to start.</em></h1>
+
+  <p class="lede">A freshly reset phone has no accounts, no history, no clutter &mdash; and no Google sign-in if you don't want one. Here's what's actually worth putting on it, and how, without ever touching the Play Store.</p>
+
+  <div class="divider"></div>
+
+  <h2>Do this first &mdash; nothing to install</h2>
+
+  <p>Every tool in the FeelFamous ecosystem runs straight from a web browser. No store, no account, no download. Open Chris's <strong>Everyday Carry</strong> toolkit, tap the share/menu button, then <strong>Add to Home Screen</strong> &mdash; it sits on your phone and opens like an app from now on.</p>
+
+  <div class="callout">
+    <p><strong>🎒 Doc's Everyday Carry</strong> &mdash; the toolkit Chris actually uses himself. SpicyLister, offline meeting-point cards, Motor-Oid, Travel-Oid and more, all free, all real.</p>
+    <div class="btn-row">
+      <a class="app-btn" href="https://feelfamous.co.uk/edc-toolkit" target="_blank" rel="noopener">Open Doc's Everyday Carry</a>
+      <a class="app-btn secondary" href="index.html">🔥 Back to Basecamp</a>
+    </div>
+  </div>
+
+  <p><strong>Android (Chrome):</strong> tap the &vellip; menu, top right &rarr; <strong>Add to Home screen</strong>.<br>
+  <strong>iPhone (must be Safari, not Chrome):</strong> tap the Share icon &rarr; <strong>Add to Home Screen</strong>.</p>
+
+  <div class="divider"></div>
+
+  <h2>Android &mdash; if you want real apps too</h2>
+
+  <p>Android will happily install apps from outside the Play Store, if you know where to get them safely. These three are the ones actually worth having. All open their download straight from the app's own official website &mdash; none of them ever ask for a Google account.</p>
+
+  <div class="app-card">
+    <div class="app-top">
+      <span class="app-icon">🏪</span>
+      <span class="app-name">F-Droid</span>
+      <span class="app-tag">App Store</span>
+    </div>
+    <p class="app-desc">An entire app store that isn't Google's. Open source, no ads, no account, no tracking. Once it's on, everything else below installs through it.</p>
+    <p class="app-desc">Open your browser, go to <strong>f-droid.org</strong>, download the APK, open it. Your phone will ask to allow installs from your browser &mdash; say yes, that's normal, it's just letting you install anything at all.</p>
+    <a class="app-btn" href="https://f-droid.org" target="_blank" rel="noopener">Get F-Droid</a>
+  </div>
+
+  <div class="app-card">
+    <div class="app-top">
+      <span class="app-icon">🔒</span>
+      <span class="app-name">Signal</span>
+      <span class="app-tag">Messaging</span>
+    </div>
+    <p class="app-desc">Proper private messaging &mdash; texts, calls, groups &mdash; without a Google account behind it. Downloads straight from Signal themselves.</p>
+    <a class="app-btn" href="https://signal.org/android/apk/" target="_blank" rel="noopener">Get Signal</a>
+  </div>
+
+  <div class="app-card">
+    <div class="app-top">
+      <span class="app-icon">🗺️</span>
+      <span class="app-name">Organic Maps</span>
+      <span class="app-tag">Via F-Droid</span>
+    </div>
+    <p class="app-desc">Offline maps that don't need signal or sign-in once downloaded. Genuinely useful on a festival field or anywhere the network drops.</p>
+    <a class="app-btn secondary" href="https://f-droid.org/packages/app.organicmaps/" target="_blank" rel="noopener">Get Organic Maps</a>
+  </div>
+
+  <div class="warn-box">
+    <strong>One rule:</strong> only ever download an app from that app's own official website (f-droid.org, signal.org) &mdash; never a random "free APK download" site. That's the one genuine risk here, and it's easy to avoid: if the address bar doesn't say the real name of the thing you're installing, close the tab.
+  </div>
+
+  <div class="divider"></div>
+
+  <h2>iPhone</h2>
+
+  <p>Straight answer: Apple doesn't let you install real apps without an Apple ID and the App Store &mdash; there's no safe way round that, and anything claiming otherwise is worth not trusting.</p>
+
+  <p>What you <em>can</em> do with zero account, zero App Store: Safari's <strong>Add to Home Screen</strong> (above) covers most of what a bare phone actually needs &mdash; Basecamp, the whole Everyday Carry toolkit, every -oid tool in the ecosystem. That's a real starting kit before you ever touch Apple's login screen.</p>
+
+  <div class="pull-quote">
+    "You don't need permission from a store to have a useful phone. You just need to know where the front door actually is."
+  </div>
+
+  <footer>
+    Doc Strange &middot; Bristol, UK &middot; Magic Circle &middot; The FeelFamous Ecosystem<br>
+    "Just trying to be useful. One ember at a time."
+  </footer>
+
+</div>
+</body>
+</html>
