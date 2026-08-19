@@ -86,6 +86,21 @@
   .get-box-btn{display:block;width:100%;padding:20px 24px;background:var(--gold);color:var(--deep);font-family:'Space Mono',monospace;font-size:1.05rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
   .get-box-btn:hover{background:var(--ember)}
 
+  .help-details{margin-top:16px;text-align:left}
+  .help-details summary{cursor:pointer;list-style:none;font-family:'Space Mono',monospace;font-size:0.9rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border:1px solid var(--ash);padding:12px 16px;display:flex;align-items:center;justify-content:space-between;transition:border-color .2s}
+  .help-details summary::-webkit-details-marker{display:none}
+  .help-details summary:hover{border-color:var(--ember)}
+  .help-details summary::after{content:'+';font-size:1.2rem;color:var(--cream)}
+  .help-details[open] summary::after{content:'\2212'}
+  .help-details[open] summary{border-bottom:none}
+  .help-body{border:1px solid var(--ash);border-top:none;padding:18px 16px;background:rgba(0,0,0,0.15)}
+  .help-body p{font-size:1rem;color:var(--cream);margin-bottom:12px;line-height:1.6}
+  .help-body p:last-child{margin-bottom:0}
+  .help-body strong{color:var(--gold)}
+  .help-body ol{margin:0 0 12px 20px;padding:0}
+  .help-body li{font-size:1rem;color:var(--cream);margin-bottom:8px;line-height:1.6}
+  .help-body li:last-child{margin-bottom:0}
+
   .update-box{
     border:1px solid var(--ash);padding:24px 28px;margin:40px 0;
     background:rgba(46,40,24,0.6);
@@ -95,15 +110,17 @@
   .update-box strong{color:var(--gold)}
 
   .nav-grid{display:grid;grid-template-columns:1fr;gap:2px;margin:48px 0;animation:fadeIn 2s ease 1.2s both}
-  .nav-card{display:block;padding:24px 28px;background:var(--ash);border-left:3px solid transparent;text-decoration:none;transition:all 0.2s ease;position:relative;overflow:hidden}
+  .nav-card{display:block;padding:24px 56px 24px 28px;background:var(--ash);border-left:3px solid transparent;text-decoration:none;transition:all 0.2s ease;position:relative;overflow:hidden}
   .nav-card::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(212,137,31,0.06),transparent);opacity:0;transition:opacity 0.2s}
   .nav-card:hover{border-left-color:var(--ember);background:#16120a}
   .nav-card:hover::before{opacity:1}
-  .nav-card-title{font-family:'Space Mono',monospace;font-size:0.95rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .nav-card-top{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+  .nav-card-title{font-family:'Space Mono',monospace;font-size:0.95rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
+  .nav-card-top .nav-card-title{margin-bottom:0}
   .nav-card-desc{color:var(--cream);font-size:1.05rem}
-  .nav-card-arrow{position:absolute;right:24px;top:50%;transform:translateY(-50%);color:var(--cream);font-size:1.3rem;transition:all 0.2s}
-  .nav-card:hover .nav-card-arrow{color:var(--ember);transform:translateY(-50%) translateX(4px)}
-  .nav-card-new{position:absolute;right:52px;top:50%;transform:translateY(-50%);font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 8px}
+  .nav-card-arrow{position:absolute;right:24px;top:26px;color:var(--cream);font-size:1.3rem;transition:all 0.2s}
+  .nav-card:hover .nav-card-arrow{color:var(--ember);transform:translateX(4px)}
+  .nav-card-new{flex-shrink:0;font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 8px}
 
   footer{padding:48px 0 64px;text-align:center;animation:fadeIn 2s ease 1.5s both}
   footer p{font-size:1.05rem;color:var(--cream);font-style:italic;margin-bottom:8px}
@@ -138,6 +155,27 @@
     <div class="get-box-title" data-i18n="get_title">📥 Take This With You</div>
     <p data-i18n="get_desc">Save the whole thing to your phone right now. No internet needed after that. Share it with a mate &mdash; hand them your phone, AirDrop it, whatever&rsquo;s easiest. It&rsquo;s free. No catch.</p>
     <a class="get-box-btn" href="feelfamous-basecamp.zip" download data-i18n="get_btn">⬇ Save to My Phone</a>
+
+    <details class="help-details">
+      <summary>🤔 Not sure what to do next?</summary>
+      <div class="help-body">
+        <p>It downloaded as one <strong>.zip</strong> file. You need to open it so you can see the pages inside &mdash; here&rsquo;s how, no app store and no Google account needed.</p>
+        <p><strong>On an iPhone:</strong></p>
+        <ol>
+          <li>Tap the download notification, or open the <strong>Files</strong> app (it&rsquo;s already on your phone) and look in <strong>Downloads</strong>.</li>
+          <li>Tap <strong>feelfamous-basecamp.zip</strong>. It unzips itself into a folder &mdash; no extra app needed.</li>
+          <li>Open that folder, tap <strong>index.html</strong>, and it opens in your browser.</li>
+        </ol>
+        <p><strong>On Android:</strong></p>
+        <ol>
+          <li>Open the <strong>Files</strong> app that came on your phone (sometimes called <strong>My Files</strong> or <strong>File Manager</strong> &mdash; already installed, nothing to download).</li>
+          <li>Go to <strong>Downloads</strong> and tap <strong>feelfamous-basecamp.zip</strong>.</li>
+          <li>Tap <strong>Extract</strong> or <strong>Unzip</strong> (usually a button right there, or three dots &rarr; Extract).</li>
+          <li>Open the new folder it makes, tap <strong>index.html</strong>, and it opens in your browser.</li>
+        </ol>
+        <p>Every phone already has a Files app built in &mdash; you never need the Play Store or a Google sign-in for any of this.</p>
+      </div>
+    </details>
   </div>
 
   <div class="update-box">
@@ -156,21 +194,27 @@
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="chill-zone.html" class="nav-card">
-      <div class="nav-card-title">🌳 The Chill Zone</div>
+      <div class="nav-card-top">
+        <div class="nav-card-title">🌳 The Chill Zone</div>
+        <span class="nav-card-new">New</span>
+      </div>
       <div class="nav-card-desc">Why this van is here. Shade, quiet music, no pressure. Sit down.</div>
-      <span class="nav-card-new">New</span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="whats-on.html" class="nav-card">
-      <div class="nav-card-title">🎪 What&rsquo;s On</div>
+      <div class="nav-card-top">
+        <div class="nav-card-title">🎪 What&rsquo;s On</div>
+        <span class="nav-card-new">New</span>
+      </div>
       <div class="nav-card-desc">The whole Wild Gardens weekend &mdash; lineup, times, wellbeing, weather. No app, no sign-in.</div>
-      <span class="nav-card-new">New</span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="https://glowgadgets.co.uk/gallery.html" target="_blank" rel="noopener" class="nav-card">
-      <div class="nav-card-title">🌀 Were You There?</div>
+      <div class="nav-card-top">
+        <div class="nav-card-title">🌀 Were You There?</div>
+        <span class="nav-card-new">New</span>
+      </div>
       <div class="nav-card-desc">Bristol or Cardiff raver, 90s&ndash;2000s? Free party crew? Calling all ravers &mdash; step back in time. 1,000+ photos from Lakota, Trinity, Bionic and more.</div>
-      <span class="nav-card-new">New</span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="feelfamous.html" class="nav-card">
@@ -184,9 +228,11 @@
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="symbiosis-engine.html" class="nav-card">
-      <div class="nav-card-title">The Symbiosis Engine ⚙️</div>
+      <div class="nav-card-top">
+        <div class="nav-card-title">The Symbiosis Engine ⚙️</div>
+        <span class="nav-card-new">New</span>
+      </div>
       <div class="nav-card-desc">AI inbox automation. Your staff get their time back. Built from a suitcase. 14-day deployment.</div>
-      <span class="nav-card-new">New</span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="spore.html" class="nav-card">
@@ -194,10 +240,20 @@
       <div class="nav-card-desc" data-i18n="nav_spore_desc">Clone this. Carry it. Spread the mycelium.</div>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
+    <a href="phone-kit.html" class="nav-card">
+      <div class="nav-card-top">
+        <div class="nav-card-title">📲 The Bare Phone Kit</div>
+        <span class="nav-card-new">New</span>
+      </div>
+      <div class="nav-card-desc">Just reset a phone? What's actually worth putting on it &mdash; no Google Play account needed.</div>
+      <span class="nav-card-arrow">&rarr;</span>
+    </a>
     <a href="tutorial.html" class="nav-card">
-      <div class="nav-card-title">📱 Node Setup Tutorial</div>
+      <div class="nav-card-top">
+        <div class="nav-card-title">📱 Node Setup Tutorial</div>
+        <span class="nav-card-new">New</span>
+      </div>
       <div class="nav-card-desc">Step-by-step: turn any old Android into a FeelFamous node.</div>
-      <span class="nav-card-new">New</span>
       <span class="nav-card-arrow">&rarr;</span>
     </a>
     <a href="escape.html" class="nav-card">

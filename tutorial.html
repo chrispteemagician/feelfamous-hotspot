@@ -111,24 +111,25 @@
   <div class="step-block">
     <div class="step-number">03</div>
     <h3>Install the server app</h3>
-    <p>Go to Play Store. Search for <strong>HTTP File Server</strong>. Install the one by <strong>Slowscript</strong>. It's free.</p>
-    <p>Open the app. Tap the folder icon. Navigate to <strong>Internal Storage → basecamp</strong>. Select it. Hit <strong>Start</strong>.</p>
-    <p class="note">The app will show you an IP address — something like <span class="code">192.168.x.x:8080</span>. Write it down or screenshot it. You'll need it in a moment.</p>
+    <p>No Play Store, no Google account. Open your browser and go to <strong>f-droid.org</strong> — a free, open-source app store. Download the F-Droid app itself first, open it, allow the "install unknown apps" prompt once (that's your browser asking permission to install anything at all, totally normal).</p>
+    <p>Inside F-Droid, search for <strong>lWS</strong> (lightweight Web Server, by mvbasov). Install it.</p>
+    <p>Open lWS. Set the document root to <strong>Internal Storage → basecamp</strong> (type the path or use the folder picker). Leave the port on <strong>8080</strong> — that's already the default. Hit <strong>Start</strong>.</p>
+    <p class="note">The app will show you an IP address — something like <span class="code">192.168.x.x:8080</span>. Write it down or screenshot it. You'll need it in a moment. See <a href="phone-kit.html" style="color:var(--gold)">The Bare Phone Kit</a> if F-Droid itself is new to you.</p>
   </div>
 
   <div class="step-block">
     <div class="step-number">04</div>
     <h3>Name your hotspot FeelFamous</h3>
     <p>Go to Settings → Network → Mobile Hotspot. Turn it on. Tap the name and change it to <strong>FeelFamous</strong>. No password — leave it open. This is intentional. You want people to connect.</p>
-    <p class="note">Keep the HTTP File Server running in the background while the hotspot is on.</p>
+    <p class="note">Keep lWS running in the background while the hotspot is on.</p>
   </div>
 
   <div class="step-block">
     <div class="step-number">05</div>
     <h3>Make the QR code</h3>
     <p>On another device connected to your FeelFamous hotspot, open a browser and go to:</p>
-    <p><span class="code">http://[your IP]:8080/files/qr.html</span></p>
-    <p>Paste in the full URL: <span class="code">http://[your IP]:8080/files/index.html</span></p>
+    <p><span class="code">http://[your IP]:8080/qr.html</span></p>
+    <p>Paste in the full URL: <span class="code">http://[your IP]:8080/index.html</span></p>
     <p>Generate the QR. Save it. That's what people scan to go straight to the basecamp.</p>
     <p class="note">The IP can change when you restart. Check the app each time and regenerate the QR if it's different.</p>
   </div>
@@ -136,7 +137,7 @@
   <div class="step-block">
     <div class="step-number">06</div>
     <h3>Plug in the powerbank. Walk into a crowd.</h3>
-    <p>Phone in your bag. Powerbank plugged in. Hotspot on. HTTP File Server running. That's it.</p>
+    <p>Phone in your bag. Powerbank plugged in. Hotspot on. lWS running. That's it.</p>
     <p>People nearby see <strong>FeelFamous</strong> WiFi. They connect. They scan the QR. They arrive here. They become nodes. The fire spreads.</p>
     <p class="note">You don't have to do anything. You just have to show up.</p>
   </div>
@@ -157,11 +158,13 @@
 
   <h2>Troubleshooting</h2>
 
-  <p><strong>App can't see my files</strong> — check Internal Storage permissions. Go to Settings → Apps → HTTP File Server → Permissions → Allow management of all files.</p>
+  <p><strong>App can't see my files</strong> — check storage permissions. Go to Settings → Apps → lWS → Permissions and allow full file access, then re-pick the basecamp folder as the document root.</p>
 
-  <p><strong>Browser shows a / with no content</strong> — go to the full URL: <span class="code">http://[IP]:8080/files/index.html</span></p>
+  <p><strong>Browser shows a / with no content</strong> — go to the full URL: <span class="code">http://[IP]:8080/index.html</span></p>
 
-  <p><strong>IP has changed since last time</strong> — check the HTTP File Server app for the current IP. Regenerate the QR.</p>
+  <p><strong>IP has changed since last time</strong> — check the lWS app for the current IP. Regenerate the QR.</p>
+
+  <p><strong>Only see an example page, not the basecamp files</strong> — that's lWS's default document root (its own private folder). Go back into lWS's settings and set the document root to <strong>Internal Storage → basecamp</strong>, then restart the server.</p>
 
   <p><strong>People can't connect</strong> — make sure the hotspot is named FeelFamous and has no password.</p>
 
